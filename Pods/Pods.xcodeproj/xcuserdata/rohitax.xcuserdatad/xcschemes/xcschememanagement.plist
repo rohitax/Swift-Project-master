@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>EZAlertController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Myly Swift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SkyFloatingLabelTextField.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>TKKeyboardControl.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>UIViewController+BHTKeyboardAnimationBlocks.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>024EE761C19C027DAFB37AE453EFB1E6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>082612B653D8E7E7C2A49DA243566287</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6291CD6A8A8973F44540F6825FFB3C90</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7D37680455DA971045DF016A761C55B3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7E0BCF041DE05462955C28D6D66DEE34</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

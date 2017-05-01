@@ -1,0 +1,1084 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		496B9A5D63C6D52B336CF7E7CC9E660D /* Pods-Myly Swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3F4FEBE3927F8D18FD8BAB01DD0EBD /* Pods-Myly Swift-dummy.m */; };
+		542D328DAB72F72F78B6BB1A9EF357AC /* TKKeyboardControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11327983CD98779AB258ABC454C08AC8 /* TKKeyboardControl.swift */; };
+		56F4621EBA89CEEA5E76153E5B3D4727 /* EZAlertController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3F3A1045E8663215CDED0738118470 /* EZAlertController-dummy.m */; };
+		627C3C98116FA1520726E92C50677134 /* EZAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75FEFB87D967D8A8826FBE100224F7E /* EZAlertController.swift */; };
+		692733DE7C22F4C6BBA4F52E73087D84 /* SkyFloatingLabelTextField-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A3D7AE09492E2A99013D035099B8F7A6 /* SkyFloatingLabelTextField-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7D043343A40609E48E98470A9FDCEFE9 /* UIViewController+BHTKeyboardNotifications.h in Headers */ = {isa = PBXBuildFile; fileRef = B9C72DBF10759D1337F6E767B9BD1150 /* UIViewController+BHTKeyboardNotifications.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		83E3299D5A97E3537CB8C653FB5579FC /* UIViewController+BHTKeyboardNotifications.m in Sources */ = {isa = PBXBuildFile; fileRef = 67AAD398A3E62AB11BA085435377A7D7 /* UIViewController+BHTKeyboardNotifications.m */; };
+		896771386C3F9206AE4180860423C801 /* TKKeyboardControl-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A7AD98729644E465485738260710F8F5 /* TKKeyboardControl-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8F5409B67A7226BDB143302B5C3E8B0C /* TKKeyboardControl-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 05491FAAD74591A623177E70E7301A69 /* TKKeyboardControl-dummy.m */; };
+		92624D7D4CB12169D28E373D6145E6AA /* UIViewController+BHTKeyboardAnimationBlocks-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 588B6BFC09D1AD77EAA739BD9BDCD0FC /* UIViewController+BHTKeyboardAnimationBlocks-dummy.m */; };
+		9E4F3EBA0269E2A803785347A6B4B1E0 /* EZAlertController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CC504612779239713788AE26E0A51862 /* EZAlertController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A07BFCC4A7CE88E129CED6D58D4F936C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		AA3ADA342F3A04F739E7F706E84846BB /* UITextField+fixCaretPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65388AE6D11642213186D4405138EEC8 /* UITextField+fixCaretPosition.swift */; };
+		B84DEE3AF694A9570A224C654EBCD83C /* SkyFloatingLabelTextFieldWithIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D4D66994000AD4DFBC00F6A8AB28AE /* SkyFloatingLabelTextFieldWithIcon.swift */; };
+		BFF064FA68C37417FB839E56C6F30062 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		C3AF9C7679F1D33F6FCEB3FA5E7F76EA /* SkyFloatingLabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62E2C17E5F2779D2394EFD5EA8F4289 /* SkyFloatingLabelTextField.swift */; };
+		CCEA1BB9634C602D138D7349530506E3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		D31B464D42A4099E448C2D351CEB2B66 /* UIViewController+BHTKeyboardAnimationBlocks-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5046653F4FB246C9BEB8F8DBF363E063 /* UIViewController+BHTKeyboardAnimationBlocks-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D6891C26E8E3DB6EAE36BBBA2D6B0AED /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */; };
+		DE285189734A052BBE56E3FEDDE38FE2 /* SkyFloatingLabelTextField-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F6F39C69783B378D6B7DD42509065C47 /* SkyFloatingLabelTextField-dummy.m */; };
+		F31B0526DB55E557430777D3B28A6D24 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		F429CDE9EDDFD5C2B9301689BF4EF061 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		FB32A961BE31D72249174D3FE601BD14 /* Pods-Myly Swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A5F35CD2B5BC4111971CF66441EBE006 /* Pods-Myly Swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		11D0AADF6320546AC9E2EBDD17618962 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 024EE761C19C027DAFB37AE453EFB1E6;
+			remoteInfo = EZAlertController;
+		};
+		7A9E3046FEE98C40E9F5DB9039F71D96 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7E0BCF041DE05462955C28D6D66DEE34;
+			remoteInfo = TKKeyboardControl;
+		};
+		813614B91E953045A07C91865374EA9F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6291CD6A8A8973F44540F6825FFB3C90;
+			remoteInfo = SkyFloatingLabelTextField;
+		};
+		EB68B990DAFA25AB5C35C02C6A2202A8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 082612B653D8E7E7C2A49DA243566287;
+			remoteInfo = "UIViewController+BHTKeyboardAnimationBlocks";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0363FE388913E509D410764D26626769 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		05491FAAD74591A623177E70E7301A69 /* TKKeyboardControl-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TKKeyboardControl-dummy.m"; sourceTree = "<group>"; };
+		1071C367FFC4850D6821FEFE27E28862 /* TKKeyboardControl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TKKeyboardControl.framework; path = TKKeyboardControl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		11327983CD98779AB258ABC454C08AC8 /* TKKeyboardControl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TKKeyboardControl.swift; path = TKKeyboardControl/Classes/TKKeyboardControl.swift; sourceTree = "<group>"; };
+		164BD9C65E078FB0888E6D1A3E26F4F0 /* SkyFloatingLabelTextField-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SkyFloatingLabelTextField-prefix.pch"; sourceTree = "<group>"; };
+		2078619C959C673433A149D3EE8B95D4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23E6E988C6623E9645047096DA250653 /* Pods-Myly Swift-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Myly Swift-resources.sh"; sourceTree = "<group>"; };
+		2D3F3A1045E8663215CDED0738118470 /* EZAlertController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "EZAlertController-dummy.m"; sourceTree = "<group>"; };
+		2E9A78C8C844B49F23C7FDFE22A56146 /* UIViewController_BHTKeyboardAnimationBlocks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = UIViewController_BHTKeyboardAnimationBlocks.framework; path = "UIViewController+BHTKeyboardAnimationBlocks.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		428DED8FFE9C59EC3DF308F5FC0E3D45 /* SkyFloatingLabelTextField.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SkyFloatingLabelTextField.modulemap; sourceTree = "<group>"; };
+		4AED62AFF674A273F06F64EFE98E3214 /* EZAlertController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = EZAlertController.framework; path = EZAlertController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D71AD8A75E5E3B4220E5CD88D2F4A05 /* Pods-Myly Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Myly Swift.debug.xcconfig"; sourceTree = "<group>"; };
+		5046653F4FB246C9BEB8F8DBF363E063 /* UIViewController+BHTKeyboardAnimationBlocks-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIViewController+BHTKeyboardAnimationBlocks-umbrella.h"; sourceTree = "<group>"; };
+		546E494FC7A36A78F9B11F10A5CE6C51 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5562E50464AA0B5633FC4CCD51406AA5 /* SkyFloatingLabelTextField.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SkyFloatingLabelTextField.xcconfig; sourceTree = "<group>"; };
+		588B6BFC09D1AD77EAA739BD9BDCD0FC /* UIViewController+BHTKeyboardAnimationBlocks-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BHTKeyboardAnimationBlocks-dummy.m"; sourceTree = "<group>"; };
+		5BA2AF1DFADCCC2E3F1DFBF3359F3E79 /* TKKeyboardControl.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TKKeyboardControl.xcconfig; sourceTree = "<group>"; };
+		65388AE6D11642213186D4405138EEC8 /* UITextField+fixCaretPosition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITextField+fixCaretPosition.swift"; path = "Sources/UITextField+fixCaretPosition.swift"; sourceTree = "<group>"; };
+		67AAD398A3E62AB11BA085435377A7D7 /* UIViewController+BHTKeyboardNotifications.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+BHTKeyboardNotifications.m"; path = "BHTKeyboardAnimationBlocks/UIViewController+BHTKeyboardNotifications.m"; sourceTree = "<group>"; };
+		68BB4303AC8279BF28410E5CBF104D96 /* EZAlertController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = EZAlertController.xcconfig; sourceTree = "<group>"; };
+		7094D7CCDC3CCFED52F7EA4DA5DD5067 /* Pods-Myly Swift-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Myly Swift-acknowledgements.plist"; sourceTree = "<group>"; };
+		8BF212DE43DC5CD5531BDECF2B7798E6 /* TKKeyboardControl.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = TKKeyboardControl.modulemap; sourceTree = "<group>"; };
+		8F015DB0083BDBD6823EE923F57D748F /* Pods-Myly Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Myly Swift.release.xcconfig"; sourceTree = "<group>"; };
+		8F0543E6993E2767EE80197669D3E7F1 /* Pods-Myly Swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Myly Swift.modulemap"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9466E97C13320805151601C9E49E2A06 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		97D4D66994000AD4DFBC00F6A8AB28AE /* SkyFloatingLabelTextFieldWithIcon.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SkyFloatingLabelTextFieldWithIcon.swift; path = Sources/SkyFloatingLabelTextFieldWithIcon.swift; sourceTree = "<group>"; };
+		990CEE2070AC4ECA464A495CB8B05D02 /* TKKeyboardControl-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TKKeyboardControl-prefix.pch"; sourceTree = "<group>"; };
+		A3D7AE09492E2A99013D035099B8F7A6 /* SkyFloatingLabelTextField-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SkyFloatingLabelTextField-umbrella.h"; sourceTree = "<group>"; };
+		A5F35CD2B5BC4111971CF66441EBE006 /* Pods-Myly Swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Myly Swift-umbrella.h"; sourceTree = "<group>"; };
+		A75FEFB87D967D8A8826FBE100224F7E /* EZAlertController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EZAlertController.swift; sourceTree = "<group>"; };
+		A7AD98729644E465485738260710F8F5 /* TKKeyboardControl-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TKKeyboardControl-umbrella.h"; sourceTree = "<group>"; };
+		A7B2E8D55A5F4495F060198840758474 /* Pods-Myly Swift-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Myly Swift-frameworks.sh"; sourceTree = "<group>"; };
+		B445A33F144D6D72107F998132815CEA /* UIViewController+BHTKeyboardAnimationBlocks.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "UIViewController+BHTKeyboardAnimationBlocks.modulemap"; sourceTree = "<group>"; };
+		B62E2C17E5F2779D2394EFD5EA8F4289 /* SkyFloatingLabelTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SkyFloatingLabelTextField.swift; path = Sources/SkyFloatingLabelTextField.swift; sourceTree = "<group>"; };
+		B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		B9C72DBF10759D1337F6E767B9BD1150 /* UIViewController+BHTKeyboardNotifications.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+BHTKeyboardNotifications.h"; path = "BHTKeyboardAnimationBlocks/UIViewController+BHTKeyboardNotifications.h"; sourceTree = "<group>"; };
+		C482DD51F5D721F357BF6474FF5D1FDA /* UIViewController+BHTKeyboardAnimationBlocks-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIViewController+BHTKeyboardAnimationBlocks-prefix.pch"; sourceTree = "<group>"; };
+		C94A2F37D7DDCE073BCDBAF7289D06E2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC504612779239713788AE26E0A51862 /* EZAlertController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EZAlertController-umbrella.h"; sourceTree = "<group>"; };
+		D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		E48D8D3E698AD5FBBC97F2716209AAFE /* SkyFloatingLabelTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SkyFloatingLabelTextField.framework; path = SkyFloatingLabelTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E59673AC61FD36825B1B2E8D0ECD28B9 /* EZAlertController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = EZAlertController.modulemap; sourceTree = "<group>"; };
+		EFB9CCF608C42363120A1A0853D28B7D /* EZAlertController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EZAlertController-prefix.pch"; sourceTree = "<group>"; };
+		F5900A440A5B81F0672F56B14565EE04 /* Pods_Myly_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Myly_Swift.framework; path = "Pods-Myly Swift.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6F39C69783B378D6B7DD42509065C47 /* SkyFloatingLabelTextField-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SkyFloatingLabelTextField-dummy.m"; sourceTree = "<group>"; };
+		F7BEB113789A31341FCBD15B3E1E3E55 /* Pods-Myly Swift-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Myly Swift-acknowledgements.markdown"; sourceTree = "<group>"; };
+		FA3F4FEBE3927F8D18FD8BAB01DD0EBD /* Pods-Myly Swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Myly Swift-dummy.m"; sourceTree = "<group>"; };
+		FD9516CBD4701C9561629F2FEA911237 /* UIViewController+BHTKeyboardAnimationBlocks.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "UIViewController+BHTKeyboardAnimationBlocks.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		163D673ED83A984CAE7724B68A78E878 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A07BFCC4A7CE88E129CED6D58D4F936C /* Foundation.framework in Frameworks */,
+				D6891C26E8E3DB6EAE36BBBA2D6B0AED /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40909A75AA129E3B5F58E632B413E341 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F429CDE9EDDFD5C2B9301689BF4EF061 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		662E639EB8A08A5D6287672945658805 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCEA1BB9634C602D138D7349530506E3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6687652719094227B77E9530A25B7BBD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFF064FA68C37417FB839E56C6F30062 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8057B05EBF1F02EBA5B21067D508012 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F31B0526DB55E557430777D3B28A6D24 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0E0F56714795221D2CEFDD4F93408EFB /* SkyFloatingLabelTextField */ = {
+			isa = PBXGroup;
+			children = (
+				B62E2C17E5F2779D2394EFD5EA8F4289 /* SkyFloatingLabelTextField.swift */,
+				97D4D66994000AD4DFBC00F6A8AB28AE /* SkyFloatingLabelTextFieldWithIcon.swift */,
+				65388AE6D11642213186D4405138EEC8 /* UITextField+fixCaretPosition.swift */,
+				457C32DF108CCE9B6C5C17DF06385ADA /* Support Files */,
+			);
+			name = SkyFloatingLabelTextField;
+			path = SkyFloatingLabelTextField;
+			sourceTree = "<group>";
+		};
+		2909517A4A1DE98EE161E39BD67B8928 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C94A2F37D7DDCE073BCDBAF7289D06E2 /* Info.plist */,
+				B445A33F144D6D72107F998132815CEA /* UIViewController+BHTKeyboardAnimationBlocks.modulemap */,
+				FD9516CBD4701C9561629F2FEA911237 /* UIViewController+BHTKeyboardAnimationBlocks.xcconfig */,
+				588B6BFC09D1AD77EAA739BD9BDCD0FC /* UIViewController+BHTKeyboardAnimationBlocks-dummy.m */,
+				C482DD51F5D721F357BF6474FF5D1FDA /* UIViewController+BHTKeyboardAnimationBlocks-prefix.pch */,
+				5046653F4FB246C9BEB8F8DBF363E063 /* UIViewController+BHTKeyboardAnimationBlocks-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/UIViewController+BHTKeyboardAnimationBlocks";
+			sourceTree = "<group>";
+		};
+		3D7698D1BCB1A31B2BEE7AE62933DE0F /* EZAlertController */ = {
+			isa = PBXGroup;
+			children = (
+				A75FEFB87D967D8A8826FBE100224F7E /* EZAlertController.swift */,
+				BDE86981DB50B666A61E104A5B8EE079 /* Support Files */,
+			);
+			name = EZAlertController;
+			path = EZAlertController;
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				438B396F6B4147076630CAEFE34282C1 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		438B396F6B4147076630CAEFE34282C1 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */,
+				B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		4524B3D9388AD4AC8A120F11C38C21FB /* UIViewController+BHTKeyboardAnimationBlocks */ = {
+			isa = PBXGroup;
+			children = (
+				B9C72DBF10759D1337F6E767B9BD1150 /* UIViewController+BHTKeyboardNotifications.h */,
+				67AAD398A3E62AB11BA085435377A7D7 /* UIViewController+BHTKeyboardNotifications.m */,
+				2909517A4A1DE98EE161E39BD67B8928 /* Support Files */,
+			);
+			name = "UIViewController+BHTKeyboardAnimationBlocks";
+			path = "UIViewController+BHTKeyboardAnimationBlocks";
+			sourceTree = "<group>";
+		};
+		457C32DF108CCE9B6C5C17DF06385ADA /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				546E494FC7A36A78F9B11F10A5CE6C51 /* Info.plist */,
+				428DED8FFE9C59EC3DF308F5FC0E3D45 /* SkyFloatingLabelTextField.modulemap */,
+				5562E50464AA0B5633FC4CCD51406AA5 /* SkyFloatingLabelTextField.xcconfig */,
+				F6F39C69783B378D6B7DD42509065C47 /* SkyFloatingLabelTextField-dummy.m */,
+				164BD9C65E078FB0888E6D1A3E26F4F0 /* SkyFloatingLabelTextField-prefix.pch */,
+				A3D7AE09492E2A99013D035099B8F7A6 /* SkyFloatingLabelTextField-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SkyFloatingLabelTextField";
+			sourceTree = "<group>";
+		};
+		631F2DD0DBCC5F2D6C5672F8C1BB36D5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3D7698D1BCB1A31B2BEE7AE62933DE0F /* EZAlertController */,
+				0E0F56714795221D2CEFDD4F93408EFB /* SkyFloatingLabelTextField */,
+				F4803C48BBF69A495947E7C8CAE4D546 /* TKKeyboardControl */,
+				4524B3D9388AD4AC8A120F11C38C21FB /* UIViewController+BHTKeyboardAnimationBlocks */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		63577CD6A7C05CBB08E60AECF10F071C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2078619C959C673433A149D3EE8B95D4 /* Info.plist */,
+				8BF212DE43DC5CD5531BDECF2B7798E6 /* TKKeyboardControl.modulemap */,
+				5BA2AF1DFADCCC2E3F1DFBF3359F3E79 /* TKKeyboardControl.xcconfig */,
+				05491FAAD74591A623177E70E7301A69 /* TKKeyboardControl-dummy.m */,
+				990CEE2070AC4ECA464A495CB8B05D02 /* TKKeyboardControl-prefix.pch */,
+				A7AD98729644E465485738260710F8F5 /* TKKeyboardControl-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/TKKeyboardControl";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				631F2DD0DBCC5F2D6C5672F8C1BB36D5 /* Pods */,
+				D77DF3B3F2852488FFB96274320D7517 /* Products */,
+				E1C62B1AC88394292786EE68B6318E73 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		BDE86981DB50B666A61E104A5B8EE079 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E59673AC61FD36825B1B2E8D0ECD28B9 /* EZAlertController.modulemap */,
+				68BB4303AC8279BF28410E5CBF104D96 /* EZAlertController.xcconfig */,
+				2D3F3A1045E8663215CDED0738118470 /* EZAlertController-dummy.m */,
+				EFB9CCF608C42363120A1A0853D28B7D /* EZAlertController-prefix.pch */,
+				CC504612779239713788AE26E0A51862 /* EZAlertController-umbrella.h */,
+				9466E97C13320805151601C9E49E2A06 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/EZAlertController";
+			sourceTree = "<group>";
+		};
+		D77DF3B3F2852488FFB96274320D7517 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4AED62AFF674A273F06F64EFE98E3214 /* EZAlertController.framework */,
+				F5900A440A5B81F0672F56B14565EE04 /* Pods_Myly_Swift.framework */,
+				E48D8D3E698AD5FBBC97F2716209AAFE /* SkyFloatingLabelTextField.framework */,
+				1071C367FFC4850D6821FEFE27E28862 /* TKKeyboardControl.framework */,
+				2E9A78C8C844B49F23C7FDFE22A56146 /* UIViewController_BHTKeyboardAnimationBlocks.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E1C62B1AC88394292786EE68B6318E73 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F95CA2F418DF5159A99B8D513040D4E1 /* Pods-Myly Swift */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		F4803C48BBF69A495947E7C8CAE4D546 /* TKKeyboardControl */ = {
+			isa = PBXGroup;
+			children = (
+				11327983CD98779AB258ABC454C08AC8 /* TKKeyboardControl.swift */,
+				63577CD6A7C05CBB08E60AECF10F071C /* Support Files */,
+			);
+			name = TKKeyboardControl;
+			path = TKKeyboardControl;
+			sourceTree = "<group>";
+		};
+		F95CA2F418DF5159A99B8D513040D4E1 /* Pods-Myly Swift */ = {
+			isa = PBXGroup;
+			children = (
+				0363FE388913E509D410764D26626769 /* Info.plist */,
+				8F0543E6993E2767EE80197669D3E7F1 /* Pods-Myly Swift.modulemap */,
+				F7BEB113789A31341FCBD15B3E1E3E55 /* Pods-Myly Swift-acknowledgements.markdown */,
+				7094D7CCDC3CCFED52F7EA4DA5DD5067 /* Pods-Myly Swift-acknowledgements.plist */,
+				FA3F4FEBE3927F8D18FD8BAB01DD0EBD /* Pods-Myly Swift-dummy.m */,
+				A7B2E8D55A5F4495F060198840758474 /* Pods-Myly Swift-frameworks.sh */,
+				23E6E988C6623E9645047096DA250653 /* Pods-Myly Swift-resources.sh */,
+				A5F35CD2B5BC4111971CF66441EBE006 /* Pods-Myly Swift-umbrella.h */,
+				4D71AD8A75E5E3B4220E5CD88D2F4A05 /* Pods-Myly Swift.debug.xcconfig */,
+				8F015DB0083BDBD6823EE923F57D748F /* Pods-Myly Swift.release.xcconfig */,
+			);
+			name = "Pods-Myly Swift";
+			path = "Target Support Files/Pods-Myly Swift";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		2077FFE754B81A3699456763EB2E215B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E4F3EBA0269E2A803785347A6B4B1E0 /* EZAlertController-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47B0F44E7418B886B0F4AEEA1CB1C26D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				692733DE7C22F4C6BBA4F52E73087D84 /* SkyFloatingLabelTextField-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5558B4CCC3D59C52A084A184110957A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D31B464D42A4099E448C2D351CEB2B66 /* UIViewController+BHTKeyboardAnimationBlocks-umbrella.h in Headers */,
+				7D043343A40609E48E98470A9FDCEFE9 /* UIViewController+BHTKeyboardNotifications.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9AAF15BACC5E67C92CC754C6DD85D03 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB32A961BE31D72249174D3FE601BD14 /* Pods-Myly Swift-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F74793DD2A26C6C196A4E66729787E30 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				896771386C3F9206AE4180860423C801 /* TKKeyboardControl-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		024EE761C19C027DAFB37AE453EFB1E6 /* EZAlertController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9ACC0FBDB062A3ABACA1C4E7374B8A47 /* Build configuration list for PBXNativeTarget "EZAlertController" */;
+			buildPhases = (
+				218285A3471BF61E0B7A484F2AB07A28 /* Sources */,
+				6687652719094227B77E9530A25B7BBD /* Frameworks */,
+				2077FFE754B81A3699456763EB2E215B /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EZAlertController;
+			productName = EZAlertController;
+			productReference = 4AED62AFF674A273F06F64EFE98E3214 /* EZAlertController.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		082612B653D8E7E7C2A49DA243566287 /* UIViewController+BHTKeyboardAnimationBlocks */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E18674E4AB16FA2AC5446D571D4C6E78 /* Build configuration list for PBXNativeTarget "UIViewController+BHTKeyboardAnimationBlocks" */;
+			buildPhases = (
+				CD379C78659F56BBA5B12B04A97003D2 /* Sources */,
+				40909A75AA129E3B5F58E632B413E341 /* Frameworks */,
+				A5558B4CCC3D59C52A084A184110957A /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "UIViewController+BHTKeyboardAnimationBlocks";
+			productName = "UIViewController+BHTKeyboardAnimationBlocks";
+			productReference = 2E9A78C8C844B49F23C7FDFE22A56146 /* UIViewController_BHTKeyboardAnimationBlocks.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		6291CD6A8A8973F44540F6825FFB3C90 /* SkyFloatingLabelTextField */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF5A2F5531D3229BBEAED3B44EE93C45 /* Build configuration list for PBXNativeTarget "SkyFloatingLabelTextField" */;
+			buildPhases = (
+				345B5C723D70E56568896484281DF5C1 /* Sources */,
+				F8057B05EBF1F02EBA5B21067D508012 /* Frameworks */,
+				47B0F44E7418B886B0F4AEEA1CB1C26D /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SkyFloatingLabelTextField;
+			productName = SkyFloatingLabelTextField;
+			productReference = E48D8D3E698AD5FBBC97F2716209AAFE /* SkyFloatingLabelTextField.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		7D37680455DA971045DF016A761C55B3 /* Pods-Myly Swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7930C7DBF1FF0760031C58F1B908271D /* Build configuration list for PBXNativeTarget "Pods-Myly Swift" */;
+			buildPhases = (
+				37F71C859277CFDCFF97416DDF0EE10C /* Sources */,
+				662E639EB8A08A5D6287672945658805 /* Frameworks */,
+				D9AAF15BACC5E67C92CC754C6DD85D03 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D8BAEDDE2EFC484CA2EAA774B8A7D04B /* PBXTargetDependency */,
+				7F51FA63D0EF782640DBD6E0F7D7EE94 /* PBXTargetDependency */,
+				55C547A793B4EF780F2BE1FBF739407A /* PBXTargetDependency */,
+				A63C20C79DD98B3B386C9FCD704E5B86 /* PBXTargetDependency */,
+			);
+			name = "Pods-Myly Swift";
+			productName = "Pods-Myly Swift";
+			productReference = F5900A440A5B81F0672F56B14565EE04 /* Pods_Myly_Swift.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		7E0BCF041DE05462955C28D6D66DEE34 /* TKKeyboardControl */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 561A8CB32C09EFC7CA2D42E015073DEB /* Build configuration list for PBXNativeTarget "TKKeyboardControl" */;
+			buildPhases = (
+				3C69F08655C02A6FD0E65B38BF658AD4 /* Sources */,
+				163D673ED83A984CAE7724B68A78E878 /* Frameworks */,
+				F74793DD2A26C6C196A4E66729787E30 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TKKeyboardControl;
+			productName = TKKeyboardControl;
+			productReference = 1071C367FFC4850D6821FEFE27E28862 /* TKKeyboardControl.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = D77DF3B3F2852488FFB96274320D7517 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				024EE761C19C027DAFB37AE453EFB1E6 /* EZAlertController */,
+				7D37680455DA971045DF016A761C55B3 /* Pods-Myly Swift */,
+				6291CD6A8A8973F44540F6825FFB3C90 /* SkyFloatingLabelTextField */,
+				7E0BCF041DE05462955C28D6D66DEE34 /* TKKeyboardControl */,
+				082612B653D8E7E7C2A49DA243566287 /* UIViewController+BHTKeyboardAnimationBlocks */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		218285A3471BF61E0B7A484F2AB07A28 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56F4621EBA89CEEA5E76153E5B3D4727 /* EZAlertController-dummy.m in Sources */,
+				627C3C98116FA1520726E92C50677134 /* EZAlertController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		345B5C723D70E56568896484281DF5C1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE285189734A052BBE56E3FEDDE38FE2 /* SkyFloatingLabelTextField-dummy.m in Sources */,
+				C3AF9C7679F1D33F6FCEB3FA5E7F76EA /* SkyFloatingLabelTextField.swift in Sources */,
+				B84DEE3AF694A9570A224C654EBCD83C /* SkyFloatingLabelTextFieldWithIcon.swift in Sources */,
+				AA3ADA342F3A04F739E7F706E84846BB /* UITextField+fixCaretPosition.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37F71C859277CFDCFF97416DDF0EE10C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				496B9A5D63C6D52B336CF7E7CC9E660D /* Pods-Myly Swift-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C69F08655C02A6FD0E65B38BF658AD4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F5409B67A7226BDB143302B5C3E8B0C /* TKKeyboardControl-dummy.m in Sources */,
+				542D328DAB72F72F78B6BB1A9EF357AC /* TKKeyboardControl.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD379C78659F56BBA5B12B04A97003D2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92624D7D4CB12169D28E373D6145E6AA /* UIViewController+BHTKeyboardAnimationBlocks-dummy.m in Sources */,
+				83E3299D5A97E3537CB8C653FB5579FC /* UIViewController+BHTKeyboardNotifications.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		55C547A793B4EF780F2BE1FBF739407A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TKKeyboardControl;
+			target = 7E0BCF041DE05462955C28D6D66DEE34 /* TKKeyboardControl */;
+			targetProxy = 7A9E3046FEE98C40E9F5DB9039F71D96 /* PBXContainerItemProxy */;
+		};
+		7F51FA63D0EF782640DBD6E0F7D7EE94 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SkyFloatingLabelTextField;
+			target = 6291CD6A8A8973F44540F6825FFB3C90 /* SkyFloatingLabelTextField */;
+			targetProxy = 813614B91E953045A07C91865374EA9F /* PBXContainerItemProxy */;
+		};
+		A63C20C79DD98B3B386C9FCD704E5B86 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "UIViewController+BHTKeyboardAnimationBlocks";
+			target = 082612B653D8E7E7C2A49DA243566287 /* UIViewController+BHTKeyboardAnimationBlocks */;
+			targetProxy = EB68B990DAFA25AB5C35C02C6A2202A8 /* PBXContainerItemProxy */;
+		};
+		D8BAEDDE2EFC484CA2EAA774B8A7D04B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = EZAlertController;
+			target = 024EE761C19C027DAFB37AE453EFB1E6 /* EZAlertController */;
+			targetProxy = 11D0AADF6320546AC9E2EBDD17618962 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3A5DB0E48CBDB024D7F333AD6B14BABB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD9516CBD4701C9561629F2FEA911237 /* UIViewController+BHTKeyboardAnimationBlocks.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/UIViewController+BHTKeyboardAnimationBlocks/UIViewController+BHTKeyboardAnimationBlocks-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/UIViewController+BHTKeyboardAnimationBlocks/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/UIViewController+BHTKeyboardAnimationBlocks/UIViewController+BHTKeyboardAnimationBlocks.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = UIViewController_BHTKeyboardAnimationBlocks;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		400260CC7DE63C8AF6F42D3AB704CF60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5BA2AF1DFADCCC2E3F1DFBF3359F3E79 /* TKKeyboardControl.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/TKKeyboardControl/TKKeyboardControl-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TKKeyboardControl/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TKKeyboardControl/TKKeyboardControl.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = TKKeyboardControl;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		45C78B295B9FC192B8B34155D7E75424 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5BA2AF1DFADCCC2E3F1DFBF3359F3E79 /* TKKeyboardControl.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/TKKeyboardControl/TKKeyboardControl-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TKKeyboardControl/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TKKeyboardControl/TKKeyboardControl.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = TKKeyboardControl;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4E487F173E6C9664F4E9E26B9635D23C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		A64E527B3F8F92118F3A46FBDCC6C161 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD9516CBD4701C9561629F2FEA911237 /* UIViewController+BHTKeyboardAnimationBlocks.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/UIViewController+BHTKeyboardAnimationBlocks/UIViewController+BHTKeyboardAnimationBlocks-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/UIViewController+BHTKeyboardAnimationBlocks/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/UIViewController+BHTKeyboardAnimationBlocks/UIViewController+BHTKeyboardAnimationBlocks.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = UIViewController_BHTKeyboardAnimationBlocks;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		ABAF8A0831BBAE7285BBF52FC73D4292 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5562E50464AA0B5633FC4CCD51406AA5 /* SkyFloatingLabelTextField.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SkyFloatingLabelTextField/SkyFloatingLabelTextField-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SkyFloatingLabelTextField/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SkyFloatingLabelTextField/SkyFloatingLabelTextField.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SkyFloatingLabelTextField;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B53C27626078C33F90C2AD2DE88B29B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68BB4303AC8279BF28410E5CBF104D96 /* EZAlertController.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/EZAlertController/EZAlertController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/EZAlertController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/EZAlertController/EZAlertController.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = EZAlertController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B79359BA30D034326DDCBE2BD7C2A238 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F015DB0083BDBD6823EE923F57D748F /* Pods-Myly Swift.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Myly Swift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Myly Swift/Pods-Myly Swift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Myly_Swift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		BDD0139D6EB93FA375F887ABD62DAB2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BE80BF31AA2651C147A611150CB75106 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5562E50464AA0B5633FC4CCD51406AA5 /* SkyFloatingLabelTextField.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SkyFloatingLabelTextField/SkyFloatingLabelTextField-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SkyFloatingLabelTextField/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SkyFloatingLabelTextField/SkyFloatingLabelTextField.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SkyFloatingLabelTextField;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D354B71CB613F4FEC12B1E217A612893 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68BB4303AC8279BF28410E5CBF104D96 /* EZAlertController.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/EZAlertController/EZAlertController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/EZAlertController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/EZAlertController/EZAlertController.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = EZAlertController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		DA3B5DA4DC68C9FB1BEBA4582F58D61B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D71AD8A75E5E3B4220E5CD88D2F4A05 /* Pods-Myly Swift.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Myly Swift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Myly Swift/Pods-Myly Swift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Myly_Swift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E487F173E6C9664F4E9E26B9635D23C /* Debug */,
+				BDD0139D6EB93FA375F887ABD62DAB2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		561A8CB32C09EFC7CA2D42E015073DEB /* Build configuration list for PBXNativeTarget "TKKeyboardControl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45C78B295B9FC192B8B34155D7E75424 /* Debug */,
+				400260CC7DE63C8AF6F42D3AB704CF60 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7930C7DBF1FF0760031C58F1B908271D /* Build configuration list for PBXNativeTarget "Pods-Myly Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA3B5DA4DC68C9FB1BEBA4582F58D61B /* Debug */,
+				B79359BA30D034326DDCBE2BD7C2A238 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9ACC0FBDB062A3ABACA1C4E7374B8A47 /* Build configuration list for PBXNativeTarget "EZAlertController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B53C27626078C33F90C2AD2DE88B29B5 /* Debug */,
+				D354B71CB613F4FEC12B1E217A612893 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF5A2F5531D3229BBEAED3B44EE93C45 /* Build configuration list for PBXNativeTarget "SkyFloatingLabelTextField" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE80BF31AA2651C147A611150CB75106 /* Debug */,
+				ABAF8A0831BBAE7285BBF52FC73D4292 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E18674E4AB16FA2AC5446D571D4C6E78 /* Build configuration list for PBXNativeTarget "UIViewController+BHTKeyboardAnimationBlocks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A5DB0E48CBDB024D7F333AD6B14BABB /* Debug */,
+				A64E527B3F8F92118F3A46FBDCC6C161 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

@@ -1,0 +1,6 @@
+framework module Pods_Myly_Swift {
+  umbrella header "Pods-Myly Swift-umbrella.h"
+
+  export *
+  module * { export * }
+}
