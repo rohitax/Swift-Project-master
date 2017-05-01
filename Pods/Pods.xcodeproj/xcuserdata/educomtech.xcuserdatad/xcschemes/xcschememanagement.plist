@@ -6,28 +6,33 @@
 	<dict>
 		<key>EZAlertController.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Networking.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods-Myly Swift.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>2</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>SkyFloatingLabelTextField.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>3</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>TKKeyboardControl.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>4</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>UIViewController+BHTKeyboardAnimationBlocks.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>5</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -37,22 +42,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>082612B653D8E7E7C2A49DA243566287</key>
+		<key>5F3EFBC459F9C76209EA6410ACA6625B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6291CD6A8A8973F44540F6825FFB3C90</key>
+		<key>725499F0D4E87B6FA7A7E3EC39CEE9FE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7D37680455DA971045DF016A761C55B3</key>
+		<key>CE990E350E1D746DD6269A7CDB901686</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7E0BCF041DE05462955C28D6D66DEE34</key>
+		<key>D6F2241B88330FA3F8CC781B263B4893</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E8DECBC13EC32063340D8F0BCD70F4C0</key>
 		<dict>
 			<key>primary</key>
 			<true/>

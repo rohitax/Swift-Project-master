@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0830"
+   LastUpgradeVersion = "0700"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7D37680455DA971045DF016A761C55B3"
+               BlueprintIdentifier = "CE990E350E1D746DD6269A7CDB901686"
                BuildableName = "Pods_Myly_Swift.framework"
                BlueprintName = "Pods-Myly Swift"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7D37680455DA971045DF016A761C55B3"
+            BlueprintIdentifier = "CE990E350E1D746DD6269A7CDB901686"
             BuildableName = "Pods_Myly_Swift.framework"
             BlueprintName = "Pods-Myly Swift"
             ReferencedContainer = "container:Pods.xcodeproj">
@@ -60,15 +60,6 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7D37680455DA971045DF016A761C55B3"
-            BuildableName = "Pods_Myly_Swift.framework"
-            BlueprintName = "Pods-Myly Swift"
-            ReferencedContainer = "container:Pods.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

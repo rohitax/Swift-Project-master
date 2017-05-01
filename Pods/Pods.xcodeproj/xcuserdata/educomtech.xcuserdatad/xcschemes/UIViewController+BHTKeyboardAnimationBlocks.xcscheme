@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0830"
+   LastUpgradeVersion = "0700"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "082612B653D8E7E7C2A49DA243566287"
+               BlueprintIdentifier = "E8DECBC13EC32063340D8F0BCD70F4C0"
                BuildableName = "UIViewController_BHTKeyboardAnimationBlocks.framework"
                BlueprintName = "UIViewController+BHTKeyboardAnimationBlocks"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "082612B653D8E7E7C2A49DA243566287"
+            BlueprintIdentifier = "E8DECBC13EC32063340D8F0BCD70F4C0"
             BuildableName = "UIViewController_BHTKeyboardAnimationBlocks.framework"
             BlueprintName = "UIViewController+BHTKeyboardAnimationBlocks"
             ReferencedContainer = "container:Pods.xcodeproj">
@@ -60,15 +60,6 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "082612B653D8E7E7C2A49DA243566287"
-            BuildableName = "UIViewController_BHTKeyboardAnimationBlocks.framework"
-            BlueprintName = "UIViewController+BHTKeyboardAnimationBlocks"
-            ReferencedContainer = "container:Pods.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

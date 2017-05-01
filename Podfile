@@ -9,6 +9,7 @@ pod 'SkyFloatingLabelTextField', '~> 3.0'
 pod 'TKKeyboardControl'
 pod 'UIViewController+BHTKeyboardAnimationBlocks', '~> 0.0.2'
 pod 'EZAlertController', '3.2'
+pod 'Networking', '~> 3'
 
   # Pods for Myly Swift
 

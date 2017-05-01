@@ -10,7 +10,8 @@ import UIKit
 import SkyFloatingLabelTextField
 import EZAlertController
 import TKKeyboardControl
-
+import Networking
+//import Networking+HTTPRequests
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
 
@@ -51,7 +52,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         if (txt_username.text!.isEmpty) || (txt_password.text!.isEmpty) {
             
-            EZAlertController.alert("Myly Swift", message: txt_password.text!.isEmpty ? "Password is empty." : "Username is empty.", acceptMessage: "OK", acceptBlock: {
+            EZAlertController.alert(kProjectName, message: txt_password.text!.isEmpty ? "Password is empty." : "Username is empty.", acceptMessage: "OK", acceptBlock: {
                 
                 if (self.txt_username.text!.isEmpty) {
                     self.txt_username.becomeFirstResponder()
@@ -63,6 +64,32 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             })
             
         }
+        else {
+            let networking = Networking(baseURL: kServerURL)
+            
+            networking.post("PostUnRegisterMemberMobileInformation", parameters: ["UserName" : self.txt_username.text!, "Password" : self.txt_password.text!, "AppName" : "myly"]) { result in
+                
+                print(result.error?.description ?? "test")
+            }
+                /*
+                 {
+                 "json" : {
+                 "username" : "jameson",
+                 "password" : "secret"
+                 },
+                 "url" : "http://httpbin.org/post",
+                 "data" : "{"password" : "secret","username" : "jameson"}",
+                 "headers" : {
+                 "Accept" : "application/json",
+                 "Content-Type" : "application/json",
+                 "Host" : "httpbin.org",
+                 "Content-Length" : "44",
+                 "Accept-Language" : "en-us"
+                 }
+                 }
+                 */
+        }
+        
     }
     
     @IBAction func btn_forgotPassword_tap(_ sender: AnyObject) {
