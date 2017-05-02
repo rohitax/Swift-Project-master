@@ -69,7 +69,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             
             networking.post("PostUnRegisterMemberMobileInformation", parameters: ["UserName" : self.txt_username.text!, "Password" : self.txt_password.text!, "AppName" : "myly"]) { result in
                 
-                print(result.error?.description ?? "test")
+                //print(result.error?.description ?? "test")
             }
                 /*
                  {
