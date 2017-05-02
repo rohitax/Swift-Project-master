@@ -10,4 +10,4 @@ import Foundation
 
 let kProjectName = "Myly Swift"
 
-let kServerURL = "http://testapi.myly.in/MylyAPI/MylyApp.svc/"
+let kServerURL = "https://testapi.myly.in/MylyAPI/MylyApp.svc/"

@@ -11,7 +11,7 @@ import SkyFloatingLabelTextField
 import EZAlertController
 import TKKeyboardControl
 import Networking
-//import Networking+HTTPRequests
+import Alamofire
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
 
@@ -65,29 +65,51 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             
         }
         else {
-            let networking = Networking(baseURL: kServerURL)
             
-            networking.post("PostUnRegisterMemberMobileInformation", parameters: ["UserName" : self.txt_username.text!, "Password" : self.txt_password.text!, "AppName" : "myly"]) { result in
+            let dict = ["UserName": self.txt_username.text!,
+                        "Password": self.txt_password.text!,
+                        "AppName": "myly"]
+                as [String: Any]
+            
+            
+            let headers = ["Content-Type": "text/html; charset=UTF-8"]
+            let completeURL = kServerURL + "PostParentLogin.json"
+            Alamofire.request(completeURL, method: .post, parameters: dict, encoding: URLEncoding.default, headers: headers).responseJSON { response in
                 
-                //print(result.error?.description ?? "test")
+                if let JSON = response.result.value {
+                    print("JSON: \(JSON)") // your JSONResponse result
+                    //completionHandler(JSON as! NSDictionary)
+                }
+                else {
+                    print(response.result.error!)
+                }
+                //print("Response String: \(response.result.value)")
             }
-                /*
-                 {
-                 "json" : {
-                 "username" : "jameson",
-                 "password" : "secret"
-                 },
-                 "url" : "http://httpbin.org/post",
-                 "data" : "{"password" : "secret","username" : "jameson"}",
-                 "headers" : {
-                 "Accept" : "application/json",
-                 "Content-Type" : "application/json",
-                 "Host" : "httpbin.org",
-                 "Content-Length" : "44",
-                 "Accept-Language" : "en-us"
-                 }
-                 }
-                 */
+            
+            
+            Alamofire.request(
+                kServerURL + "PostParentLogin",
+                parameters: dict,
+                headers: ["Authorization": "Basic xxx"]
+                )
+                .responseJSON { response in
+                    guard response.result.isSuccess else {
+                        print("Error while fetching tags: \(response.result.error)")
+                        //completion([String]())
+                        return
+                    }
+                    
+                    guard let responseJSON = response.result.value as? [String: Any] else {
+                        print("Invalid tag information received from the service")
+                        //completion([String]())
+                        return
+                    }
+                    
+                    print("Response String: \(response.result.value)")
+                    print(responseJSON)
+                    //completion([String]())
+            }
+            
         }
         
     }

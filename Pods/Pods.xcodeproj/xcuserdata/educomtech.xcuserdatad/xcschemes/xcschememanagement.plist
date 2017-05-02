@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Alamofire.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>EZAlertController.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,27 +47,32 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5F3EFBC459F9C76209EA6410ACA6625B</key>
+		<key>14FAF8F3B12314CED9559E2B47372B6C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>725499F0D4E87B6FA7A7E3EC39CEE9FE</key>
+		<key>329F1B3CE16DD3765A9CE02FF7F81F13</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CE990E350E1D746DD6269A7CDB901686</key>
+		<key>37CB38AEDA904F6A9A6B2BE9FC45A263</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4ACCEDCF623DE4BC5C0F1CF327ACDEFD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>D6F2241B88330FA3F8CC781B263B4893</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E8DECBC13EC32063340D8F0BCD70F4C0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
