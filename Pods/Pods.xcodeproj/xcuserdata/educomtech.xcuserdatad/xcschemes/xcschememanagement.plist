@@ -14,7 +14,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Networking.xcscheme</key>
+		<key>KRProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -47,22 +47,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>14FAF8F3B12314CED9559E2B47372B6C</key>
+		<key>229E4D801CAE3F86909EFF46617581B7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>329F1B3CE16DD3765A9CE02FF7F81F13</key>
+		<key>2965281EC6A4699F81A5B5325EACAEB9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>37CB38AEDA904F6A9A6B2BE9FC45A263</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>4ACCEDCF623DE4BC5C0F1CF327ACDEFD</key>
+		<key>673FE51697B383E119A853EF97EB2954</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -72,7 +67,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D6F2241B88330FA3F8CC781B263B4893</key>
+		<key>9DC1E54E4B399F377024D7E09E3EBF32</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A9ACEF2C498EF8F83B78A83DB2C1F172</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -15,6 +15,8 @@
 		3C7D7DA11EB48CBC008AB85C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C7D7D9F1EB48CBC008AB85C /* LaunchScreen.storyboard */; };
 		4F9B891881737109755614A4 /* Pods_Myly_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96E99A059177FE664B67A3BC /* Pods_Myly_Swift.framework */; };
 		CB96E8341EB7372400139F22 /* AppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB96E8331EB7372400139F22 /* AppConstant.swift */; };
+		CBBE16091EB9D59900E0C9E8 /* WebAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBE16081EB9D59900E0C9E8 /* WebAPI.swift */; };
+		CBBE160B1EBA0BAC00E0C9E8 /* Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBE160A1EBA0BAC00E0C9E8 /* Delegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		96E99A059177FE664B67A3BC /* Pods_Myly_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Myly_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABDFA556FED13FA460A17001 /* Pods-Myly Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Myly Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Myly Swift/Pods-Myly Swift.debug.xcconfig"; sourceTree = "<group>"; };
 		CB96E8331EB7372400139F22 /* AppConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstant.swift; sourceTree = "<group>"; };
+		CBBE16081EB9D59900E0C9E8 /* WebAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebAPI.swift; path = "Web API/WebAPI.swift"; sourceTree = "<group>"; };
+		CBBE160A1EBA0BAC00E0C9E8 /* Delegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Delegate.swift; sourceTree = "<group>"; };
 		E88873A72866D8E3539AB858 /* Pods-Myly Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Myly Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-Myly Swift/Pods-Myly Swift.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -65,6 +69,7 @@
 		3C7D7D921EB48CBC008AB85C /* Myly Swift */ = {
 			isa = PBXGroup;
 			children = (
+				CBBE16071EB9C2F300E0C9E8 /* Web API */,
 				3C7D7DA81EB49B9A008AB85C /* Login */,
 				3C7D7D931EB48CBC008AB85C /* AppDelegate.swift */,
 				3C7D7D971EB48CBC008AB85C /* Main.storyboard */,
@@ -73,6 +78,7 @@
 				3C7D7DA21EB48CBC008AB85C /* Info.plist */,
 				3C7D7D9A1EB48CBC008AB85C /* Myly_Swift.xcdatamodeld */,
 				CB96E8331EB7372400139F22 /* AppConstant.swift */,
+				CBBE160A1EBA0BAC00E0C9E8 /* Delegate.swift */,
 			);
 			path = "Myly Swift";
 			sourceTree = "<group>";
@@ -100,6 +106,14 @@
 				96E99A059177FE664B67A3BC /* Pods_Myly_Swift.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CBBE16071EB9C2F300E0C9E8 /* Web API */ = {
+			isa = PBXGroup;
+			children = (
+				CBBE16081EB9D59900E0C9E8 /* WebAPI.swift */,
+			);
+			name = "Web API";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,6 +239,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBBE160B1EBA0BAC00E0C9E8 /* Delegate.swift in Sources */,
+				CBBE16091EB9D59900E0C9E8 /* WebAPI.swift in Sources */,
 				3C1EFF141EB5DABE003D6CE4 /* LoginViewController.swift in Sources */,
 				3C7D7D9C1EB48CBC008AB85C /* Myly_Swift.xcdatamodeld in Sources */,
 				3C7D7D941EB48CBC008AB85C /* AppDelegate.swift in Sources */,

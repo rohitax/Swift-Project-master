@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5w7-9K-0Jw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="x5j-mw-zVP">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -19,17 +22,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_mylyLogoFull" translatesAutoresizingMaskIntoConstraints="NO" id="Wtj-8u-TC5">
+                                <rect key="frame" x="87.5" y="88" width="200" height="117"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="4pO-Va-2Cn"/>
                                     <constraint firstAttribute="height" constant="117" id="NWg-oT-Uuu"/>
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="89h-Y8-G2h">
+                                <rect key="frame" x="20" y="229" width="335" height="295"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dRo-9Y-Wkc">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="295"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="CNm-4e-nUo" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                        <rect key="frame" x="20" y="3" width="295" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="Ad8-OR-hye"/>
                                         </constraints>
@@ -50,6 +57,7 @@
                                         </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="OYr-rR-YdE" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                        <rect key="frame" x="20" y="45" width="295" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="glN-mf-JPF"/>
                                         </constraints>
@@ -70,8 +78,10 @@
                                         </connections>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SoU-NP-H0L">
+                                        <rect key="frame" x="20" y="88" width="295" height="80"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hPU-YX-1Am">
+                                                <rect key="frame" x="0.0" y="8" width="295" height="30"/>
                                                 <color key="backgroundColor" red="0.3294117647" green="0.50196078430000002" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="oZG-ey-wVF"/>
@@ -84,6 +94,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rue-BJ-9Vv">
+                                                <rect key="frame" x="0.0" y="50" width="295" height="30"/>
                                                 <color key="backgroundColor" red="0.3294117647" green="0.50196078430000002" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="Pda-zr-4JI"/>
@@ -109,6 +120,7 @@
                                         </constraints>
                                     </view>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="JAw-jV-XlC">
+                                        <rect key="frame" x="20" y="176" width="295" height="119"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <string key="text">Welcome to the most trusted Mobile App Solution connecting educators, students and parents. If your Institute is still not on myly platform, ask them to contact us at hello@mylyapp.com</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -147,6 +159,7 @@
                             <constraint firstAttribute="trailing" secondItem="89h-Y8-G2h" secondAttribute="trailing" constant="20" id="aFg-ba-ONR"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="mgx-Yi-j6r"/>
                     <connections>
                         <outlet property="txt_password" destination="OYr-rR-YdE" id="s9R-bg-tkd"/>
                         <outlet property="txt_username" destination="CNm-4e-nUo" id="vge-Jp-8bW"/>
@@ -154,7 +167,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KOV-mV-CiH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1767" y="1227"/>
+            <point key="canvasLocation" x="2704.8000000000002" y="1226.5367316341831"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zUq-Ha-9Cq">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="x5j-mw-zVP" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dUM-cn-Vm5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="5w7-9K-0Jw" kind="relationship" relationship="rootViewController" id="NXk-V0-6nQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nhk-h3-Eaq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1765.5999999999999" y="1226.5367316341831"/>
         </scene>
     </scenes>
     <resources>

@@ -91,7 +91,7 @@ strip_invalid_archs() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/Alamofire/Alamofire.framework"
   install_framework "$BUILT_PRODUCTS_DIR/EZAlertController/EZAlertController.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/Networking/Networking.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/KRProgressHUD/KRProgressHUD.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework"
   install_framework "$BUILT_PRODUCTS_DIR/TKKeyboardControl/TKKeyboardControl.framework"
   install_framework "$BUILT_PRODUCTS_DIR/UIViewController+BHTKeyboardAnimationBlocks/UIViewController_BHTKeyboardAnimationBlocks.framework"
@@ -99,7 +99,7 @@ fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/Alamofire/Alamofire.framework"
   install_framework "$BUILT_PRODUCTS_DIR/EZAlertController/EZAlertController.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/Networking/Networking.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/KRProgressHUD/KRProgressHUD.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework"
   install_framework "$BUILT_PRODUCTS_DIR/TKKeyboardControl/TKKeyboardControl.framework"
   install_framework "$BUILT_PRODUCTS_DIR/UIViewController+BHTKeyboardAnimationBlocks/UIViewController_BHTKeyboardAnimationBlocks.framework"

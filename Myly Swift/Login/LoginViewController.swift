@@ -10,7 +10,6 @@ import UIKit
 import SkyFloatingLabelTextField
 import EZAlertController
 import TKKeyboardControl
-import Networking
 import Alamofire
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
@@ -32,7 +31,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             // Animation block is handled for you
             
             }, constraintBasedActionHandler: nil)
-        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -50,9 +48,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func btn_login_tap(_ sender: AnyObject) {
         
-        if (txt_username.text!.isEmpty) || (txt_password.text!.isEmpty) {
+        if (txt_username.text!.isEmpty) ||
+            (txt_password.text!.isEmpty) {
             
-            EZAlertController.alert(kProjectName, message: txt_password.text!.isEmpty ? "Password is empty." : "Username is empty.", acceptMessage: "OK", acceptBlock: {
+            EZAlertController.alert(kProjectName,
+                                    message: txt_username.text!.isEmpty ? "UserName is empty." : "Password is empty.",
+                                    acceptMessage: "OK",
+                                    acceptBlock: {
                 
                 if (self.txt_username.text!.isEmpty) {
                     self.txt_username.becomeFirstResponder()
@@ -60,59 +62,24 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 else {
                     self.txt_password.becomeFirstResponder()
                 }
-                
             })
-            
         }
         else {
             
             let dict = ["UserName": self.txt_username.text!,
                         "Password": self.txt_password.text!,
                         "AppName": "myly"]
-                as [String: Any]
             
-            
-            let headers = ["Content-Type": "text/html; charset=UTF-8"]
-            let completeURL = kServerURL + "PostParentLogin.json"
-            Alamofire.request(completeURL, method: .post, parameters: dict, encoding: URLEncoding.default, headers: headers).responseJSON { response in
+            WebAPI.callWebAPI(parametersToBePassed: dict, functionToBeCalled: kPostParentLogin, completion: {(response: Dictionary<String, Any>) -> Void in
                 
-                if let JSON = response.result.value {
-                    print("JSON: \(JSON)") // your JSONResponse result
-                    //completionHandler(JSON as! NSDictionary)
-                }
-                else {
-                    print(response.result.error!)
-                }
-                //print("Response String: \(response.result.value)")
-            }
-            
-            
-            Alamofire.request(
-                kServerURL + "PostParentLogin",
-                parameters: dict,
-                headers: ["Authorization": "Basic xxx"]
-                )
-                .responseJSON { response in
-                    guard response.result.isSuccess else {
-                        print("Error while fetching tags: \(response.result.error)")
-                        //completion([String]())
-                        return
-                    }
-                    
-                    guard let responseJSON = response.result.value as? [String: Any] else {
-                        print("Invalid tag information received from the service")
-                        //completion([String]())
-                        return
-                    }
-                    
-                    print("Response String: \(response.result.value)")
-                    print(responseJSON)
-                    //completion([String]())
-            }
-            
+                print(response)
+                
+                
+            })
         }
-        
     }
+    
+    
     
     @IBAction func btn_forgotPassword_tap(_ sender: AnyObject) {
         

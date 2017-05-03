@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4ACCEDCF623DE4BC5C0F1CF327ACDEFD"
+               BlueprintIdentifier = "229E4D801CAE3F86909EFF46617581B7"
                BuildableName = "UIViewController_BHTKeyboardAnimationBlocks.framework"
                BlueprintName = "UIViewController+BHTKeyboardAnimationBlocks"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4ACCEDCF623DE4BC5C0F1CF327ACDEFD"
+            BlueprintIdentifier = "229E4D801CAE3F86909EFF46617581B7"
             BuildableName = "UIViewController_BHTKeyboardAnimationBlocks.framework"
             BlueprintName = "UIViewController+BHTKeyboardAnimationBlocks"
             ReferencedContainer = "container:Pods.xcodeproj">

@@ -10,8 +10,7 @@
 #endif
 #endif
 
-#import "Networking.h"
 
-FOUNDATION_EXPORT double NetworkingVersionNumber;
-FOUNDATION_EXPORT const unsigned char NetworkingVersionString[];
+FOUNDATION_EXPORT double KRProgressHUDVersionNumber;
+FOUNDATION_EXPORT const unsigned char KRProgressHUDVersionString[];
 
