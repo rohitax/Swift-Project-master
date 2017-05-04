@@ -4,12 +4,32 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>ASToast.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Alamofire.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Alertift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>EZAlertController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>INSPersistentContainer.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>IQKeyboardManagerSwift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -47,17 +67,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>229E4D801CAE3F86909EFF46617581B7</key>
+		<key>24499BFF690DD5CCD812083C7AA1EBD8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2965281EC6A4699F81A5B5325EACAEB9</key>
+		<key>35A3EF774EDE75749E8997A952435298</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>673FE51697B383E119A853EF97EB2954</key>
+		<key>41719BA5DD69011FCC2BDBE320DE210D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4DC059E04CBA98AEDDB5C34E02D551E9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>511C8C43974BF980E3DDFC85EA96E4F3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -67,12 +97,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9DC1E54E4B399F377024D7E09E3EBF32</key>
+		<key>9220F80FF659571E63C06D77A3083838</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>A9ACEF2C498EF8F83B78A83DB2C1F172</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D312B66A7E9C0AA555A2891FD0EFE21C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F3952E35E28A9E61F4A711AA1F9BDABB</key>
 		<dict>
 			<key>primary</key>
 			<true/>

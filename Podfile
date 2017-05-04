@@ -11,6 +11,10 @@ pod 'UIViewController+BHTKeyboardAnimationBlocks', '~> 0.0.2'
 pod 'EZAlertController', '3.2'
 pod 'Alamofire', '~> 4.4'
 pod "KRProgressHUD"
+pod 'Alertift', '~> 1.0'
+pod 'IQKeyboardManagerSwift', '4.0.9'
+pod 'ASToast', '~> 1.0.9'
+pod 'INSPersistentContainer'
 
   # Pods for Myly Swift
 

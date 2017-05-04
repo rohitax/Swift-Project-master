@@ -89,16 +89,24 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "$BUILT_PRODUCTS_DIR/ASToast/ASToast.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Alamofire/Alamofire.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Alertift/Alertift.framework"
   install_framework "$BUILT_PRODUCTS_DIR/EZAlertController/EZAlertController.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/INSPersistentContainer/INSPersistentContainer.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework"
   install_framework "$BUILT_PRODUCTS_DIR/KRProgressHUD/KRProgressHUD.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework"
   install_framework "$BUILT_PRODUCTS_DIR/TKKeyboardControl/TKKeyboardControl.framework"
   install_framework "$BUILT_PRODUCTS_DIR/UIViewController+BHTKeyboardAnimationBlocks/UIViewController_BHTKeyboardAnimationBlocks.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "$BUILT_PRODUCTS_DIR/ASToast/ASToast.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Alamofire/Alamofire.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Alertift/Alertift.framework"
   install_framework "$BUILT_PRODUCTS_DIR/EZAlertController/EZAlertController.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/INSPersistentContainer/INSPersistentContainer.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework"
   install_framework "$BUILT_PRODUCTS_DIR/KRProgressHUD/KRProgressHUD.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework"
   install_framework "$BUILT_PRODUCTS_DIR/TKKeyboardControl/TKKeyboardControl.framework"

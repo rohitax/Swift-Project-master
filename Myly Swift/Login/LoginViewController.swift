@@ -11,6 +11,7 @@ import SkyFloatingLabelTextField
 import EZAlertController
 import TKKeyboardControl
 import Alamofire
+import Alertift
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
 
@@ -48,11 +49,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func btn_login_tap(_ sender: AnyObject) {
         
+        self.view.endEditing(true)
         if (txt_username.text!.isEmpty) ||
             (txt_password.text!.isEmpty) {
             
             EZAlertController.alert(kProjectName,
-                                    message: txt_username.text!.isEmpty ? "UserName is empty." : "Password is empty.",
+                                    message: txt_username.text!.isEmpty ? "Mobile Number is empty." : "Password is empty.",
                                     acceptMessage: "OK",
                                     acceptBlock: {
                 
@@ -70,16 +72,25 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                         "Password": self.txt_password.text!,
                         "AppName": "myly"]
             
-            WebAPI.callWebAPI(parametersToBePassed: dict, functionToBeCalled: kPostParentLogin, completion: {(response: Dictionary<String, Any>) -> Void in
+            WebAPI.callWebAPI(parametersToBePassed: dict, functionToBeCalled: kPostParentLogin, controller: self, completion: {(response: Dictionary<String, String>) -> Void in
                 
-                print(response)
-                
-                
+                if response["ResponseCode"] != nil {
+                    
+                    if response["ResponseCode"] == "1" {
+                        
+                    }
+                    else {
+                        
+                        let message = response["StudentDetails"] ?? kError
+                        Alertift.alert(title: kProjectName,
+                                       message: message)
+                            .action(.default("OK"))
+                            .show(on: self)
+                    }
+                }
             })
         }
     }
-    
-    
     
     @IBAction func btn_forgotPassword_tap(_ sender: AnyObject) {
         

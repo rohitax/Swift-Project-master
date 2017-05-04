@@ -10,10 +10,28 @@ import UIKit
 import Alamofire
 import EZAlertController
 import KRProgressHUD
+import Alertift
+import ASToast
 
 class WebAPI: NSObject {
 
-    class func callWebAPI(parametersToBePassed param: Dictionary<String, Any>, functionToBeCalled function: String, completion: @escaping (_ response: Dictionary<String, Any>) -> Void) {
+    class func callWebAPI(parametersToBePassed param: Dictionary<String, Any>, functionToBeCalled function: String, controller: UIViewController, completion: @escaping (_ response: Dictionary<String, String>) -> Void) {
+        
+        if !Reachability.isConnectedToNetwork() {
+            
+            if let topController = UIApplication.topViewController() {
+                topController.view.makeToast(message: kNoInternetConnectivity,
+                                          backgroundColor: UIColor.black,
+                                          messageColor: nil)
+            }
+            else {
+                Alertift.alert(title: kProjectName,
+                               message: kNoInternetConnectivity)
+                    .action(.default("OK"))
+                    .show(on: controller)
+            }
+            return;
+        }
         
         KRProgressHUD.show()
         
@@ -36,12 +54,11 @@ class WebAPI: NSObject {
             //debugPrint("Debug Print :", response)
             
             if !response.result.isSuccess {
-                EZAlertController.alert(kProjectName,
-                                        message: "Some error occured.",
-                                        acceptMessage: "OK",
-                                        acceptBlock: {}
-                )
                 debugPrint("Debug Print :", response)
+                Alertift.alert(title: kProjectName,
+                               message: kError)
+                    .action(.default("OK"))
+                    .show(on: controller)
             }
             else {
                 
@@ -50,8 +67,15 @@ class WebAPI: NSObject {
                     let myJson = try JSONSerialization.jsonObject(with: response.data!, options: JSONSerialization.ReadingOptions.allowFragments) as Any
                     
                     let dict_response = Delegate.appDelegate.convertToDictionary(text: myJson as! String)
-                    print(dict_response ?? "Some error occured")
-                    completion(dict_response ?? ["": ""])
+                    print(dict_response ?? kError)
+                    
+                    if dict_response != nil {
+                        
+                        let convertedDict: [String: String] = dict_response!.mapPairs { (key, value) in
+                            (key, String(describing: value))
+                        }
+                        completion(convertedDict)
+                    }
                     
                 }
                 catch let error as NSError {
@@ -61,6 +85,32 @@ class WebAPI: NSObject {
             
             KRProgressHUD.dismiss()
         }
+    }
+    
+}
+
+extension Dictionary {
+    //    Since Dictionary conforms to CollectionType, and its Element typealias is a (key, value) tuple, that means you ought to be able to do something like this:
+    //
+    //    result = dict.map { (key, value) in (key, value.uppercaseString) }
+    //
+    //    However, that won't actually assign to a Dictionary-typed variable. THE MAP METHOD IS DEFINED TO ALWAYS RETURN AN ARRAY (THE [T]), even for other types like dictionaries. If you write a constructor that'll turn an array of two-tuples into a Dictionary and all will be right with the world:
+    //  Now you can do this:
+    //    result = Dictionary(dict.map { (key, value) in (key, value.uppercaseString) })
+    //
+    init(_ pairs: [Element]) {
+        self.init()
+        for (k, v) in pairs {
+            self[k] = v
+        }
+    }
+    
+    //    You may even want to write a Dictionary-specific version of map just to avoid explicitly calling the constructor. Here I've also included an implementation of filter:
+    //    let testarr = ["foo" : 1, "bar" : 2]
+    //    let result = testarr.mapPairs { (key, value) in (key, value * 2) }
+    //    result["bar"]
+    func mapPairs<OutKey: Hashable, OutValue>( transform: (Element) throws -> (OutKey, OutValue)) rethrows -> [OutKey: OutValue] {
+        return Dictionary<OutKey, OutValue>(try map(transform))
     }
     
 }

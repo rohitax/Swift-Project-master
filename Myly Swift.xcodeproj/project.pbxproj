@@ -17,6 +17,7 @@
 		CB96E8341EB7372400139F22 /* AppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB96E8331EB7372400139F22 /* AppConstant.swift */; };
 		CBBE16091EB9D59900E0C9E8 /* WebAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBE16081EB9D59900E0C9E8 /* WebAPI.swift */; };
 		CBBE160B1EBA0BAC00E0C9E8 /* Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBE160A1EBA0BAC00E0C9E8 /* Delegate.swift */; };
+		CBEC63071EBAF7B900C2B5A0 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEC63061EBAF7B900C2B5A0 /* Reachability.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		CB96E8331EB7372400139F22 /* AppConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstant.swift; sourceTree = "<group>"; };
 		CBBE16081EB9D59900E0C9E8 /* WebAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebAPI.swift; path = "Web API/WebAPI.swift"; sourceTree = "<group>"; };
 		CBBE160A1EBA0BAC00E0C9E8 /* Delegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Delegate.swift; sourceTree = "<group>"; };
+		CBEC63061EBAF7B900C2B5A0 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		E88873A72866D8E3539AB858 /* Pods-Myly Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Myly Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-Myly Swift/Pods-Myly Swift.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -69,6 +71,7 @@
 		3C7D7D921EB48CBC008AB85C /* Myly Swift */ = {
 			isa = PBXGroup;
 			children = (
+				CBEC63051EBAEDB500C2B5A0 /* Common Files */,
 				CBBE16071EB9C2F300E0C9E8 /* Web API */,
 				3C7D7DA81EB49B9A008AB85C /* Login */,
 				3C7D7D931EB48CBC008AB85C /* AppDelegate.swift */,
@@ -77,8 +80,6 @@
 				3C7D7D9F1EB48CBC008AB85C /* LaunchScreen.storyboard */,
 				3C7D7DA21EB48CBC008AB85C /* Info.plist */,
 				3C7D7D9A1EB48CBC008AB85C /* Myly_Swift.xcdatamodeld */,
-				CB96E8331EB7372400139F22 /* AppConstant.swift */,
-				CBBE160A1EBA0BAC00E0C9E8 /* Delegate.swift */,
 			);
 			path = "Myly Swift";
 			sourceTree = "<group>";
@@ -116,6 +117,16 @@
 			name = "Web API";
 			sourceTree = "<group>";
 		};
+		CBEC63051EBAEDB500C2B5A0 /* Common Files */ = {
+			isa = PBXGroup;
+			children = (
+				CBBE160A1EBA0BAC00E0C9E8 /* Delegate.swift */,
+				CB96E8331EB7372400139F22 /* AppConstant.swift */,
+				CBEC63061EBAF7B900C2B5A0 /* Reachability.swift */,
+			);
+			name = "Common Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -146,7 +157,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "EduCommerce Technologies";
 				TargetAttributes = {
 					3C7D7D8F1EB48CBC008AB85C = {
@@ -239,6 +250,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBEC63071EBAF7B900C2B5A0 /* Reachability.swift in Sources */,
 				CBBE160B1EBA0BAC00E0C9E8 /* Delegate.swift in Sources */,
 				CBBE16091EB9D59900E0C9E8 /* WebAPI.swift in Sources */,
 				3C1EFF141EB5DABE003D6CE4 /* LoginViewController.swift in Sources */,
@@ -288,6 +300,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -337,6 +350,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -366,11 +380,27 @@
 			baseConfigurationReference = ABDFA556FED13FA460A17001 /* Pods-Myly Swift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/ASToast\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/Alamofire\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/Alertift\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/EZAlertController\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/INSPersistentContainer\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/IQKeyboardManagerSwift\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/KRProgressHUD\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/SkyFloatingLabelTextField\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/Sync\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/TKKeyboardControl\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/UIViewController+BHTKeyboardAnimationBlocks\"",
+				);
 				INFOPLIST_FILE = "Myly Swift/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.myly.Myly-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "$(SWIFT_MODULE_NAME)-Swift.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -380,11 +410,27 @@
 			baseConfigurationReference = E88873A72866D8E3539AB858 /* Pods-Myly Swift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/ASToast\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/Alamofire\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/Alertift\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/EZAlertController\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/INSPersistentContainer\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/IQKeyboardManagerSwift\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/KRProgressHUD\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/SkyFloatingLabelTextField\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/Sync\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/TKKeyboardControl\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/UIViewController+BHTKeyboardAnimationBlocks\"",
+				);
 				INFOPLIST_FILE = "Myly Swift/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.myly.Myly-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "$(SWIFT_MODULE_NAME)-Swift.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
