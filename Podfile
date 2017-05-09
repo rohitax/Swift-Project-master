@@ -15,6 +15,7 @@ pod 'Alertift', '~> 1.0'
 pod 'IQKeyboardManagerSwift', '4.0.9'
 pod 'ASToast', '~> 1.0.9'
 pod 'INSPersistentContainer'
+pod "EVReflection"
 
   # Pods for Myly Swift
 

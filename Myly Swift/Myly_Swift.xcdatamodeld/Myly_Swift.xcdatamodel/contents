@@ -1,7 +1,32 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16E195" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="StuentDetails" representedClassName="StuentDetails" syncable="YES" codeGenerationType="class"/>
+    <entity name="StudentDetails" representedClassName="StudentDetails" syncable="YES">
+        <attribute name="branch_Name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="class_Name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="databaseID" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isSMSDisabled" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="notificationSettingID" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="profilePicture" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="schoolLogo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sMSBalance" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="sMSSettingID" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="student_BranchID" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="student_ClassID" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="student_DOB" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="student_EnrollmentNo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="student_FirstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="student_Gender" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="student_ID" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="student_IsActive" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="student_IsProfileImageUpload" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="student_IsSoftDelete" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="student_LastName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="student_MiddleName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="student_Password" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="student_PrimaryEmailID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="student_SchoolID" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
     <elements>
-        <element name="StuentDetails" positionX="-63" positionY="-18" width="128" height="45"/>
+        <element name="StudentDetails" positionX="-63" positionY="-18" width="128" height="405"/>
     </elements>
 </model>

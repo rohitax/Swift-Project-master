@@ -124,3 +124,60 @@ extension UIApplication {
         return controller
     }
 }
+
+extension String {
+    
+    func capitalizedFirst() -> String {
+        let first = self[self.startIndex ..< self.index(startIndex, offsetBy: 1)]
+        let rest = self[self.index(startIndex, offsetBy: 1) ..< self.endIndex]
+        return first.uppercased() + rest.lowercased()
+    }
+    
+    func capitalizedFirst(with: Locale?) -> String {
+        let first = self[self.startIndex ..< self.index(startIndex, offsetBy: 1)]
+        let rest = self[self.index(startIndex, offsetBy: 1) ..< self.endIndex]
+        return first.uppercased(with: with) + rest.lowercased(with: with)
+    }
+    
+    func lowerizedFirst() -> String {
+        let first = self[self.startIndex ..< self.index(startIndex, offsetBy: 1)]
+        let rest = self[self.index(startIndex, offsetBy: 1) ..< self.endIndex]
+        return first.lowercased() + rest.uppercased()
+    }
+    
+    func lowerizedFirst(with: Locale?) -> String {
+        let first = self[self.startIndex ..< self.index(startIndex, offsetBy: 1)]
+        let rest = self[self.index(startIndex, offsetBy: 1) ..< self.endIndex]
+        return first.lowercased(with: with) + rest.uppercased(with: with)
+    }
+}
+
+extension String {
+    
+    subscript (i: Int) -> Character {
+        return self[index(startIndex, offsetBy: i)]
+    }
+    
+    subscript (i: Int) -> String {
+        return String(self[i] as Character)
+    }
+    
+    subscript (r: Range<Int>) -> String {
+        let start = index(startIndex, offsetBy: r.lowerBound)
+        let end = index(startIndex, offsetBy: r.upperBound - r.lowerBound)
+        return self[Range(start ..< end)]
+    }
+}
+
+extension String {
+    
+    func lowerFirstCharacter() -> String {
+        var str_firstCharacter = self[0] as String
+        str_firstCharacter = str_firstCharacter.lowerizedFirst()
+        
+        var str_key = self
+        let index = str_key.index(str_key.startIndex, offsetBy: 0)
+        str_key.replaceSubrange(index...index, with: str_firstCharacter)
+        return str_key
+    }
+}

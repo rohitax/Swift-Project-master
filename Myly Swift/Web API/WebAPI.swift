@@ -12,10 +12,11 @@ import EZAlertController
 import KRProgressHUD
 import Alertift
 import ASToast
+import EVReflection
 
 class WebAPI: NSObject {
 
-    class func callWebAPI(parametersToBePassed param: Dictionary<String, Any>, functionToBeCalled function: String, controller: UIViewController, completion: @escaping (_ response: Dictionary<String, String>) -> Void) {
+    class func callWebAPI(parametersToBePassed param: Dictionary<String, Any>, functionToBeCalled function: String, controller: UIViewController, completion: @escaping (_ response: Dictionary<String, Any>) -> Void) {
         
         if !Reachability.isConnectedToNetwork() {
             
@@ -66,17 +67,28 @@ class WebAPI: NSObject {
                     
                     let myJson = try JSONSerialization.jsonObject(with: response.data!, options: JSONSerialization.ReadingOptions.allowFragments) as Any
                     
-                    let dict_response = Delegate.appDelegate.convertToDictionary(text: myJson as! String)
-                    print(dict_response ?? kError)
+//                    let jsonData = myJson.data(using: .utf8)
+//                    
+//                    // then try to convert it to json object
+//                    do {
+//                        let json = try JSONSerialization.jsonObject(with: jsonData!, options: JSONSerialization.ReadingOptions.mutableContainers) as! [String : AnyObject]
+//                        // now you can try to parse your json
+//                        let dict_response = json as Dictionary
+//                        print("dict_response:\n\(dict_response)")
+//                    } catch let error as NSError {
+//                        print(error.localizedDescription)
+//                    }
                     
-                    if dict_response != nil {
-                        
-                        let convertedDict: [String: String] = dict_response!.mapPairs { (key, value) in
-                            (key, String(describing: value))
-                        }
-                        completion(convertedDict)
-                    }
                     
+                    let dict_response = NSMutableDictionary(json: myJson as! String)
+                    print("dict_response:\n\(dict_response)")
+                    
+                    let post_paramsValue = dict_response as! Dictionary<String,Any>
+                    
+//                    let convertedDict: [String: String] = post_paramsValue.mapPairs { (key, value) in
+//                        (key, String(describing: value))
+//                    }
+                    completion(post_paramsValue)
                 }
                 catch let error as NSError {
                     print(error.description)

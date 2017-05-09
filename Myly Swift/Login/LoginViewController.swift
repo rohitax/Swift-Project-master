@@ -12,6 +12,7 @@ import EZAlertController
 import TKKeyboardControl
 import Alamofire
 import Alertift
+import CoreData
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
 
@@ -20,7 +21,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
 
@@ -72,23 +73,80 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                         "Password": self.txt_password.text!,
                         "AppName": "myly"]
             
-            WebAPI.callWebAPI(parametersToBePassed: dict, functionToBeCalled: kPostParentLogin, controller: self, completion: {(response: Dictionary<String, String>) -> Void in
+            WebAPI.callWebAPI(parametersToBePassed: dict, functionToBeCalled: kPostParentLogin, controller: self, completion: {(response: Dictionary<String, Any>) -> Void in
                 
                 if response["ResponseCode"] != nil {
                     
-                    if response["ResponseCode"] == "1" {
-                        
+                    let responseCode = response["ResponseCode"] as! NSNumber
+                    
+                    if responseCode == 1 {
+                        self.saveStudentDetails(response)
                     }
                     else {
                         
                         let message = response["StudentDetails"] ?? kError
                         Alertift.alert(title: kProjectName,
-                                       message: message)
+                                       message: message as? String)
                             .action(.default("OK"))
                             .show(on: self)
                     }
                 }
             })
+        }
+    }
+    
+    func saveStudentDetails(_ dict_response: Dictionary<String, Any>) -> Void {
+        
+        let container = NSPersistentContainer(name: "Myly_Swift")
+        container.performBackgroundTask() { (moc) in
+            //let managedObjectContext = Delegate.appDelegate.persistentContainer.viewContext
+            
+            let entity = NSEntityDescription.entity(forEntityName: "StudentDetails", in: moc)!
+            
+            let arr_studentDetails: Array = dict_response["StudentDetails"] as! [Dictionary<String, Any>]
+            
+            for dict_studentDetails in arr_studentDetails {
+                
+                let obj_studentDetails = StudentDetails(entity: entity, insertInto: moc)
+                //let obj = StudentDetails(entity: entity, insertInto: moc)
+                
+                for (key, element) in dict_studentDetails {
+                    
+                    if ((element as? NSNull) == nil)  {
+                        obj_studentDetails.setValue(element, forKey: key.lowerFirstCharacter())
+                    }
+                    else {
+                        obj_studentDetails.setValue(nil, forKey: key.lowerFirstCharacter())
+                    }
+                }
+                
+                do {
+                    try moc.save()
+                } catch let error as NSError {
+                    print("Could not save. \(error), \(error.userInfo)")
+                }
+            }
+        }
+        return
+        let managedObjectContext = Delegate.appDelegate.persistentContainer.viewContext
+        
+        let entity = NSEntityDescription.entity(forEntityName: "StudentDetails", in: managedObjectContext)!
+        
+        let arr_studentDetails: Array = dict_response["StudentDetails"] as! [Dictionary<String, Any>]
+        
+        for dict_studentDetails in arr_studentDetails {
+            
+            let obj_studentDetails = NSManagedObject(entity: entity, insertInto: managedObjectContext)
+            
+            for (key, element) in dict_studentDetails {
+                obj_studentDetails.setValue(element, forKey: key.lowerFirstCharacter())
+            }
+            
+            do {
+                try managedObjectContext.save()
+            } catch let error as NSError {
+                print("Could not save. \(error), \(error.userInfo)")
+            }
         }
     }
     

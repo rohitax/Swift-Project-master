@@ -14,6 +14,8 @@
 		3C7D7D9E1EB48CBC008AB85C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C7D7D9D1EB48CBC008AB85C /* Assets.xcassets */; };
 		3C7D7DA11EB48CBC008AB85C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C7D7D9F1EB48CBC008AB85C /* LaunchScreen.storyboard */; };
 		4F9B891881737109755614A4 /* Pods_Myly_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96E99A059177FE664B67A3BC /* Pods_Myly_Swift.framework */; };
+		CB8139A41EC1F90F00C14AF6 /* StudentDetails+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8139A21EC1F90F00C14AF6 /* StudentDetails+CoreDataClass.swift */; };
+		CB8139A51EC1F90F00C14AF6 /* StudentDetails+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8139A31EC1F90F00C14AF6 /* StudentDetails+CoreDataProperties.swift */; };
 		CB96E8341EB7372400139F22 /* AppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB96E8331EB7372400139F22 /* AppConstant.swift */; };
 		CBBE16091EB9D59900E0C9E8 /* WebAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBE16081EB9D59900E0C9E8 /* WebAPI.swift */; };
 		CBBE160B1EBA0BAC00E0C9E8 /* Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBE160A1EBA0BAC00E0C9E8 /* Delegate.swift */; };
@@ -31,6 +33,8 @@
 		3C7D7DAA1EB49BD0008AB85C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Login/LoginViewController.swift; sourceTree = "<group>"; };
 		96E99A059177FE664B67A3BC /* Pods_Myly_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Myly_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABDFA556FED13FA460A17001 /* Pods-Myly Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Myly Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Myly Swift/Pods-Myly Swift.debug.xcconfig"; sourceTree = "<group>"; };
+		CB8139A21EC1F90F00C14AF6 /* StudentDetails+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "StudentDetails+CoreDataClass.swift"; path = "CoreData Classes/StudentDetails+CoreDataClass.swift"; sourceTree = "<group>"; };
+		CB8139A31EC1F90F00C14AF6 /* StudentDetails+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "StudentDetails+CoreDataProperties.swift"; path = "CoreData Classes/StudentDetails+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		CB96E8331EB7372400139F22 /* AppConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstant.swift; sourceTree = "<group>"; };
 		CBBE16081EB9D59900E0C9E8 /* WebAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebAPI.swift; path = "Web API/WebAPI.swift"; sourceTree = "<group>"; };
 		CBBE160A1EBA0BAC00E0C9E8 /* Delegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Delegate.swift; sourceTree = "<group>"; };
@@ -109,6 +113,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CB8139961EC19B0100C14AF6 /* CoreData Classes */ = {
+			isa = PBXGroup;
+			children = (
+				CB8139A21EC1F90F00C14AF6 /* StudentDetails+CoreDataClass.swift */,
+				CB8139A31EC1F90F00C14AF6 /* StudentDetails+CoreDataProperties.swift */,
+			);
+			name = "CoreData Classes";
+			sourceTree = "<group>";
+		};
 		CBBE16071EB9C2F300E0C9E8 /* Web API */ = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +133,7 @@
 		CBEC63051EBAEDB500C2B5A0 /* Common Files */ = {
 			isa = PBXGroup;
 			children = (
+				CB8139961EC19B0100C14AF6 /* CoreData Classes */,
 				CBBE160A1EBA0BAC00E0C9E8 /* Delegate.swift */,
 				CB96E8331EB7372400139F22 /* AppConstant.swift */,
 				CBEC63061EBAF7B900C2B5A0 /* Reachability.swift */,
@@ -255,7 +269,9 @@
 				CBBE16091EB9D59900E0C9E8 /* WebAPI.swift in Sources */,
 				3C1EFF141EB5DABE003D6CE4 /* LoginViewController.swift in Sources */,
 				3C7D7D9C1EB48CBC008AB85C /* Myly_Swift.xcdatamodeld in Sources */,
+				CB8139A51EC1F90F00C14AF6 /* StudentDetails+CoreDataProperties.swift in Sources */,
 				3C7D7D941EB48CBC008AB85C /* AppDelegate.swift in Sources */,
+				CB8139A41EC1F90F00C14AF6 /* StudentDetails+CoreDataClass.swift in Sources */,
 				CB96E8341EB7372400139F22 /* AppConstant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
