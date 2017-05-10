@@ -1,4 +1,5 @@
 PODS:
+  - AERecord (4.0.0)
   - Alamofire (4.4.0)
   - Alertift (1.3)
   - ASToast (1.0.9)
@@ -14,6 +15,7 @@ PODS:
   - UIViewController+BHTKeyboardAnimationBlocks (0.0.2)
 
 DEPENDENCIES:
+  - AERecord
   - Alamofire (~> 4.4)
   - Alertift (~> 1.0)
   - ASToast (~> 1.0.9)
@@ -27,6 +29,7 @@ DEPENDENCIES:
   - UIViewController+BHTKeyboardAnimationBlocks (~> 0.0.2)
 
 SPEC CHECKSUMS:
+  AERecord: 3a14a25972dc60ed7c7b3fd62f62a5fc32ef6edd
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
   Alertift: e9a2d1e31af55f8f44d4153d84fdf0f4657bad24
   ASToast: 7b0a104bba38264e2525924a6ab60dde972d0c83
@@ -39,6 +42,6 @@ SPEC CHECKSUMS:
   TKKeyboardControl: 32a07ab35fa0540062b22e323776d7fb0a8fb48a
   UIViewController+BHTKeyboardAnimationBlocks: 4996f7909cb141f19e9544720e5bb79de20e4db9
 
-PODFILE CHECKSUM: beca1e1aee4fdfad0dfde4b7c07c856a9420b759
+PODFILE CHECKSUM: b04fedcc4ed36a07cf3a32d9c4913d07614fcf83
 
 COCOAPODS: 1.2.1

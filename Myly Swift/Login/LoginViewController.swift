@@ -13,6 +13,9 @@ import TKKeyboardControl
 import Alamofire
 import Alertift
 import CoreData
+import AERecord
+
+let context = Delegate.appDelegate.persistentContainer.viewContext
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
 
@@ -22,6 +25,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let arr = StudentDetails.all()
+        print(arr ?? "")
         // Do any additional setup after loading the view.
     }
 
@@ -97,55 +102,46 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     func saveStudentDetails(_ dict_response: Dictionary<String, Any>) -> Void {
         
-        let container = NSPersistentContainer(name: "Myly_Swift")
-        container.performBackgroundTask() { (moc) in
-            //let managedObjectContext = Delegate.appDelegate.persistentContainer.viewContext
+        
+        
+        let managedObjectContext = Delegate.appDelegate.persistentContainer.viewContext
+        let privateContext = NSManagedObjectContext(concurrencyType: .privateQueueConcurrencyType)
+        privateContext.persistentStoreCoordinator = managedObjectContext.persistentStoreCoordinator
+        privateContext.perform {
             
-            let entity = NSEntityDescription.entity(forEntityName: "StudentDetails", in: moc)!
+            let entity = NSEntityDescription.entity(forEntityName: StudentDetails.description(), in: managedObjectContext)!
             
             let arr_studentDetails: Array = dict_response["StudentDetails"] as! [Dictionary<String, Any>]
             
             for dict_studentDetails in arr_studentDetails {
                 
-                let obj_studentDetails = StudentDetails(entity: entity, insertInto: moc)
+                let obj_studentDetails = StudentDetails(entity: entity, insertInto: managedObjectContext)
                 //let obj = StudentDetails(entity: entity, insertInto: moc)
                 
+                var dict_object = [String: Any]()
                 for (key, element) in dict_studentDetails {
                     
+                    var str_key = key
                     if ((element as? NSNull) == nil)  {
-                        obj_studentDetails.setValue(element, forKey: key.lowerFirstCharacter())
+                        dict_object[key] = element
+                        obj_studentDetails.setValue(element, forKey: str_key.lowerFirstCharacter())
+                        
                     }
                     else {
-                        obj_studentDetails.setValue(nil, forKey: key.lowerFirstCharacter())
+                        dict_object[key] = nil
+                        obj_studentDetails.setValue(nil, forKey: str_key.lowerFirstCharacter())
                     }
+                    
                 }
-                
-                do {
-                    try moc.save()
-                } catch let error as NSError {
-                    print("Could not save. \(error), \(error.userInfo)")
-                }
-            }
-        }
-        return
-        let managedObjectContext = Delegate.appDelegate.persistentContainer.viewContext
-        
-        let entity = NSEntityDescription.entity(forEntityName: "StudentDetails", in: managedObjectContext)!
-        
-        let arr_studentDetails: Array = dict_response["StudentDetails"] as! [Dictionary<String, Any>]
-        
-        for dict_studentDetails in arr_studentDetails {
-            
-            let obj_studentDetails = NSManagedObject(entity: entity, insertInto: managedObjectContext)
-            
-            for (key, element) in dict_studentDetails {
-                obj_studentDetails.setValue(element, forKey: key.lowerFirstCharacter())
-            }
-            
-            do {
-                try managedObjectContext.save()
-            } catch let error as NSError {
-                print("Could not save. \(error), \(error.userInfo)")
+                var obj = StudentDetails.firstOrCreate(with: "student_ID", value: dict_object["Student_ID"])
+                print(obj)
+                // save context
+                AERecord.save() // save default context
+//                do {
+//                    try managedObjectContext.save()
+//                } catch let error as NSError {
+//                    print("Could not save. \(error), \(error.userInfo)")
+//                }
             }
         }
     }

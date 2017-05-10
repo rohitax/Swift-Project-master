@@ -9,18 +9,23 @@
 import UIKit
 import CoreData
 import IQKeyboardManagerSwift
+import AERecord
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
         IQKeyboardManager.sharedManager().enable = true
+        
+        do {
+            try AERecord.loadCoreDataStack()
+        } catch {
+            print(error)
+        }
         
         return true
     }
@@ -171,13 +176,13 @@ extension String {
 
 extension String {
     
-    func lowerFirstCharacter() -> String {
+    mutating func lowerFirstCharacter() -> String {
         var str_firstCharacter = self[0] as String
         str_firstCharacter = str_firstCharacter.lowerizedFirst()
         
-        var str_key = self
-        let index = str_key.index(str_key.startIndex, offsetBy: 0)
-        str_key.replaceSubrange(index...index, with: str_firstCharacter)
-        return str_key
+        let index = self.index(self.startIndex, offsetBy: 0)
+        self.replaceSubrange(index...index, with: str_firstCharacter)
+        return self
     }
 }
+
