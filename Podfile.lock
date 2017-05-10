@@ -12,7 +12,6 @@ PODS:
   - KRProgressHUD (2.2.2)
   - SkyFloatingLabelTextField (3.1.0)
   - TKKeyboardControl (1.0.8)
-  - UIViewController+BHTKeyboardAnimationBlocks (0.0.2)
 
 DEPENDENCIES:
   - AERecord
@@ -26,7 +25,6 @@ DEPENDENCIES:
   - KRProgressHUD
   - SkyFloatingLabelTextField (~> 3.0)
   - TKKeyboardControl
-  - UIViewController+BHTKeyboardAnimationBlocks (~> 0.0.2)
 
 SPEC CHECKSUMS:
   AERecord: 3a14a25972dc60ed7c7b3fd62f62a5fc32ef6edd
@@ -40,8 +38,7 @@ SPEC CHECKSUMS:
   KRProgressHUD: ee25f70e274d1933b2ad0c8583a8552a349ce85d
   SkyFloatingLabelTextField: 26a92ad407044dd5a7c3e4e348738ff0991514fe
   TKKeyboardControl: 32a07ab35fa0540062b22e323776d7fb0a8fb48a
-  UIViewController+BHTKeyboardAnimationBlocks: 4996f7909cb141f19e9544720e5bb79de20e4db9
 
-PODFILE CHECKSUM: b04fedcc4ed36a07cf3a32d9c4913d07614fcf83
+PODFILE CHECKSUM: 078edde02cd43597d46823a2eaaa912a949d0d7a
 
 COCOAPODS: 1.2.1

@@ -100,7 +100,6 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/KRProgressHUD/KRProgressHUD.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework"
   install_framework "$BUILT_PRODUCTS_DIR/TKKeyboardControl/TKKeyboardControl.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/UIViewController+BHTKeyboardAnimationBlocks/UIViewController_BHTKeyboardAnimationBlocks.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/AERecord/AERecord.framework"
@@ -114,7 +113,6 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/KRProgressHUD/KRProgressHUD.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework"
   install_framework "$BUILT_PRODUCTS_DIR/TKKeyboardControl/TKKeyboardControl.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/UIViewController+BHTKeyboardAnimationBlocks/UIViewController_BHTKeyboardAnimationBlocks.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

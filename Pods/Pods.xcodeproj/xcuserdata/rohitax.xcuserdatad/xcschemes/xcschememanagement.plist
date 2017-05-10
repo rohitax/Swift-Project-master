@@ -4,7 +4,47 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>AERecord.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ASToast.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Alamofire.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Alertift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>EVReflection.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>EZAlertController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>INSPersistentContainer.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>IQKeyboardManagerSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>KRProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -24,35 +64,65 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>UIViewController+BHTKeyboardAnimationBlocks.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>0244C67B543376F67421E6300CAEECB0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>024EE761C19C027DAFB37AE453EFB1E6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>082612B653D8E7E7C2A49DA243566287</key>
+		<key>2D8041EFC6B4949422E120A744E84259</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6291CD6A8A8973F44540F6825FFB3C90</key>
+		<key>3A66455BB54C60581ED2154CB2279474</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7D37680455DA971045DF016A761C55B3</key>
+		<key>41719BA5DD69011FCC2BDBE320DE210D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7E0BCF041DE05462955C28D6D66DEE34</key>
+		<key>4DC059E04CBA98AEDDB5C34E02D551E9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>511C8C43974BF980E3DDFC85EA96E4F3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>518FEC8C4A3A393FEC2C56F4ADFCF9D3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A9ACEF2C498EF8F83B78A83DB2C1F172</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D312B66A7E9C0AA555A2891FD0EFE21C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EE529DE55BCDAFDE8194040AF1ED32FB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
