@@ -30,12 +30,14 @@ class ForgotPasswordViewController: UIViewController, UITextFieldDelegate {
             // Animation block is handled for you
             
         }, constraintBasedActionHandler: nil)
+        
+        self.setNoteTextInTextView()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         
+        self.view.endEditing(true)
         self.view.removeKeyboardControl()
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -96,6 +98,31 @@ class ForgotPasswordViewController: UIViewController, UITextFieldDelegate {
         }
     }
 
+    // MARK: - Custom Methods
+    
+    func setNoteTextInTextView() {
+        
+        let str_mutableAttributedString = NSMutableAttributedString(string: kForgotPasswordNoteForMyly, attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 14.0)])
+        
+        let rangeOfString = str_mutableAttributedString.string.range(of: "support@mylyapp.com")
+        
+        let nsRange = str_mutableAttributedString.string.nsRange(from: rangeOfString!)
+        
+        str_mutableAttributedString.addAttributes([NSForegroundColorAttributeName: UIColor.blue], range: nsRange)
+        
+        self.txt_note.attributedText = str_mutableAttributedString
+        self.txt_note.textAlignment = NSTextAlignment.center
+    }
+    
+    // MARK: - UITextField Delegate Methods
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        let compSepByCharInSet = string.components(separatedBy: numberSet)
+        let numberFiltered = compSepByCharInSet.joined(separator: "")
+        return string == numberFiltered
+    }
+    
     /*
     // MARK: - Navigation
 

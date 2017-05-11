@@ -17,6 +17,7 @@
 		CB8139A41EC1F90F00C14AF6 /* StudentDetails+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8139A21EC1F90F00C14AF6 /* StudentDetails+CoreDataClass.swift */; };
 		CB8139A51EC1F90F00C14AF6 /* StudentDetails+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8139A31EC1F90F00C14AF6 /* StudentDetails+CoreDataProperties.swift */; };
 		CB91EC901EC4624A00E6692B /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB91EC8F1EC4624A00E6692B /* ForgotPasswordViewController.swift */; };
+		CB91EC921EC4922F00E6692B /* WelcomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB91EC911EC4922F00E6692B /* WelcomeScreenViewController.swift */; };
 		CB96E8341EB7372400139F22 /* AppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB96E8331EB7372400139F22 /* AppConstant.swift */; };
 		CBBE16091EB9D59900E0C9E8 /* WebAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBE16081EB9D59900E0C9E8 /* WebAPI.swift */; };
 		CBBE160B1EBA0BAC00E0C9E8 /* Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBE160A1EBA0BAC00E0C9E8 /* Delegate.swift */; };
@@ -37,6 +38,7 @@
 		CB8139A21EC1F90F00C14AF6 /* StudentDetails+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "StudentDetails+CoreDataClass.swift"; path = "CoreData Classes/StudentDetails+CoreDataClass.swift"; sourceTree = "<group>"; };
 		CB8139A31EC1F90F00C14AF6 /* StudentDetails+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "StudentDetails+CoreDataProperties.swift"; path = "CoreData Classes/StudentDetails+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		CB91EC8F1EC4624A00E6692B /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ForgotPasswordViewController.swift; path = Login/ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		CB91EC911EC4922F00E6692B /* WelcomeScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeScreenViewController.swift; sourceTree = "<group>"; };
 		CB96E8331EB7372400139F22 /* AppConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstant.swift; sourceTree = "<group>"; };
 		CBBE16081EB9D59900E0C9E8 /* WebAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebAPI.swift; path = "Web API/WebAPI.swift"; sourceTree = "<group>"; };
 		CBBE160A1EBA0BAC00E0C9E8 /* Delegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Delegate.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 		3C7D7DA81EB49B9A008AB85C /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				CB91EC911EC4922F00E6692B /* WelcomeScreenViewController.swift */,
 				3C7D7DAA1EB49BD0008AB85C /* LoginViewController.swift */,
 				CB91EC8F1EC4624A00E6692B /* ForgotPasswordViewController.swift */,
 			);
@@ -272,6 +275,7 @@
 				CBBE160B1EBA0BAC00E0C9E8 /* Delegate.swift in Sources */,
 				CBBE16091EB9D59900E0C9E8 /* WebAPI.swift in Sources */,
 				3C1EFF141EB5DABE003D6CE4 /* LoginViewController.swift in Sources */,
+				CB91EC921EC4922F00E6692B /* WelcomeScreenViewController.swift in Sources */,
 				3C7D7D9C1EB48CBC008AB85C /* Myly_Swift.xcdatamodeld in Sources */,
 				CB8139A51EC1F90F00C14AF6 /* StudentDetails+CoreDataProperties.swift in Sources */,
 				CB91EC901EC4624A00E6692B /* ForgotPasswordViewController.swift in Sources */,
@@ -407,14 +411,11 @@
 					"\"$PODS_CONFIGURATION_BUILD_DIR/ASToast\"",
 					"\"$PODS_CONFIGURATION_BUILD_DIR/Alamofire\"",
 					"\"$PODS_CONFIGURATION_BUILD_DIR/Alertift\"",
-					"\"$PODS_CONFIGURATION_BUILD_DIR/EZAlertController\"",
 					"\"$PODS_CONFIGURATION_BUILD_DIR/INSPersistentContainer\"",
 					"\"$PODS_CONFIGURATION_BUILD_DIR/IQKeyboardManagerSwift\"",
 					"\"$PODS_CONFIGURATION_BUILD_DIR/KRProgressHUD\"",
 					"\"$PODS_CONFIGURATION_BUILD_DIR/SkyFloatingLabelTextField\"",
-					"\"$PODS_CONFIGURATION_BUILD_DIR/Sync\"",
 					"\"$PODS_CONFIGURATION_BUILD_DIR/TKKeyboardControl\"",
-					"\"$PODS_CONFIGURATION_BUILD_DIR/UIViewController+BHTKeyboardAnimationBlocks\"",
 				);
 				INFOPLIST_FILE = "Myly Swift/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -438,14 +439,11 @@
 					"\"$PODS_CONFIGURATION_BUILD_DIR/ASToast\"",
 					"\"$PODS_CONFIGURATION_BUILD_DIR/Alamofire\"",
 					"\"$PODS_CONFIGURATION_BUILD_DIR/Alertift\"",
-					"\"$PODS_CONFIGURATION_BUILD_DIR/EZAlertController\"",
 					"\"$PODS_CONFIGURATION_BUILD_DIR/INSPersistentContainer\"",
 					"\"$PODS_CONFIGURATION_BUILD_DIR/IQKeyboardManagerSwift\"",
 					"\"$PODS_CONFIGURATION_BUILD_DIR/KRProgressHUD\"",
 					"\"$PODS_CONFIGURATION_BUILD_DIR/SkyFloatingLabelTextField\"",
-					"\"$PODS_CONFIGURATION_BUILD_DIR/Sync\"",
 					"\"$PODS_CONFIGURATION_BUILD_DIR/TKKeyboardControl\"",
-					"\"$PODS_CONFIGURATION_BUILD_DIR/UIViewController+BHTKeyboardAnimationBlocks\"",
 				);
 				INFOPLIST_FILE = "Myly Swift/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;

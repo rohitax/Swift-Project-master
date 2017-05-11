@@ -38,8 +38,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     override func viewWillDisappear(_ animated: Bool) {
         
+        self.view.endEditing(true)
         self.view.removeKeyboardControl()
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -176,6 +176,18 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         } catch let error as NSError {
             print("Could not save. \(error), \(error.userInfo)")
         }
+    }
+    
+    // MARK: - UITextField Delegate Methods
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        if textField == self.txt_username {
+            let compSepByCharInSet = string.components(separatedBy: numberSet)
+            let numberFiltered = compSepByCharInSet.joined(separator: "")
+            return string == numberFiltered
+        }
+        return true
     }
     
     /*
