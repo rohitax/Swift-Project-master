@@ -15,6 +15,7 @@ class WelcomeScreenViewController: UIViewController, UIScrollViewDelegate {
     
     let arr_images = ["img_welcome1", "img_welcome2", "img_welcome3", "img_welcome4", "img_welcome5"]
     var frame = CGRect(x: 0, y: 0, width: 0, height: 0)
+    let screenSize: CGRect = UIScreen.main.bounds
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +24,12 @@ class WelcomeScreenViewController: UIViewController, UIScrollViewDelegate {
         self.addImagesInScrollView()
     }
 
+    override var prefersStatusBarHidden: Bool {
+        get {
+            return true
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -31,8 +38,6 @@ class WelcomeScreenViewController: UIViewController, UIScrollViewDelegate {
     // MARK: - Custom Methods
     
     func addImagesInScrollView() -> Void {
-        
-        let screenSize: CGRect = UIScreen.main.bounds
         
         for index in 0 ..< arr_images.count {
             
@@ -51,14 +56,27 @@ class WelcomeScreenViewController: UIViewController, UIScrollViewDelegate {
     
     // MARK: - Action Methods
     
-    @IBAction func btn_skip_tap(_ sender: Any) {
+    @IBAction func btn_skip_tap(_ sender: Any?) {
+        
+        let navigationController = self.storyboard?.instantiateViewController(withIdentifier: "LoginNavigation")
+        self.present(navigationController!, animated: true)
     }
 
     @IBAction func btn_next_tap(_ sender: Any) {
         
-        self.scrollview.setContentOffset(CGPoint(self.view_scrollView.contentOffset.x + [[UIScreen mainScreen] bounds].size.width, self.view_scrollView.contentOffset.y), animated: true)
+        let count = CGFloat(self.arr_images.count - 1)
+        if self.scrollview.contentOffset.x >= (count * screenSize.size.width) {
+            self.btn_skip_tap(nil)
+            return
+        }
         
-//        [self.view_scrollView setContentOffset:CGPointMake(self.view_scrollView.contentOffset.x + [[UIScreen mainScreen] bounds].size.width, self.view_scrollView.contentOffset.y)];
+        self.scrollview.setContentOffset(CGPoint(x: self.scrollview.contentOffset.x + screenSize.size.width, y: self.scrollview.contentOffset.y), animated: true)
+    }
+    
+    @IBAction func pageControl_tap(_ sender: UIPageControl) {
+        
+        let page = CGFloat(sender.currentPage)
+        self.scrollview.setContentOffset(CGPoint(x: (page * screenSize.size.width), y: self.scrollview.contentOffset.y), animated: true)
     }
     
     // MARK: - UIScrollView Delegate Methods

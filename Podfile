@@ -14,6 +14,7 @@ pod 'IQKeyboardManagerSwift', '4.0.9'
 pod 'ASToast', '~> 1.0.9'
 pod 'INSPersistentContainer'
 pod "EVReflection"
+pod 'FormToolbar', '~> 1.0'
 
   # Pods for Myly Swift
 

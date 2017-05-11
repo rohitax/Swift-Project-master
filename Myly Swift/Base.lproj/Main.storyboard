@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="K5O-be-n7D">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="K5O-be-n7D">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -174,8 +174,7 @@
         <!--Navigation Controller-->
         <scene sceneID="zUq-Ha-9Cq">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nhk-h3-Eaq" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="x5j-mw-zVP" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="LoginNavigation" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" navigationBarHidden="YES" id="x5j-mw-zVP" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dUM-cn-Vm5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -186,6 +185,7 @@
                         <segue destination="5w7-9K-0Jw" kind="relationship" relationship="rootViewController" id="NXk-V0-6nQ"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nhk-h3-Eaq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1765.5999999999999" y="1226.5367316341831"/>
         </scene>
@@ -356,11 +356,14 @@
                                                     <action selector="btn_next_tap:" destination="K5O-be-n7D" eventType="touchUpInside" id="d4T-BC-qX7"/>
                                                 </connections>
                                             </button>
-                                            <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="PGi-Y4-aBU">
+                                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="PGi-Y4-aBU">
                                                 <rect key="frame" x="133" y="4" width="110" height="37"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="110" id="ce8-Ci-zWH"/>
                                                 </constraints>
+                                                <connections>
+                                                    <action selector="pageControl_tap:" destination="K5O-be-n7D" eventType="valueChanged" id="90S-vA-QfU"/>
+                                                </connections>
                                             </pageControl>
                                         </subviews>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

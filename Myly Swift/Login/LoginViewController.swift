@@ -11,6 +11,7 @@ import SkyFloatingLabelTextField
 import TKKeyboardControl
 import Alertift
 import CoreData
+import FormToolbar
 
 let managedObjectContext = Delegate.appDelegate.persistentContainer.viewContext
 
@@ -20,10 +21,19 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var txt_password: SkyFloatingLabelTextField!
     @IBOutlet weak var txt_note: UITextView!
     
+    private lazy var toolbar: FormToolbar = {
+        return FormToolbar(inputs: self.inputs)
+    }()
+    
+    private var inputs: [FormInput] {
+        return [txt_username, txt_password]
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -188,6 +198,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             return string == numberFiltered
         }
         return true
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        toolbar.update()
     }
     
     /*

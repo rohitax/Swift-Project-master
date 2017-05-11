@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '024EE761C19C027DAFB37AE453EFB1E6'
-               BlueprintName = 'EZAlertController'
+               BlueprintIdentifier = 'A0695E9C6283C5898B80CC2738691684'
+               BlueprintName = 'FormToolbar'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'EZAlertController.framework'>
+               BuildableName = 'FormToolbar.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

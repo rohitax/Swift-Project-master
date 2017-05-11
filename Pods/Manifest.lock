@@ -2,9 +2,10 @@ PODS:
   - Alamofire (4.4.0)
   - Alertift (1.3)
   - ASToast (1.0.9)
-  - EVReflection (4.10.2):
-    - EVReflection/Core (= 4.10.2)
-  - EVReflection/Core (4.10.2)
+  - EVReflection (4.11.0):
+    - EVReflection/Core (= 4.11.0)
+  - EVReflection/Core (4.11.0)
+  - FormToolbar (1.0)
   - INSPersistentContainer (1.0.2)
   - IQKeyboardManagerSwift (4.0.9)
   - KRProgressHUD (2.2.2)
@@ -16,6 +17,7 @@ DEPENDENCIES:
   - Alertift (~> 1.0)
   - ASToast (~> 1.0.9)
   - EVReflection
+  - FormToolbar (~> 1.0)
   - INSPersistentContainer
   - IQKeyboardManagerSwift (= 4.0.9)
   - KRProgressHUD
@@ -26,13 +28,14 @@ SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
   Alertift: e9a2d1e31af55f8f44d4153d84fdf0f4657bad24
   ASToast: 7b0a104bba38264e2525924a6ab60dde972d0c83
-  EVReflection: 4dfcad0b628a91ede5cad724e0609277369bf157
+  EVReflection: 21bb2070ed8cbfccebcf1a287feda13cb7538039
+  FormToolbar: 4def0dd90e2c9165e0f14e36a9ec6d3ba783b9f8
   INSPersistentContainer: 7e04a0d332ba075441ce0ee73d584ce84d76ac23
   IQKeyboardManagerSwift: 2eefe6c429b86aa08bfbc1b5c891164d754adf91
   KRProgressHUD: ee25f70e274d1933b2ad0c8583a8552a349ce85d
   SkyFloatingLabelTextField: 26a92ad407044dd5a7c3e4e348738ff0991514fe
   TKKeyboardControl: 32a07ab35fa0540062b22e323776d7fb0a8fb48a
 
-PODFILE CHECKSUM: 9a6ddc6f2ff40df1ba186a2b3bebc6ee3907871b
+PODFILE CHECKSUM: 255d138a3cff240c009e2b4ce8b901ebc5687802
 
 COCOAPODS: 1.2.1
