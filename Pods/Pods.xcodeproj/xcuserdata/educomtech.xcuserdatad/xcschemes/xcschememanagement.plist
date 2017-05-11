@@ -4,11 +4,6 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>AERecord.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>ASToast.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -25,11 +20,6 @@
 			<false/>
 		</dict>
 		<key>EVReflection.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>EZAlertController.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -64,20 +54,15 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>UIViewController+BHTKeyboardAnimationBlocks.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>024EE761C19C027DAFB37AE453EFB1E6</key>
+		<key>0FF4FBAA02B7F04E0B717566752D52FB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>20AA0688CDD5A8ED0084E53F7897223A</key>
+		<key>2D08CBC27CE162028C7B1EBBDBC7B0D0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -102,7 +87,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5748DE9AB00D94453A39AF06A05151ED</key>
+		<key>728175190D773E33D0D735418A10D300</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -117,22 +102,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CD381D7656EE9B863DA52AFAC9855959</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>D312B66A7E9C0AA555A2891FD0EFE21C</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>EE529DE55BCDAFDE8194040AF1ED32FB</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F63A388D2D8F79FD8A2E6ECE33F46638</key>
 		<dict>
 			<key>primary</key>
 			<true/>

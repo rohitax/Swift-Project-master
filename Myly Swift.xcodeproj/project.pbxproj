@@ -16,6 +16,7 @@
 		4F9B891881737109755614A4 /* Pods_Myly_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96E99A059177FE664B67A3BC /* Pods_Myly_Swift.framework */; };
 		CB8139A41EC1F90F00C14AF6 /* StudentDetails+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8139A21EC1F90F00C14AF6 /* StudentDetails+CoreDataClass.swift */; };
 		CB8139A51EC1F90F00C14AF6 /* StudentDetails+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8139A31EC1F90F00C14AF6 /* StudentDetails+CoreDataProperties.swift */; };
+		CB91EC901EC4624A00E6692B /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB91EC8F1EC4624A00E6692B /* ForgotPasswordViewController.swift */; };
 		CB96E8341EB7372400139F22 /* AppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB96E8331EB7372400139F22 /* AppConstant.swift */; };
 		CBBE16091EB9D59900E0C9E8 /* WebAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBE16081EB9D59900E0C9E8 /* WebAPI.swift */; };
 		CBBE160B1EBA0BAC00E0C9E8 /* Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBE160A1EBA0BAC00E0C9E8 /* Delegate.swift */; };
@@ -35,6 +36,7 @@
 		ABDFA556FED13FA460A17001 /* Pods-Myly Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Myly Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Myly Swift/Pods-Myly Swift.debug.xcconfig"; sourceTree = "<group>"; };
 		CB8139A21EC1F90F00C14AF6 /* StudentDetails+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "StudentDetails+CoreDataClass.swift"; path = "CoreData Classes/StudentDetails+CoreDataClass.swift"; sourceTree = "<group>"; };
 		CB8139A31EC1F90F00C14AF6 /* StudentDetails+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "StudentDetails+CoreDataProperties.swift"; path = "CoreData Classes/StudentDetails+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CB91EC8F1EC4624A00E6692B /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ForgotPasswordViewController.swift; path = Login/ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		CB96E8331EB7372400139F22 /* AppConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstant.swift; sourceTree = "<group>"; };
 		CBBE16081EB9D59900E0C9E8 /* WebAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebAPI.swift; path = "Web API/WebAPI.swift"; sourceTree = "<group>"; };
 		CBBE160A1EBA0BAC00E0C9E8 /* Delegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Delegate.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				3C7D7DAA1EB49BD0008AB85C /* LoginViewController.swift */,
+				CB91EC8F1EC4624A00E6692B /* ForgotPasswordViewController.swift */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 				TargetAttributes = {
 					3C7D7D8F1EB48CBC008AB85C = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = TDY7C42B99;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -270,6 +274,7 @@
 				3C1EFF141EB5DABE003D6CE4 /* LoginViewController.swift in Sources */,
 				3C7D7D9C1EB48CBC008AB85C /* Myly_Swift.xcdatamodeld in Sources */,
 				CB8139A51EC1F90F00C14AF6 /* StudentDetails+CoreDataProperties.swift in Sources */,
+				CB91EC901EC4624A00E6692B /* ForgotPasswordViewController.swift in Sources */,
 				3C7D7D941EB48CBC008AB85C /* AppDelegate.swift in Sources */,
 				CB8139A41EC1F90F00C14AF6 /* StudentDetails+CoreDataClass.swift in Sources */,
 				CB96E8341EB7372400139F22 /* AppConstant.swift in Sources */,
@@ -396,6 +401,7 @@
 			baseConfigurationReference = ABDFA556FED13FA460A17001 /* Pods-Myly Swift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = TDY7C42B99;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$PODS_CONFIGURATION_BUILD_DIR/ASToast\"",
@@ -426,6 +432,7 @@
 			baseConfigurationReference = E88873A72866D8E3539AB858 /* Pods-Myly Swift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = TDY7C42B99;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$PODS_CONFIGURATION_BUILD_DIR/ASToast\"",

@@ -8,7 +8,6 @@
 
 import UIKit
 import Alamofire
-import EZAlertController
 import KRProgressHUD
 import Alertift
 import ASToast
@@ -38,10 +37,13 @@ class WebAPI: NSObject {
         
         let headers: HTTPHeaders = ["Accept": "application/json", "Content-Type" :"application/json"]
         
-        Alamofire.request(kServerURL + function, method: .post, parameters: param, encoding: JSONEncoding.default, headers: headers).responseJSON { response in
+        var dict_parameters = param
+        dict_parameters["AppName"] = kAppNameMyly
+        
+        Alamofire.request(kServerURL + function, method: .post, parameters: dict_parameters, encoding: JSONEncoding.default, headers: headers).responseJSON { response in
             
             // original URL request
-            //print("Request is :", response.request!)
+            print("URL is :", response.request!)
             
             // HTTP URL response --> header and status code
             //print("Response received is :", response.response!)

@@ -9,7 +9,6 @@
 import UIKit
 import CoreData
 import IQKeyboardManagerSwift
-import AERecord
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,12 +19,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         IQKeyboardManager.sharedManager().enable = true
-        
-        do {
-            try AERecord.loadCoreDataStack()
-        } catch {
-            print(error)
-        }
         
         return true
     }

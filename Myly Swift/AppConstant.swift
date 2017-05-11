@@ -15,6 +15,9 @@ let kServerURL = "http://testapi.myly.in/MylyAPI/MylyApp.svc/"
 
 
 let kPostParentLogin = "PostParentLogin"
+let kPostForgotPassword = "PostForgotPassword"
 
 let kError = "Some error occured. Please try again later."
 let kNoInternetConnectivity = "No internet connection available."
+
+let kAppNameMyly = "myly"

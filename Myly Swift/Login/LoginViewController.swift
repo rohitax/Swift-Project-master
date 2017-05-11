@@ -8,25 +8,21 @@
 
 import UIKit
 import SkyFloatingLabelTextField
-import EZAlertController
 import TKKeyboardControl
-import Alamofire
 import Alertift
 import CoreData
-import AERecord
 
-let context = Delegate.appDelegate.persistentContainer.viewContext
+let managedObjectContext = Delegate.appDelegate.persistentContainer.viewContext
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var txt_username: SkyFloatingLabelTextField!
     @IBOutlet weak var txt_password: SkyFloatingLabelTextField!
+    @IBOutlet weak var txt_note: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let arr = StudentDetails.all()
-        print(arr ?? "")
         // Do any additional setup after loading the view.
     }
 
@@ -59,52 +55,64 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         if (txt_username.text!.isEmpty) ||
             (txt_password.text!.isEmpty) {
             
-            EZAlertController.alert(kProjectName,
-                                    message: txt_username.text!.isEmpty ? "Mobile Number is empty." : "Password is empty.",
-                                    acceptMessage: "OK",
-                                    acceptBlock: {
-                
-                if (self.txt_username.text!.isEmpty) {
-                    self.txt_username.becomeFirstResponder()
-                }
-                else {
-                    self.txt_password.becomeFirstResponder()
-                }
-            })
-        }
-        else {
-            
-            let dict = ["UserName": self.txt_username.text!,
-                        "Password": self.txt_password.text!,
-                        "AppName": "myly"]
-            
-            WebAPI.callWebAPI(parametersToBePassed: dict, functionToBeCalled: kPostParentLogin, controller: self, completion: {(response: Dictionary<String, Any>) -> Void in
-                
-                if response["ResponseCode"] != nil {
+            Alertift.alert(title: kProjectName,
+                           message: txt_username.text!.isEmpty ? "Mobile Number is empty." : "Password is empty.")
+                .action(.default("OK")) {
                     
-                    let responseCode = response["ResponseCode"] as! NSNumber
-                    
-                    if responseCode == 1 {
-                        self.saveStudentDetails(response)
+                    if (self.txt_username.text!.isEmpty) {
+                        self.txt_username.becomeFirstResponder()
                     }
                     else {
-                        
-                        let message = response["StudentDetails"] ?? kError
-                        Alertift.alert(title: kProjectName,
-                                       message: message as? String)
-                            .action(.default("OK"))
-                            .show(on: self)
+                        self.txt_password.becomeFirstResponder()
                     }
                 }
-            })
+                .show(on: self)
+        }
+        else {
+            self.loginTask()
         }
     }
     
+    @IBAction func btn_forgotPassword_tap(_ sender: AnyObject) {
+        
+        
+    }
+    
+    // MARK: - WS Methods
+    
+    func loginTask() -> Void {
+        
+        let dict_parameters = ["UserName": self.txt_username.text!,
+                               "Password": self.txt_password.text!]
+        
+        WebAPI.callWebAPI(parametersToBePassed: dict_parameters,
+                          functionToBeCalled: kPostParentLogin,
+                          controller: self,
+                          completion: {(response: Dictionary<String, Any>) -> Void in
+                            
+                            if response["ResponseCode"] != nil {
+                                
+                                let responseCode = response["ResponseCode"] as! NSNumber
+                                
+                                if responseCode == 1 {
+                                    self.saveStudentDetails(response)
+                                }
+                                else {
+                                    
+                                    let message = response["StudentDetails"] ?? kError
+                                    Alertift.alert(title: kProjectName,
+                                                   message: message as? String)
+                                        .action(.default("OK"))
+                                        .show(on: self)
+                                }
+                            }
+        })
+    }
+    
+    // MARK: - Custom Methods
+    
     func saveStudentDetails(_ dict_response: Dictionary<String, Any>) -> Void {
         
-        
-        
-        let managedObjectContext = Delegate.appDelegate.persistentContainer.viewContext
         let privateContext = NSManagedObjectContext(concurrencyType: .privateQueueConcurrencyType)
         privateContext.persistentStoreCoordinator = managedObjectContext.persistentStoreCoordinator
         privateContext.perform {
@@ -115,40 +123,59 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             
             for dict_studentDetails in arr_studentDetails {
                 
-                let obj_studentDetails = StudentDetails(entity: entity, insertInto: managedObjectContext)
-                //let obj = StudentDetails(entity: entity, insertInto: moc)
-                
-                var dict_object = [String: Any]()
-                for (key, element) in dict_studentDetails {
-                    
-                    var str_key = key
-                    if ((element as? NSNull) == nil)  {
-                        dict_object[key] = element
-                        obj_studentDetails.setValue(element, forKey: str_key.lowerFirstCharacter())
-                        
-                    }
-                    else {
-                        dict_object[key] = nil
-                        obj_studentDetails.setValue(nil, forKey: str_key.lowerFirstCharacter())
-                    }
-                    
+                if !self.checkIfStudentDetailsExist(dict_studentDetails) {
+                    let obj_studentDetails = StudentDetails(entity: entity, insertInto: managedObjectContext)
+                    self.saveDataInAttributes(dict_studentDetails, studentDetailObject: obj_studentDetails)
                 }
-                var obj = StudentDetails.firstOrCreate(with: "student_ID", value: dict_object["Student_ID"])
-                print(obj)
-                // save context
-                AERecord.save() // save default context
-//                do {
-//                    try managedObjectContext.save()
-//                } catch let error as NSError {
-//                    print("Could not save. \(error), \(error.userInfo)")
-//                }
             }
         }
     }
     
-    @IBAction func btn_forgotPassword_tap(_ sender: AnyObject) {
+    func checkIfStudentDetailsExist(_ dict_studentDetails: Dictionary<String, Any>) -> Bool {
         
+        let fetchRequest = NSFetchRequest<StudentDetails>(entityName: StudentDetails.description())
+        fetchRequest.predicate = NSPredicate(format: "student_ID == %f", dict_studentDetails["Student_ID"] as! Double);
+        fetchRequest.returnsObjectsAsFaults = false
         
+        do {
+            let arr_record = try managedObjectContext.fetch(fetchRequest)
+            
+            if arr_record.count > 0 {
+                let obj_studentDetails = arr_record[0]
+                self.saveDataInAttributes(dict_studentDetails, studentDetailObject: obj_studentDetails)
+                return true
+            }
+            
+        } catch let error as NSError {
+            print("Could not fetch. \(error), \(error.userInfo)")
+        }
+        
+        return false
+    }
+    
+    func saveDataInAttributes(_ dict_studentDetails: Dictionary<String, Any>,
+                              studentDetailObject obj_studentDetails: StudentDetails) -> Void {
+        
+        for (key, element) in dict_studentDetails {
+            
+            var str_key = key
+            if ((element as? NSNull) == nil)  {
+                obj_studentDetails.setValue(element, forKey: str_key.lowerFirstCharacter())
+            }
+            else {
+                obj_studentDetails.setValue(nil, forKey: str_key.lowerFirstCharacter())
+            }
+        }
+        self.save()
+    }
+    
+    func save() -> Void  {
+        
+        do {
+            try managedObjectContext.save()
+        } catch let error as NSError {
+            print("Could not save. \(error), \(error.userInfo)")
+        }
     }
     
     /*
