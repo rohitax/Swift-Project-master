@@ -42,6 +42,7 @@
 		CB96E8331EB7372400139F22 /* AppConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstant.swift; sourceTree = "<group>"; };
 		CBBE16081EB9D59900E0C9E8 /* WebAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebAPI.swift; path = "Web API/WebAPI.swift"; sourceTree = "<group>"; };
 		CBBE160A1EBA0BAC00E0C9E8 /* Delegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Delegate.swift; sourceTree = "<group>"; };
+		CBBEEF6C1EC5852400CA722A /* Myly Swift-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Myly Swift-Bridging-Header.h"; sourceTree = "<group>"; };
 		CBEC63061EBAF7B900C2B5A0 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		E88873A72866D8E3539AB858 /* Pods-Myly Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Myly Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-Myly Swift/Pods-Myly Swift.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,6 +89,7 @@
 				3C7D7D9F1EB48CBC008AB85C /* LaunchScreen.storyboard */,
 				3C7D7DA21EB48CBC008AB85C /* Info.plist */,
 				3C7D7D9A1EB48CBC008AB85C /* Myly_Swift.xcdatamodeld */,
+				CBBEEF6C1EC5852400CA722A /* Myly Swift-Bridging-Header.h */,
 			);
 			path = "Myly Swift";
 			sourceTree = "<group>";
@@ -422,9 +424,10 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.myly.Myly-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/educomtech/Workspace/Swift-Project-master/Myly Swift/Myly Swift-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "$(SWIFT_MODULE_NAME)-Swift.h";
 				SWIFT_VERSION = 3.0;
+				USER_HEADER_SEARCH_PATHS = "Pods/**";
 			};
 			name = Debug;
 		};
@@ -450,9 +453,10 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.myly.Myly-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/educomtech/Workspace/Swift-Project-master/Myly Swift/Myly Swift-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "$(SWIFT_MODULE_NAME)-Swift.h";
 				SWIFT_VERSION = 3.0;
+				USER_HEADER_SEARCH_PATHS = "Pods/**";
 			};
 			name = Release;
 		};

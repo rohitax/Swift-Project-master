@@ -7,9 +7,8 @@ PODS:
   - EVReflection/Core (4.11.0)
   - FormToolbar (1.0)
   - INSPersistentContainer (1.0.2)
-  - IQKeyboardManagerSwift (4.0.9)
-  - KRProgressHUD (2.2.2)
   - SkyFloatingLabelTextField (3.1.0)
+  - SVProgressHUD (2.1.2)
   - TKKeyboardControl (1.0.8)
 
 DEPENDENCIES:
@@ -19,9 +18,8 @@ DEPENDENCIES:
   - EVReflection
   - FormToolbar (~> 1.0)
   - INSPersistentContainer
-  - IQKeyboardManagerSwift (= 4.0.9)
-  - KRProgressHUD
   - SkyFloatingLabelTextField (~> 3.0)
+  - SVProgressHUD
   - TKKeyboardControl
 
 SPEC CHECKSUMS:
@@ -31,11 +29,10 @@ SPEC CHECKSUMS:
   EVReflection: 21bb2070ed8cbfccebcf1a287feda13cb7538039
   FormToolbar: 4def0dd90e2c9165e0f14e36a9ec6d3ba783b9f8
   INSPersistentContainer: 7e04a0d332ba075441ce0ee73d584ce84d76ac23
-  IQKeyboardManagerSwift: 2eefe6c429b86aa08bfbc1b5c891164d754adf91
-  KRProgressHUD: ee25f70e274d1933b2ad0c8583a8552a349ce85d
   SkyFloatingLabelTextField: 26a92ad407044dd5a7c3e4e348738ff0991514fe
+  SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
   TKKeyboardControl: 32a07ab35fa0540062b22e323776d7fb0a8fb48a
 
-PODFILE CHECKSUM: 255d138a3cff240c009e2b4ce8b901ebc5687802
+PODFILE CHECKSUM: e360910ddd01adfa0f2141ea6f2d8ff21ec3adef
 
 COCOAPODS: 1.2.1

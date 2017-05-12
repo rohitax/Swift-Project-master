@@ -8,7 +8,6 @@
 
 import UIKit
 import Alamofire
-import KRProgressHUD
 import Alertift
 import ASToast
 import EVReflection
@@ -33,7 +32,7 @@ class WebAPI: NSObject {
             return;
         }
         
-        KRProgressHUD.show()
+        SVProgressHUD.show()
         
         let headers: HTTPHeaders = ["Accept": "application/json", "Content-Type" :"application/json"]
         
@@ -97,7 +96,7 @@ class WebAPI: NSObject {
                 }
             }
             
-            KRProgressHUD.dismiss()
+            SVProgressHUD.dismiss()
         }
     }
     

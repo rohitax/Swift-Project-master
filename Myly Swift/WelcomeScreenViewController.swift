@@ -14,7 +14,6 @@ class WelcomeScreenViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var pageControl: UIPageControl!
     
     let arr_images = ["img_welcome1", "img_welcome2", "img_welcome3", "img_welcome4", "img_welcome5"]
-    var frame = CGRect(x: 0, y: 0, width: 0, height: 0)
     let screenSize: CGRect = UIScreen.main.bounds
     
     override func viewDidLoad() {
@@ -38,6 +37,8 @@ class WelcomeScreenViewController: UIViewController, UIScrollViewDelegate {
     // MARK: - Custom Methods
     
     func addImagesInScrollView() -> Void {
+        
+        var frame = CGRect(x: 0, y: 0, width: 0, height: 0)
         
         for index in 0 ..< arr_images.count {
             
@@ -64,8 +65,7 @@ class WelcomeScreenViewController: UIViewController, UIScrollViewDelegate {
 
     @IBAction func btn_next_tap(_ sender: Any) {
         
-        let count = CGFloat(self.arr_images.count - 1)
-        if self.scrollview.contentOffset.x >= (count * screenSize.size.width) {
+        if self.scrollview.contentOffset.x >= (CGFloat (self.arr_images.count - 1) * screenSize.size.width) {
             self.btn_skip_tap(nil)
             return
         }
@@ -86,6 +86,10 @@ class WelcomeScreenViewController: UIViewController, UIScrollViewDelegate {
         let pageWidth = scrollView.frame.size.width
         let page = floor((scrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1
         pageControl.currentPage = Int(page)
+        
+        if self.scrollview.contentOffset.x > (CGFloat (self.arr_images.count - 1) * screenSize.size.width) {
+            self.btn_skip_tap(nil)
+        }
     }
     
     /*
