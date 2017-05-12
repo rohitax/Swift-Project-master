@@ -96,7 +96,9 @@ class WebAPI: NSObject {
                 }
             }
             
-            SVProgressHUD.dismiss()
+            Delegate.appDelegate.delay(0.1, closure: {
+                SVProgressHUD.dismiss()
+            })
         }
     }
     

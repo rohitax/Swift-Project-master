@@ -10,16 +10,26 @@ import UIKit
 import SkyFloatingLabelTextField
 import Alertift
 import TKKeyboardControl
+import FormToolbar
 
 class ForgotPasswordViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var txt_mobileNumber: SkyFloatingLabelTextField!
     @IBOutlet weak var txt_note: UITextView!
     
+    private lazy var toolbar: FormToolbar = {
+        return FormToolbar(inputs: self.inputs)
+    }()
+    
+    private var inputs: [FormInput] {
+        return [txt_mobileNumber]
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.setNoteTextInTextView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -30,8 +40,6 @@ class ForgotPasswordViewController: UIViewController, UITextFieldDelegate {
             // Animation block is handled for you
             
         }, constraintBasedActionHandler: nil)
-        
-        self.setNoteTextInTextView()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -102,7 +110,7 @@ class ForgotPasswordViewController: UIViewController, UITextFieldDelegate {
     
     func setNoteTextInTextView() {
         
-        let str_mutableAttributedString = NSMutableAttributedString(string: kForgotPasswordNoteForMyly, attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 14.0)])
+        let str_mutableAttributedString = NSMutableAttributedString(string: kForgotPasswordNoteForMyly, attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: kFontSizeForNoteTextView)])
         
         let rangeOfString = str_mutableAttributedString.string.range(of: "support@mylyapp.com")
         
@@ -121,6 +129,11 @@ class ForgotPasswordViewController: UIViewController, UITextFieldDelegate {
         let compSepByCharInSet = string.components(separatedBy: numberSet)
         let numberFiltered = compSepByCharInSet.joined(separator: "")
         return string == numberFiltered
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        
+        toolbar.update()
     }
     
     /*

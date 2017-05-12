@@ -103,7 +103,6 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="btn_forgotPassword_tap:" destination="5w7-9K-0Jw" eventType="touchUpInside" id="Umg-ea-Eve"/>
                                                     <segue destination="Pds-Ec-HzQ" kind="show" id="hcJ-MB-ZSf"/>
                                                 </connections>
                                             </button>
@@ -306,6 +305,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cwW-Ez-dy5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3424.8000000000002" y="1226.5367316341831"/>
+        </scene>
+        <!--More Option View Controller-->
+        <scene sceneID="VPU-yl-YJL">
+            <objects>
+                <viewController storyboardIdentifier="MoreOptionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="c0H-99-cBX" customClass="MoreOptionViewController" customModule="Myly_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QBW-iv-Gh3"/>
+                        <viewControllerLayoutGuide type="bottom" id="1J1-pC-DBg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="35o-8e-2NK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K8X-FF-5c3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5399" y="1243"/>
         </scene>
         <!--Welcome Screen View Controller-->
         <scene sceneID="YeV-bR-2k0">

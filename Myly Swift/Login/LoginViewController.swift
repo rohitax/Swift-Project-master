@@ -33,7 +33,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        
+        self.setNoteTextInTextView()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -83,7 +83,27 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    @IBAction func btn_forgotPassword_tap(_ sender: AnyObject) {
+    func showAlert(_ title: String, message: String, actions: [Alertift.Action], handler: [()->()]) -> Void {
+        
+        let alert = Alertift.alert(title: kProjectName,
+                                   message: message)
+        
+        for action in actions {
+            alert.action(actions[0])
+        }
+        
+        Alertift.alert(title: title,
+                       message: message)
+            .action(.default("OK")) {
+                
+                if (self.txt_username.text!.isEmpty) {
+                    self.txt_username.becomeFirstResponder()
+                }
+                else {
+                    self.txt_password.becomeFirstResponder()
+                }
+            }
+            .show(on: self)
         
         
     }
@@ -121,6 +141,20 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: - Custom Methods
     
+    func setNoteTextInTextView() {
+        
+        let str_mutableAttributedString = NSMutableAttributedString(string: kLoginNoteForMyly, attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: kFontSizeForNoteTextView)])
+        
+        let rangeOfString = str_mutableAttributedString.string.range(of: "hello@mylyapp.com")
+        
+        let nsRange = str_mutableAttributedString.string.nsRange(from: rangeOfString!)
+        
+        str_mutableAttributedString.addAttributes([NSForegroundColorAttributeName: UIColor.blue], range: nsRange)
+        
+        self.txt_note.attributedText = str_mutableAttributedString
+        self.txt_note.textAlignment = NSTextAlignment.center
+    }
+    
     func saveStudentDetails(_ dict_response: Dictionary<String, Any>) -> Void {
         
         let privateContext = NSManagedObjectContext(concurrencyType: .privateQueueConcurrencyType)
@@ -131,12 +165,23 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             
             let arr_studentDetails: Array = dict_response["StudentDetails"] as! [Dictionary<String, Any>]
             
-            for dict_studentDetails in arr_studentDetails {
+            if arr_studentDetails.count > 0 {
                 
-                if !self.checkIfStudentDetailsExist(dict_studentDetails) {
-                    let obj_studentDetails = StudentDetails(entity: entity, insertInto: managedObjectContext)
-                    self.saveDataInAttributes(dict_studentDetails, studentDetailObject: obj_studentDetails)
+                for dict_studentDetails in arr_studentDetails {
+                    
+                    if !self.checkIfStudentDetailsExist(dict_studentDetails) {
+                        let obj_studentDetails = StudentDetails(entity: entity, insertInto: managedObjectContext)
+                        self.saveDataInAttributes(dict_studentDetails, studentDetailObject: obj_studentDetails)
+                    }
                 }
+                self.saveDetailsInUserDefaults(arr_studentDetails)
+                self.navigateToWall()
+            }
+            else {
+                Alertift.alert(title: kProjectName,
+                               message: kNoStudentsExist)
+                    .action(.default("OK"))
+                    .show(on: self)
             }
         }
     }
@@ -188,6 +233,23 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    func saveDetailsInUserDefaults(_ arr_studentDetails: [Dictionary<String, Any>]) -> Void {
+        
+        let dict_firstStudent = arr_studentDetails[0]
+        let studentId = dict_firstStudent["student_ID"] as! Double
+        let databaseId = dict_firstStudent["DatabaseID"] as! Int16
+        
+        UserDefaults.standard.set(studentId, forKey: "studentId")
+        UserDefaults.standard.set(databaseId, forKey: "databaseId")
+        UserDefaults.standard.set("1", forKey: "userLoggedIn")
+    }
+    
+    func navigateToWall() -> Void {
+        
+        let controller = self.storyboard?.instantiateViewController(withIdentifier: MoreOptionViewController.description())
+        self.navigationController?.show(controller!, sender: self)
+    }
+    
     // MARK: - UITextField Delegate Methods
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
@@ -201,6 +263,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
+        
         toolbar.update()
     }
     
