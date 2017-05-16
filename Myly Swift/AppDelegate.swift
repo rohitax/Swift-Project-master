@@ -15,10 +15,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    typealias Completion = (()->())?
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
         SVProgressHUD.setDefaultMaskType(SVProgressHUDMaskType.black)
+        
+        if let isUserLoggedIn = UserDefaults.standard.object(forKey: kUserLoggedIn) {
+            if isUserLoggedIn as! Bool {
+                let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+                let initialViewController = storyboard.instantiateViewController(withIdentifier: String(describing: TabBarViewController.self))
+                self.window?.rootViewController = initialViewController
+                self.window?.makeKeyAndVisible()
+            }
+        }
         
         return true
     }

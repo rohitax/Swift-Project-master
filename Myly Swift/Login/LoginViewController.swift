@@ -9,7 +9,6 @@
 import UIKit
 import SkyFloatingLabelTextField
 import TKKeyboardControl
-import Alertift
 import CoreData
 import FormToolbar
 
@@ -65,47 +64,24 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         if (txt_username.text!.isEmpty) ||
             (txt_password.text!.isEmpty) {
             
-            Alertift.alert(title: kProjectName,
-                           message: txt_username.text!.isEmpty ? "Mobile Number is empty." : "Password is empty.")
-                .action(.default("OK")) {
-                    
-                    if (self.txt_username.text!.isEmpty) {
-                        self.txt_username.becomeFirstResponder()
-                    }
-                    else {
-                        self.txt_password.becomeFirstResponder()
-                    }
-                }
-                .show(on: self)
+            Alert.showAlert(message: txt_username.text!.isEmpty ? "Mobile Number is empty." : "Password is empty.",
+                           actions: [.default("OK")],
+                           handler: [{
+                            
+                                if (self.txt_username.text!.isEmpty) {
+                                    self.txt_username.becomeFirstResponder()
+                                }
+                                else {
+                                    self.txt_password.becomeFirstResponder()
+                                }
+                            
+                            }],
+                           completionHandler: nil,
+                           onController: self)
         }
         else {
             self.loginTask()
         }
-    }
-    
-    func showAlert(_ title: String, message: String, actions: [Alertift.Action], handler: [()->()]) -> Void {
-        
-        let alert = Alertift.alert(title: kProjectName,
-                                   message: message)
-        
-        for action in actions {
-            alert.action(actions[0])
-        }
-        
-        Alertift.alert(title: title,
-                       message: message)
-            .action(.default("OK")) {
-                
-                if (self.txt_username.text!.isEmpty) {
-                    self.txt_username.becomeFirstResponder()
-                }
-                else {
-                    self.txt_password.becomeFirstResponder()
-                }
-            }
-            .show(on: self)
-        
-        
     }
     
     // MARK: - WS Methods
@@ -130,10 +106,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                                 else {
                                     
                                     let message = response["StudentDetails"] ?? kError
-                                    Alertift.alert(title: kProjectName,
-                                                   message: message as? String)
-                                        .action(.default("OK"))
-                                        .show(on: self)
+                                    Alert.showAlert(message: (message as? String)!,
+                                                   actions: [.default("OK")],
+                                                   handler: nil,
+                                                   completionHandler: nil,
+                                                   onController: self)
                                 }
                             }
         })
@@ -175,13 +152,18 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     }
                 }
                 self.saveDetailsInUserDefaults(arr_studentDetails)
-                self.navigateToWall()
+                DispatchQueue.main.async {
+                    self.navigateToWall()
+                }
             }
             else {
-                Alertift.alert(title: kProjectName,
-                               message: kNoStudentsExist)
-                    .action(.default("OK"))
-                    .show(on: self)
+                DispatchQueue.main.async {
+                    Alert.showAlert(message: kNoStudentsExist,
+                                   actions: [.default("OK")],
+                                   handler: nil,
+                                   completionHandler: nil,
+                                   onController: self)
+                }
             }
         }
     }
@@ -236,18 +218,17 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     func saveDetailsInUserDefaults(_ arr_studentDetails: [Dictionary<String, Any>]) -> Void {
         
         let dict_firstStudent = arr_studentDetails[0]
-        let studentId = dict_firstStudent["student_ID"] as! Double
+        let studentId = dict_firstStudent["Student_ID"] as! Double
         let databaseId = dict_firstStudent["DatabaseID"] as! Int16
         
-        UserDefaults.standard.set(studentId, forKey: "studentId")
-        UserDefaults.standard.set(databaseId, forKey: "databaseId")
-        UserDefaults.standard.set("1", forKey: "userLoggedIn")
+        UserDefaults.standard.set(studentId, forKey: kStudentId)
+        UserDefaults.standard.set(databaseId, forKey: kDatabaseId)
+        UserDefaults.standard.set(true, forKey: kUserLoggedIn)
     }
     
     func navigateToWall() -> Void {
         
-        let controller = self.storyboard?.instantiateViewController(withIdentifier: MoreOptionViewController.description())
-        self.navigationController?.show(controller!, sender: self)
+        self.performSegue(withIdentifier: "mySegueIdentifier", sender: nil)
     }
     
     // MARK: - UITextField Delegate Methods
@@ -267,14 +248,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         toolbar.update()
     }
     
-    /*
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+         // Get the new view controller using segue.destinationViewController.
+         // Pass the selected object to the new view controller.
     }
-    */
-
+    
 }

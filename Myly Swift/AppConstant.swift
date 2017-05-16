@@ -26,5 +26,8 @@ let kNoStudentsExist = "No students exist with this mobile number."
 let kAppNameMyly = "myly"
 
 let numberSet = NSCharacterSet(charactersIn:"0123456789").inverted
-
 let kFontSizeForNoteTextView: CGFloat = 14.0
+
+let kUserLoggedIn = "userLoggedIn"
+let kStudentId = "studentId"
+let kDatabaseId = "databaseId"

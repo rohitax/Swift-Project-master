@@ -8,7 +8,6 @@
 
 import UIKit
 import Alamofire
-import Alertift
 import ASToast
 import EVReflection
 
@@ -24,10 +23,11 @@ class WebAPI: NSObject {
                                           messageColor: nil)
             }
             else {
-                Alertift.alert(title: kProjectName,
-                               message: kNoInternetConnectivity)
-                    .action(.default("OK"))
-                    .show(on: controller)
+                Alert.showAlert(message: kNoInternetConnectivity,
+                                actions: [.default("OK")],
+                                handler: nil,
+                                completionHandler: nil,
+                                onController: controller)
             }
             return;
         }
@@ -57,10 +57,11 @@ class WebAPI: NSObject {
             
             if !response.result.isSuccess {
                 debugPrint("Debug Print :", response)
-                Alertift.alert(title: kProjectName,
-                               message: kError)
-                    .action(.default("OK"))
-                    .show(on: controller)
+                Alert.showAlert(message: kError,
+                                actions: [.default("OK")],
+                                handler: nil,
+                                completionHandler: nil,
+                                onController: controller)
             }
             else {
                 

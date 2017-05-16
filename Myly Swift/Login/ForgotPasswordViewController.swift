@@ -8,7 +8,6 @@
 
 import UIKit
 import SkyFloatingLabelTextField
-import Alertift
 import TKKeyboardControl
 import FormToolbar
 
@@ -58,14 +57,11 @@ class ForgotPasswordViewController: UIViewController, UITextFieldDelegate {
     @IBAction func btn_submit_tap(_ sender: AnyObject) {
         
         if (txt_mobileNumber.text!.isEmpty) {
-            
-            Alertift.alert(title: kProjectName,
-                           message: "Mobile Number is empty.")
-                .action(.default("OK")) {
-                    
-                    self.txt_mobileNumber.becomeFirstResponder()
-                }
-                .show(on: self)
+            Alert.showAlert(message: "Mobile Number is empty.",
+                            actions: [.default("OK")],
+                            handler: nil,
+                            completionHandler: nil,
+                            onController: self)
         }
         else {
             self.forgotPasswordTask()
@@ -90,18 +86,21 @@ class ForgotPasswordViewController: UIViewController, UITextFieldDelegate {
                                 let responseCode = response["ResponseCode"] as? Int8
                                 let message = response["StudentDetails"] ?? kError
                                 
-                                let alert = Alertift.alert(title: kProjectName,
-                                                           message: message as? String)
+                                var arr_closure = [()->()]()
+                                
                                 if responseCode == 1 {
-                                    alert.action(.default("OK")) {
+                                    arr_closure.append {
+                                        {
                                             self.btn_back_tap(nil)
-                                        }
-                                        .show(on: self)
+                                        }()
+                                    }
                                 }
-                                else {
-                                    alert.action(.default("OK"))
-                                        .show(on: self)
-                                }
+                                
+                                Alert.showAlert(message: (message as? String)!,
+                                                actions: [.default("OK")],
+                                                handler: arr_closure.count > 0 ? arr_closure : nil,
+                                                completionHandler: nil,
+                                                onController: self)
                             }
         }
     }
