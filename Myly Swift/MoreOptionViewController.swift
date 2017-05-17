@@ -14,6 +14,8 @@ class MoreOptionViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        SyncAPI.syncTask(self)
     }
 
     override func didReceiveMemoryWarning() {

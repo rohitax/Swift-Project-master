@@ -8,13 +8,15 @@
 
 import UIKit
 import CoreData
+import INSPersistentContainer
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    typealias Completion = (()->())?
+    typealias NSPersistentContainer         = INSPersistentContainer
+    typealias NSPersistentStoreDescription  = INSPersistentStoreDescription
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -213,5 +215,13 @@ extension String {
         let lower = UTF16View.Index(range.lowerBound, within: utf16)
         let upper = UTF16View.Index(range.upperBound, within: utf16)
         return NSRange(location: utf16.startIndex.distance(to: lower), length: lower.distance(to: upper))
+    }
+}
+
+extension Double {
+    /// Rounds the double to decimal places value
+    func roundTo(places:Int) -> Double {
+        let divisor = pow(10.0, Double(places))
+        return (self * divisor).rounded() / divisor
     }
 }

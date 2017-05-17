@@ -38,11 +38,17 @@ class WebAPI: NSObject {
         
         var dict_parameters = param
         dict_parameters["AppName"] = kAppNameMyly
+        if let databaseId = UserDefaults.standard.value(forKey: kDatabaseId) {
+            dict_parameters["DatabaseID"] = databaseId
+        }
         
         Alamofire.request(kServerURL + function, method: .post, parameters: dict_parameters, encoding: JSONEncoding.default, headers: headers).responseJSON { response in
             
             // original URL request
             print("URL is :", response.request!)
+            
+            // original parameters
+            print("Parameters are :", dict_parameters)
             
             // HTTP URL response --> header and status code
             //print("Response received is :", response.response!)
