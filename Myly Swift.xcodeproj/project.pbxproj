@@ -444,7 +444,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.myly.Myly-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/educomtech/Workspace/Swift-Project-master/Myly Swift/Myly Swift-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/educomtech/Desktop/myly swift/Swift-Project-master/Myly Swift/Myly Swift-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "$(SWIFT_MODULE_NAME)-Swift.h";
 				SWIFT_VERSION = 3.0;
 				USER_HEADER_SEARCH_PATHS = "Pods/**";
@@ -473,7 +473,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.myly.Myly-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/educomtech/Workspace/Swift-Project-master/Myly Swift/Myly Swift-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/educomtech/Desktop/myly swift/Swift-Project-master/Myly Swift/Myly Swift-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "$(SWIFT_MODULE_NAME)-Swift.h";
 				SWIFT_VERSION = 3.0;
 				USER_HEADER_SEARCH_PATHS = "Pods/**";
