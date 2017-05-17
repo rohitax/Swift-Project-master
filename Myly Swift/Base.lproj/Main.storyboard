@@ -320,16 +320,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="img_bellGray" selectedImage="img_bellBlue" id="ByI-8H-mDa"/>
+                    <tabBarItem key="tabBarItem" title="" image="img_bellGray" id="ByI-8H-mDa"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tnx-1h-cN5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4993" y="1092"/>
+            <point key="canvasLocation" x="4993" y="640"/>
         </scene>
-        <!--View Controller-->
+        <!--More Option View Controller-->
         <scene sceneID="cQU-5F-eXf">
             <objects>
-                <viewController id="saJ-DZ-ChW" sceneMemberID="viewController">
+                <viewController id="saJ-DZ-ChW" customClass="MoreOptionViewController" customModule="Myly_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ggz-Ek-Rsu"/>
                         <viewControllerLayoutGuide type="bottom" id="2bb-d7-bxJ"/>
@@ -339,29 +339,49 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="img_homeGray" selectedImage="img_homeBlue" id="kQw-Uc-06v"/>
+                    <tabBarItem key="tabBarItem" title="" image="img_homeGray" id="kQw-Uc-06v"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GAH-Q5-1MU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4993" y="1800"/>
+            <point key="canvasLocation" x="4993" y="2004"/>
         </scene>
-        <!--More Option View Controller-->
-        <scene sceneID="VPU-yl-YJL">
+        <!--View Controller-->
+        <scene sceneID="RXo-aM-esk">
             <objects>
-                <viewController storyboardIdentifier="MoreOptionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="c0H-99-cBX" customClass="MoreOptionViewController" customModule="Myly_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="tVO-g1-yy9" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="QBW-iv-Gh3"/>
-                        <viewControllerLayoutGuide type="bottom" id="1J1-pC-DBg"/>
+                        <viewControllerLayoutGuide type="top" id="aTP-96-yS5"/>
+                        <viewControllerLayoutGuide type="bottom" id="6Cc-Me-K0v"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="35o-8e-2NK">
+                    <view key="view" contentMode="scaleToFill" id="1j2-ga-d8n">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="" image="img_albumGray" id="dky-Q9-biw"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="K8X-FF-5c3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T1U-Op-T1W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6658" y="1704"/>
+            <point key="canvasLocation" x="4993" y="1292"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="l4r-NG-yL7">
+            <objects>
+                <viewController id="Hs1-Hf-86U" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5x7-FZ-ajC"/>
+                        <viewControllerLayoutGuide type="bottom" id="fOs-tO-aou"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dO4-g3-nhj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="img_calendarGray" id="Xdj-ij-CNT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xqb-P6-Wrv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4193" y="2004"/>
         </scene>
         <!--Tab Bar View Controller-->
         <scene sceneID="YJN-Zs-HOZ">
@@ -376,6 +396,8 @@
                     <connections>
                         <segue destination="saJ-DZ-ChW" kind="relationship" relationship="viewControllers" id="gjj-bP-vVh"/>
                         <segue destination="AiU-Xf-oO0" kind="relationship" relationship="viewControllers" id="AyQ-uy-uun"/>
+                        <segue destination="Hs1-Hf-86U" kind="relationship" relationship="viewControllers" id="b7U-Ae-2QN"/>
+                        <segue destination="tVO-g1-yy9" kind="relationship" relationship="viewControllers" id="ApL-zl-Bo9"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MCm-dh-Fv6" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -488,9 +510,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="img_bellBlue" width="32" height="32"/>
+        <image name="img_albumGray" width="32" height="32"/>
         <image name="img_bellGray" width="32" height="32"/>
-        <image name="img_homeBlue" width="32" height="32"/>
+        <image name="img_calendarGray" width="32" height="32"/>
         <image name="img_homeGray" width="32" height="32"/>
         <image name="img_mylyLogoFull" width="200" height="117"/>
         <image name="img_rightArrow" width="32" height="32"/>
