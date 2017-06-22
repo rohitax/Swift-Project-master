@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="K5O-be-n7D">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="K5O-be-n7D">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -149,18 +148,30 @@
                                     <constraint firstAttribute="bottom" secondItem="dRo-9Y-Wkc" secondAttribute="bottom" id="zvf-mx-No7"/>
                                 </constraints>
                             </view>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bfi-AC-UaK">
+                                <rect key="frame" x="0.0" y="667" width="375" height="216"/>
+                                <color key="backgroundColor" red="0.82745098039999998" green="0.070588235289999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="5Mb-zf-pYo"/>
+                                </constraints>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="89h-Y8-G2h" firstAttribute="leading" secondItem="WX0-pb-RQq" secondAttribute="leading" constant="20" id="6EG-Kt-t6S"/>
                             <constraint firstItem="89h-Y8-G2h" firstAttribute="top" secondItem="Wtj-8u-TC5" secondAttribute="bottom" constant="24" id="82X-dO-LH4"/>
                             <constraint firstItem="Wtj-8u-TC5" firstAttribute="top" secondItem="oCO-SY-bri" secondAttribute="bottom" constant="24" id="8TL-kg-5fv"/>
+                            <constraint firstItem="Bfi-AC-UaK" firstAttribute="leading" secondItem="WX0-pb-RQq" secondAttribute="leading" id="PzH-m3-hC7"/>
                             <constraint firstItem="Wtj-8u-TC5" firstAttribute="centerX" secondItem="WX0-pb-RQq" secondAttribute="centerX" id="Rz2-Wp-3FJ"/>
                             <constraint firstAttribute="trailing" secondItem="89h-Y8-G2h" secondAttribute="trailing" constant="20" id="aFg-ba-ONR"/>
+                            <constraint firstItem="xd4-v5-A2J" firstAttribute="top" secondItem="Bfi-AC-UaK" secondAttribute="bottom" constant="-216" id="cih-27-V0c"/>
+                            <constraint firstAttribute="trailing" secondItem="Bfi-AC-UaK" secondAttribute="trailing" id="pxF-Ne-Ph0"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="mgx-Yi-j6r"/>
                     <connections>
+                        <outlet property="constraint_pickerViewBottom" destination="cih-27-V0c" id="Lha-f9-7cF"/>
+                        <outlet property="pickerView" destination="Bfi-AC-UaK" id="pFj-Fu-cdX"/>
                         <outlet property="txt_note" destination="JAw-jV-XlC" id="14W-WI-Lau"/>
                         <outlet property="txt_password" destination="OYr-rR-YdE" id="s9R-bg-tkd"/>
                         <outlet property="txt_username" destination="CNm-4e-nUo" id="vge-Jp-8bW"/>

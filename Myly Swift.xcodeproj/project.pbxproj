@@ -446,8 +446,6 @@
 					"\"$PODS_CONFIGURATION_BUILD_DIR/Alamofire\"",
 					"\"$PODS_CONFIGURATION_BUILD_DIR/Alertift\"",
 					"\"$PODS_CONFIGURATION_BUILD_DIR/INSPersistentContainer\"",
-					"\"$PODS_CONFIGURATION_BUILD_DIR/IQKeyboardManagerSwift\"",
-					"\"$PODS_CONFIGURATION_BUILD_DIR/KRProgressHUD\"",
 					"\"$PODS_CONFIGURATION_BUILD_DIR/SkyFloatingLabelTextField\"",
 					"\"$PODS_CONFIGURATION_BUILD_DIR/TKKeyboardControl\"",
 				);
@@ -456,7 +454,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.myly.Myly-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/rohitax/Desktop/Swift-Project-master/Myly Swift/Myly Swift-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/educomtech/Desktop/Swift-Project-master 2/Myly Swift/Myly Swift-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "$(SWIFT_MODULE_NAME)-Swift.h";
 				SWIFT_VERSION = 3.0;
 				USER_HEADER_SEARCH_PATHS = "Pods/**";
@@ -475,8 +473,6 @@
 					"\"$PODS_CONFIGURATION_BUILD_DIR/Alamofire\"",
 					"\"$PODS_CONFIGURATION_BUILD_DIR/Alertift\"",
 					"\"$PODS_CONFIGURATION_BUILD_DIR/INSPersistentContainer\"",
-					"\"$PODS_CONFIGURATION_BUILD_DIR/IQKeyboardManagerSwift\"",
-					"\"$PODS_CONFIGURATION_BUILD_DIR/KRProgressHUD\"",
 					"\"$PODS_CONFIGURATION_BUILD_DIR/SkyFloatingLabelTextField\"",
 					"\"$PODS_CONFIGURATION_BUILD_DIR/TKKeyboardControl\"",
 				);
@@ -485,7 +481,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.myly.Myly-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/rohitax/Desktop/Swift-Project-master/Myly Swift/Myly Swift-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/educomtech/Desktop/Swift-Project-master 2/Myly Swift/Myly Swift-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "$(SWIFT_MODULE_NAME)-Swift.h";
 				SWIFT_VERSION = 3.0;
 				USER_HEADER_SEARCH_PATHS = "Pods/**";

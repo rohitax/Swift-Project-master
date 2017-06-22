@@ -18,7 +18,7 @@ class SyncAPI {
         formatter.minimumFractionDigits = 0
         formatter.maximumFractionDigits = 0
         
-        let dict_parameters: Dictionary<String, Any> = ["StudentID": "\(formatter.string(from: studentId))", 
+        let dict_parameters: Dictionary<String, Any> = ["StudentID": "\(String(describing: formatter.string(from: studentId)))",
                                "LastSyncdate": "",
                                "AdvtXML": "",
                                "AppVersion": "100",
