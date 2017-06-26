@@ -10,11 +10,11 @@ import Foundation
 
 let kProjectName = "Myly Swift"
 
-//let kServerURL = "http://testapi.myly.in/MylyAPI/MylyApp.svc/"
+let kServerURL = "http://testapi.myly.in/MylyAPI/MylyApp.svc/"
 
 //let kServerURL = "http://192.168.87.27/MylyService/MylyApp.svc/"
 
-let kServerURL = "https://api.mylyapp.com/mylyapp.svc/"
+//let kServerURL = "https://api.mylyapp.com/mylyapp.svc/"
 
 let kPostParentLogin = "PostParentLogin"
 let kPostForgotPassword = "PostForgotPassword"
@@ -30,6 +30,8 @@ let kAppNameMyly = "myly"
 
 let numberSet = NSCharacterSet(charactersIn:"0123456789").inverted
 let kFontSizeForNoteTextView: CGFloat = 14.0
+let kAppVersion = "102"
+
 
 let kUserLoggedIn = "userLoggedIn"
 let kStudentId = "studentId"

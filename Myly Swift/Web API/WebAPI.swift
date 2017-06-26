@@ -32,12 +32,15 @@ class WebAPI: NSObject {
             return;
         }
         
-        SVProgressHUD.show()
+        if !SVProgressHUD.isVisible() {
+            SVProgressHUD.show()
+        }
         
         let headers: HTTPHeaders = ["Accept": "application/json", "Content-Type" :"application/json"]
         
         var dict_parameters = param
         dict_parameters["AppName"] = kAppNameMyly
+        dict_parameters["AppVersion"] = kAppVersion
         if let databaseId = UserDefaults.standard.value(forKey: kDatabaseId) {
             dict_parameters["DatabaseID"] = databaseId
         }
@@ -104,7 +107,9 @@ class WebAPI: NSObject {
             }
             
             Delegate.appDelegate.delay(0.1, closure: {
-                SVProgressHUD.dismiss()
+                if SVProgressHUD.isVisible() {
+                    SVProgressHUD.dismiss()
+                }
             })
         }
     }

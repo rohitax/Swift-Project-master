@@ -12,16 +12,9 @@ class SyncAPI {
     
     class func syncTask(_ controller: UIViewController) -> Void {
         
-        let studentId = UserDefaults.standard.value(forKey: kStudentId) as! NSNumber
-        
-        let formatter = NumberFormatter()
-        formatter.minimumFractionDigits = 0
-        formatter.maximumFractionDigits = 0
-        
-        let dict_parameters: Dictionary<String, Any> = ["StudentID": "\(String(describing: formatter.string(from: studentId)))",
+        let dict_parameters: Dictionary<String, Any> = ["StudentID": UserDefaults.standard.value(forKey: kStudentId) ?? "",
                                "LastSyncdate": "",
                                "AdvtXML": "",
-                               "AppVersion": "100",
                                "MMI_UUID": UIDevice.current.identifierForVendor!.uuidString]
         
         WebAPI.callWebAPI(parametersToBePassed: dict_parameters,

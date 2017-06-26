@@ -34,7 +34,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="295"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1009998816" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="CNm-4e-nUo" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="2222211111" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="CNm-4e-nUo" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
                                         <rect key="frame" x="20" y="3" width="295" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="Ad8-OR-hye"/>
@@ -170,8 +170,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="mgx-Yi-j6r"/>
                     <connections>
-                        <outlet property="constraint_pickerViewBottom" destination="cih-27-V0c" id="Lha-f9-7cF"/>
-                        <outlet property="pickerView" destination="Bfi-AC-UaK" id="pFj-Fu-cdX"/>
                         <outlet property="txt_note" destination="JAw-jV-XlC" id="14W-WI-Lau"/>
                         <outlet property="txt_password" destination="OYr-rR-YdE" id="s9R-bg-tkd"/>
                         <outlet property="txt_username" destination="CNm-4e-nUo" id="vge-Jp-8bW"/>

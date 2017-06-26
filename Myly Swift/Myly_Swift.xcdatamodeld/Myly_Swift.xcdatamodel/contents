@@ -1,5 +1,53 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16E195" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16F73" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Assignment" representedClassName="Assignment" syncable="YES" codeGenerationType="class">
+        <attribute name="assignement_Attachment" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="assignment_CreateOn" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="assignment_Description" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="assignment_DueDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="assignment_Id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="assignment_IsTemplate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="assignment_TemplateName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="assignment_Title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="assignment_UpdatedOn" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="assignmentCreatedBy" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="assignmentDetail_StudentId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="createOn" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="createOnShort" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dueDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dueDateShort" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Event" representedClassName="Event" syncable="YES" codeGenerationType="class">
+        <attribute name="branch_Id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="branchLogo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="createdDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="createdTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="event_AllDay" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="event_Attachment" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="event_ClassGroupID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="event_CreatedOn" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="event_Description" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="event_HouseClubID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="event_ID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="event_Title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="event_UpdatededOn" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="eventTo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fromDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fromDateDDMMYYYY" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fromTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isDeleted_" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="leafUpdatedDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="postedBy" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="postedById" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rootID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="schoolID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="schoolName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="studentID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="targetTable" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="toDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="toDateDDMMYYYY" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="toTime" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="StudentDetails" representedClassName="StudentDetails" syncable="YES">
         <attribute name="branch_Name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="class_Name" optional="YES" attributeType="String" syncable="YES"/>
@@ -27,6 +75,8 @@
         <attribute name="student_SchoolID" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <elements>
+        <element name="Event" positionX="-63" positionY="135" width="128" height="480"/>
         <element name="StudentDetails" positionX="-63" positionY="-18" width="128" height="405"/>
+        <element name="Assignment" positionX="-63" positionY="135" width="128" height="270"/>
     </elements>
 </model>
