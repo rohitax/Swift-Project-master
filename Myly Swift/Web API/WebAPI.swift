@@ -45,13 +45,19 @@ class WebAPI: NSObject {
             dict_parameters["DatabaseID"] = databaseId
         }
         
+        // original URL request
+        print("URL is :", kServerURL + function)
+        
+        // original parameters
+        print("Parameters are :", dict_parameters)
+        
         Alamofire.request(kServerURL + function, method: .post, parameters: dict_parameters, encoding: JSONEncoding.default, headers: headers).responseJSON { response in
             
             // original URL request
-            print("URL is :", response.request!)
+            //print("URL is :", response.request!)
             
             // original parameters
-            print("Parameters are :", dict_parameters)
+            //print("Parameters are :", dict_parameters)
             
             // HTTP URL response --> header and status code
             //print("Response received is :", response.response!)

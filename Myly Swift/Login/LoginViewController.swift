@@ -152,9 +152,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     }
                 }
                 self.saveDetailsInUserDefaults(arr_studentDetails)
-                DispatchQueue.main.async {
+//                DispatchQueue.main.async {
+//                    self.perform(navigateToWall(), with: self, afterDelay: 0.5)
+//                    
+//                }
+                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.1, execute: {
                     self.navigateToWall()
-                }
+                })
             }
             else {
                 DispatchQueue.main.async {

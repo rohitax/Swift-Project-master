@@ -7,10 +7,11 @@
 //
 
 import Foundation
+import CoreData
 
 class SyncAPI {
     
-    class func syncTask(_ controller: UIViewController) -> Void {
+    class func syncTask(_ controller: UIViewController, completion: @escaping (_ response: Dictionary<String, Any>) -> Void) -> Void {
         
         let dict_parameters: Dictionary<String, Any> = ["StudentID": UserDefaults.standard.value(forKey: kStudentId) ?? "",
                                "LastSyncdate": "",
@@ -26,20 +27,117 @@ class SyncAPI {
                                 
                                 let responseCode = response["ResponseCode"] as! NSNumber
                                 
-//                                if responseCode == 1 {
-//                                    self.saveStudentDetails(response)
-//                                }
-//                                else {
-//                                    
-//                                    let message = response["StudentDetails"] ?? kError
-//                                    Alert.showAlert(message: (message as? String)!,
-//                                                    actions: [.default("OK")],
-//                                                    handler: nil,
-//                                                    completionHandler: nil,
-//                                                    onController: self)
-//                                }
+                                if responseCode == 1 {
+                                    
+                                }
+                                else {
+                                    Alert.showAlert(message: kError,
+                                                    actions: [.default("OK")],
+                                                    handler: nil,
+                                                    completionHandler: nil,
+                                                    onController: controller)
+                                }
                             }
         })
     }
     
+    func insertDataInCoreData(_ dict_response: NSDictionary) -> Void {
+        
+        let dict_tableMappingToEntities = ["Table": kEvent,
+                                           "Table2": kMessage,
+                                           "Table3": kParentMessage,
+                                           "Table7": kStudentProfile,
+                                           "Table8": kContactInfo,
+                                           "Table14": kSchoolAttachment,
+                                           "Table18": kEmployee,
+                                           "Table19": kFeeManagement,
+                                           "Table20": kBranchDetail,
+                                           "Table21": kStudentMigration,
+                                           "Table22": kAdvertisement,
+                                           "Table23": kAdverstisementAttachment,
+                                           "Table24": kPaymentDetails,
+                                           "Table25": kEmployeeDetails,
+                                           "Table26": kFeeReconcilation,
+                                           "Table27": kParentMessageEmpId,
+                                           "Table28": kNewsLetter,
+                                           "Table29": kNewsLetterAttachment,
+                                           "Table30": kAssignment,
+                                           "Table31": kAssignmentAttachment,
+                                           "Table32": kHoliday,
+                                           "Table33": kTeacherCalendar,
+                                           "Table34": kSubject,
+                                           "Table35": kPeriod,
+                                           "Table36": kCalendarDayOff,
+                                           "Table37": kTeacherCalendarStatus,
+                                           "Table38": kExamDetail,
+                                           "Table39": kExamSubjectDetail,
+                                           "Table40": kExamResult,
+                                           "Table41": kExamResultDetail,
+                                           "Table42": kExamTerm,
+                                           "Table43": kExamType,
+                                           "Table44": kExamSubType,
+                                           "Table45": kExamOtherSkill,
+                                           "Table46": kExamOtherResultSkill,
+                                           "Table47": kExamOtherResult,
+                                           "Table49": kMessageQueue,
+                                           "Table50": kClub,
+                                           "Table51": kAction,
+                                           "Table52": kGroup,
+                                           "Table53": kGroupStudent,
+                                           "Table54": kClubStudent,
+                                           "Table57": kExamAttachment,
+                                           "Table58": kParentMessageAttachment,
+                                           "Table59": kMenu
+                                           ]
+        for str_entity in dict_response {
+            
+        }
+        
+        
+    }
+    
+    func insertDataInParticularEntity(_ str_entityName: String, arr_data: Array<Dictionary<String, Any>>) -> Void {
+        
+        let privateContext = NSManagedObjectContext(concurrencyType: .privateQueueConcurrencyType)
+        privateContext.persistentStoreCoordinator = managedObjectContext.persistentStoreCoordinator
+        privateContext.perform {
+        
+            var arr_attributesNotSaved = [String]()
+            for dict in arr_data {
+                
+                let obj_managedObject = NSManagedObject(entity: NSEntityDescription.entity(forEntityName: str_entityName, in: privateContext)!, insertInto: privateContext)
+                
+                for (key, element) in dict {
+                    
+                    var str_key = key
+                    
+                    if obj_managedObject.entity.propertiesByName.keys.contains(str_key) {
+                        if ((element as? NSNull) == nil)  {
+                            obj_managedObject.setValue(element, forKey: str_key.lowerFirstCharacter())
+                        }
+                        else {
+                            obj_managedObject.setValue(nil, forKey: str_key.lowerFirstCharacter())
+                        }
+                    }
+                    else {
+                        arr_attributesNotSaved.append(str_key)
+                    }
+                }
+                self.save()
+            }
+            
+            if arr_attributesNotSaved.count > 0 {
+                print("The attributes that are not present in core data are: %@", arr_attributesNotSaved[0])
+            }
+        }
+    }
+    
+    func save() -> Void  {
+        
+        do {
+            try managedObjectContext.save()
+        } catch let error as NSError {
+            print("Could not save. \(error), \(error.userInfo)")
+        }
+    }
 }

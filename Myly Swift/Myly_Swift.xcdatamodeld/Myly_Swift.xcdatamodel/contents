@@ -1,42 +1,180 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16F73" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Action" representedClassName="Action" syncable="YES" codeGenerationType="class">
+        <attribute name="actionName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="associationDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="branchId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="databaseid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isActive" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="myly_studentid" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="AdverstisementAttachment" representedClassName="AdverstisementAttachment" syncable="YES" codeGenerationType="class">
+        <attribute name="advtAttach_ActualName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="advtAttach_AdvtID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="advtAttach_Attachment" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="advtAttach_ID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="advtAttachStatistics_Count" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="databaseid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="myly_studentid" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Advertisement" representedClassName="Advertisement" syncable="YES" codeGenerationType="class">
+        <attribute name="advt_CreatedDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="advt_Description" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="advt_ID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="advt_Image" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="advt_IsActive" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="advt_Logo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="advt_Position" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="advt_SponsorContent" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="advt_SponsorLink" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="advt_Title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="advt_UpdatedDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="advtUser_ClickCount" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="advtUser_ViewCount" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="databaseid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="leafUpdatedDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="myly_studentid" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="Assignment" representedClassName="Assignment" syncable="YES" codeGenerationType="class">
         <attribute name="assignement_Attachment" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="assignment_CreateOn" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="assignment_Description" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="assignment_DueDate" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="assignment_Id" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="assignment_IsTemplate" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="assignment_TemplateName" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="assignment_Title" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="assignment_UpdatedOn" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="assignmentCreatedBy" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="assignmentDetail_StudentId" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="createOn" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="createOnShort" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="dueDate" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="dueDateShort" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="assignement_CreatedBy" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="assignement_CreatedOn" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="assignement_Description" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="assignement_DueDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="assignement_For" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="assignement_ID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="assignement_IsActive" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="assignement_Title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="assignement_UpdatedID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="assignementClass_ClassGroupID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="assignment_WorkType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="databaseid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="emp_Name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="leafUpdatedDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="myly_studentid" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="AssignmentAttachment" representedClassName="AssignmentAttachment" syncable="YES" codeGenerationType="class">
+        <attribute name="assignement_BranchID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="assignement_SchoolID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="assignementAttachment_ActualName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="assignementAttachment_AssignementID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="assignementAttachment_FileSize" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="assignementAttachment_ID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="assignementAttachment_URL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="databaseid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="myly_studentid" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="BranchDetail" representedClassName="BranchDetail" syncable="YES" codeGenerationType="class">
+        <attribute name="branch_CustomerId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="branch_Id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="branchLogo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="databaseid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="myly_studentid" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="CalendarDayOff" representedClassName="CalendarDayOff" syncable="YES" codeGenerationType="class">
+        <attribute name="classCalenderDayOffID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="classCalenderDayOffID_DayId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="databaseid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="myly_studentid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="teacherCalander_ID" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Club" representedClassName="Club" syncable="YES" codeGenerationType="class">
+        <attribute name="clubCreatedBy" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="clubCreatedOn" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="clubID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="clubIsActive" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="clubName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="clubStudentIsActive" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="clubUpdatedOn" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="databaseid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="leafUpdatedDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="myly_studentid" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="ClubStudent" representedClassName="ClubStudent" syncable="YES" codeGenerationType="class">
+        <attribute name="clubClassClubMasterID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="clubClassCreatedOn" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="clubClassID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="clubClassIsActive" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="clubClassUpdatedOn" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="clubCreatedOn" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="clubStudentClubClassID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="clubStudentCreatedBy" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="clubStudentCreatedOn" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="clubStudentID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="clubStudentIsActive" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="clubStudentUpdatedOn" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="clubUpdatedOn" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="databaseid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="myly_studentid" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="ContactInfo" representedClassName="ContactInfo" syncable="YES" codeGenerationType="class">
+        <attribute name="branch_ContactPersonNo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="branch_EmailID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="branch_Id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="branch_LandlineNo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="branch_Name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="branchHeadName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="branchLogo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="databaseid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="emp_FirstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isBranchImage" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="myly_studentid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="principalContact" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="principalEmail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="schoolCompleteAddress" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="schoolEmailID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="schoollandlineno" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="student_PrimaryEmailID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="student_PrimaryMobileNo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="supportMail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="vision_AboutInstitution" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="vision_Address" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="vision_ContactPerson" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="vision_Details" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="vision_EmailID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="vision_Image" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="vision_LandlineNo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="vision_MobileNo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="vision_URL" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Employee" representedClassName="Employee" syncable="YES" codeGenerationType="class">
+        <attribute name="databaseid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="emp_Id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="emp_Name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="myly_studentid" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="EmployeeDetails" representedClassName="EmployeeDetails" syncable="YES" codeGenerationType="class">
+        <attribute name="databaseid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="emp_EmailID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="emp_Id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="emp_IsActive" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="emp_IsSoftDelete" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="emp_Name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="empStatus" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="myly_studentid" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Event" representedClassName="Event" syncable="YES" codeGenerationType="class">
         <attribute name="branch_Id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="branchLogo" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="createdDate" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="createdTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="databaseid" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="event_AllDay" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="event_Attachment" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="event_ClassGroupID" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="event_CreatedOn" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="event_CreatedOn" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="event_Description" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="event_HouseClubID" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="event_ID" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="event_Title" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="event_UpdatededOn" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="event_UpdatededOn" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="eventTo" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="fromDate" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="fromDateDDMMYYYY" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="fromTime" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="isDeleted_" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="leafUpdatedDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="leafUpdatedDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="myly_studentid" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="postedBy" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="postedById" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="rootID" optional="YES" attributeType="String" syncable="YES"/>
@@ -48,11 +186,379 @@
         <attribute name="toDateDDMMYYYY" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="toTime" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="ExamAttachment" representedClassName="ExamAttachment" syncable="YES" codeGenerationType="class">
+        <attribute name="branch_SchoolID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="branchID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="changedExamFileName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="databaseid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="examAttachment_ActualName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="examAttachment_FileSize" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="examAttachment_ID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="exameID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="myly_studentid" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="ExamDetail" representedClassName="ExamDetail" syncable="YES" codeGenerationType="class">
+        <attribute name="cancelDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="databaseid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="examActiveStatus" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="examBranchID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="examCreatedBy" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="examCreatedOn" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="exameID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="examName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="examTypeID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="examTypeName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="examUpdatedOn" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="leafUpdatedDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="myly_studentid" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="ExamOtherResult" representedClassName="ExamOtherResult" syncable="YES" codeGenerationType="class">
+        <attribute name="databaseid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="examOtherResultCreatedBy" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="examOtherResultCreatedON" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="examOtherResultDetailID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="examOtherResultUpdatedBy" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="examOtherResultUpdatedOn" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="leafUpdatedDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="myly_studentid" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="ExamOtherResultSkill" representedClassName="ExamOtherResultSkill" syncable="YES" codeGenerationType="class">
+        <attribute name="databaseid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="examOtherResultSkillDetail_ExamOtherSkillsID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="examOtherResultSkillDetail_IsAbsent" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="examOtherResultSkillDetailID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="examOtherResultSkillDetailOtherResultDetailID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="examOtherResultSkillDetailScore" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="examOtherResultSkillDetailTermID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="myly_studentid" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="ExamOtherSkill" representedClassName="ExamOtherSkill" syncable="YES" codeGenerationType="class">
+        <attribute name="databaseid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="examOtherSkillName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="examOtherSkillsID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="examOtherSubTypeID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="myly_studentid" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="ExamResult" representedClassName="ExamResult" syncable="YES" codeGenerationType="class">
+        <attribute name="databaseid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="examResult_CreatedBy" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="examResult_CreatedOn" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="examResult_ExamID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="examResult_UpdatedOn" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="examResultID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="leafUpdatedDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="myly_studentid" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="ExamResultDetail" representedClassName="ExamResultDetail" syncable="YES" codeGenerationType="class">
+        <attribute name="databaseid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="examStudentResult_IsGrade" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="examStudentResult_Score" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="examStudentResult_StudentID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="examSubjectResult_AverageScore" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="examSubjectResult_ExamResultID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="examSubjectResult_IsGrade" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="examSubjectResult_MaxMarks" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="examSubjectResult_MaxScore" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="examSubjectResult_SubjectID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="examSubjectResultID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="myly_studentid" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="ExamSubjectDetail" representedClassName="ExamSubjectDetail" syncable="YES" codeGenerationType="class">
+        <attribute name="databaseid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="examSubjectActiveStatus" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="examSubjectExamDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="examSubjectExamFromTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="examSubjectExamID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="examSubjectExamToTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="examSubjectID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="examSubjectSubjectID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="myly_studentid" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="ExamSubType" representedClassName="ExamSubType" syncable="YES" codeGenerationType="class">
+        <attribute name="databaseid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="examOtherSubTypeID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="examOtherSubTypeName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="myly_studentid" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="ExamTerm" representedClassName="ExamTerm" syncable="YES" codeGenerationType="class">
+        <attribute name="databaseid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="examTermID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="examTermIsActive" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="examTermName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="myly_studentid" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="ExamType" representedClassName="ExamType" syncable="YES" codeGenerationType="class">
+        <attribute name="databaseid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="examTypeActiveStatus" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="examTypeID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="examTypeName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="myly_studentid" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="FeeManagement" representedClassName="FeeManagement" syncable="YES" codeGenerationType="class">
+        <attribute name="activity_CreatedOn" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="activity_FeeAmount" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="activity_Notes" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="activityFeeId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="alreadyPaid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="branch_Id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="branchLogo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="clubMasterID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="convienceFee" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="createdOn" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="databaseid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dueDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="feeType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="leafUpdatedDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="myly_studentid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="oRDERID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="paidDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="paidStatus" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="paymentActive" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pDFPath" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="postedById" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="schoolName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="student_Id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="titles" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="txnId" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="FeeReconcilation" representedClassName="FeeReconcilation" syncable="YES" codeGenerationType="class">
+        <attribute name="branch_CountryID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="branchId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="branchName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="databaseid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="feeReconcilation_Amount" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="feeReconcilation_ChequeNo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="feeReconcilation_ID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="feeReconcilation_PaymentMethod" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="feeReconcilation_ReconciledBy" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="feeReconcilation_ReconciledReason" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="feeReconcilation_StudentID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="feeReconcilation_TransactionID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mobileNo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="myly_studentid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="student_FatherMobileNo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="studentName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="studentPassword" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userName" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Group" representedClassName="Group" syncable="YES" codeGenerationType="class">
+        <attribute name="databaseid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="groupCreatedBy" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="groupCreatedOn" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="groupID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="groupIsActive" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="groupName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="groupStudentIsActive" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="groupUpdatedOn" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="leafUpdatedDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="myly_studentid" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="GroupStudent" representedClassName="GroupStudent" syncable="YES" codeGenerationType="class">
+        <attribute name="databaseid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="groupStudentCreatedBy" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="groupStudentCreatedOn" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="groupStudentGroupMasterID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="groupStudentID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="groupStudentIsActive" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="groupStudentUpdatedOn" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="myly_studentid" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Holiday" representedClassName="Holiday" syncable="YES" codeGenerationType="class">
+        <attribute name="databaseid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="holiday_FromDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="holiday_HolidayName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="holiday_IsActive" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="holiday_ToDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="holidayId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="holliday_CreateDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="holliday_CreatedBy" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="holliday_UpdateDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="holliday_UpdatedBy" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="leafUpdatedDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="myly_studentid" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="LastSyncDateTime" representedClassName="LastSyncDateTime" syncable="YES" codeGenerationType="class">
+        <attribute name="databaseid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="databaseID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastSyncdate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="logoutDateTime" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="myly_studentid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="resetDateTime" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+    </entity>
+    <entity name="Menu" representedClassName="Menu" syncable="YES" codeGenerationType="class">
+        <attribute name="code" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="databaseid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isActive" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="menuID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="menuName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="myly_studentid" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Message" representedClassName="Message" syncable="YES" codeGenerationType="class">
+        <attribute name="branch_Id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="branchLogo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="createDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="createTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="databaseid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isAdmin" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="leafUpdatedDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="message_Attachment" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="message_Body" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="message_Category" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="message_ClassGroupID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="message_CreatedOn" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="message_For" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="message_HouseClubID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="message_IsCritical" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="message_IsIndividual" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="message_MessageUniqueID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="message_SentType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="message_Title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="message_Type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="messageColor" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="messageCreatedBy" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="messageID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="messageUpdateID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="myly_studentid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="parentMessageID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="postedBy" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="postedById" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rootID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="schoolID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="schoolName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="targetTable" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="MessageQueue" representedClassName="MessageQueue" syncable="YES" codeGenerationType="class">
+        <attribute name="atDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="att_Date" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="attDetails_Status" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="branch_Id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="branchLogo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="createDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="createTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="databaseid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="leafUpdatedDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="message_CreatedOn" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="messageQueue_ID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="messageQueue_MessageType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="messageQueue_StudentId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="messageQueue_Title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="myly_studentid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="postedBy" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="postedById" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rootID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="schoolID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="schoolName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="targetTable" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="NewsLetter" representedClassName="NewsLetter" syncable="YES" codeGenerationType="class">
+        <attribute name="databaseid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="emp_Name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="leafUpdatedDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="myly_studentid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="newsLetter_Attachment" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="newsLetter_CreatedBy" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="newsLetter_CreatedOn" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="newsLetter_Description" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="newsLetter_For" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="newsLetter_ID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="newsLetter_IsActive" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="newsLetter_Title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="newsLetter_UpdatedID" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="NewsLetterAttachment" representedClassName="NewsLetterAttachment" syncable="YES" codeGenerationType="class">
+        <attribute name="databaseid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="myly_studentid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="newsLetter_BranchID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="newsLetter_SchoolID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="newsLetterAttachment_ActualName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="newsLetterAttachment_FileSize" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="newsLetterAttachment_ID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="newsLetterAttachment_NewsLetterID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="newsLetterAttachment_URL" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="ParentMessage" representedClassName="ParentMessage" syncable="YES" codeGenerationType="class">
+        <attribute name="createDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="createTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="databaseid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="leafUpdatedDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="myly_studentid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="parentMessage_Body" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="parentMessage_IsIndividual" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="parentMessage_MessageID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="parentMessage_MessageType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="parentMessage_MessageUniqueID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="parentMessage_Title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="parentMessageCreateOn" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="parentMessageID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="parentMessageReason" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="parentMessages_FromDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="parentMessages_IsLeaveStatus" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="parentMessages_LeaveActionDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="parentMessages_ToDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rootID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="targetTable" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="ParentMessageAttachment" representedClassName="ParentMessageAttachment" syncable="YES" codeGenerationType="class">
+        <attribute name="changedExamFileName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="databaseid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="myly_studentid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="parentMessage_BranchID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="parentMessage_MessageType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="parentMessage_Notes" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="parentMessage_StudentID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="parentMessageAttachment_ActualName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="parentMessageAttachment_FileSize" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="parentMessageAttachment_ID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="parentMessageID" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="ParentMessageEmpId" representedClassName="ParentMessageEmpId" syncable="YES" codeGenerationType="class">
+        <attribute name="databaseid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="myly_studentid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="parentMessage_EmpID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="parentMessage_ID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="parentMessage_ParentMessageID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="parentMessageID" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="PaymentDetails" representedClassName="PaymentDetails" syncable="YES" codeGenerationType="class">
+        <attribute name="branch_CustomerId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="branch_Id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="branchLogo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="databaseid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="myly_studentid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="payment_CHANNELID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="payment_INDUSTRYTYPE_ID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="payment_MerchantKey" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="payment_Mid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="payment_Theme" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="payment_WEBSITE" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="paymentActive" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Period" representedClassName="Period" syncable="YES" codeGenerationType="class">
+        <attribute name="databaseid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="myly_studentid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="period_Id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="period_IsActive" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="period_IsSoftDelete" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="period_IsVisible" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="period_Name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="SchoolAttachment" representedClassName="SchoolAttachment" syncable="YES" codeGenerationType="class">
+        <attribute name="databaseid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="message_BranchID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="message_SchoolID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="messageID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="myly_studentid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="schoolAttachment_Name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="schoolAttachment_URL" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="StudentDetails" representedClassName="StudentDetails" syncable="YES">
         <attribute name="branch_Name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="class_Name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="databaseid" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="databaseID" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="isSMSDisabled" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="myly_studentid" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="notificationSettingID" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="profilePicture" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="schoolLogo" optional="YES" attributeType="String" syncable="YES"/>
@@ -74,9 +580,136 @@
         <attribute name="student_PrimaryEmailID" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="student_SchoolID" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
+    <entity name="StudentMigration" representedClassName="StudentMigration" syncable="YES" codeGenerationType="class">
+        <attribute name="branch_Id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="branchLogo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="createDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="createTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="databaseid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="leafUpdatedDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="message_Body" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="message_Category" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="message_CreatedOn" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="message_Title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="message_Type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="messageCreatedBy" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="messageID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="myly_studentid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="postedById" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="schoolID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="schoolName" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="StudentProfile" representedClassName="StudentProfile" syncable="YES" codeGenerationType="class">
+        <attribute name="branch_IsPremium" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="class_Name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="databaseid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fatherName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isProfilePicUpdated" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="motherName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="myly_studentid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="profilePicture" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="schoolAddress" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="schoolName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="student_BloodGroup" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="student_ClassID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="student_FatherEmailID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="student_FatherMobileNo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="student_IsActive" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="student_MID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="student_MotherEmailID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="student_MotherMobileNo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="student_PrimaryEmailID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="student_PrimaryMobileNo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="studentAddress" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="studentDOB" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="studentIsActive" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="studentName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="studentSoftDelete" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="studentUID" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Subject" representedClassName="Subject" syncable="YES" codeGenerationType="class">
+        <attribute name="databaseid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="myly_studentid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="subject_ID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="subject_IsSoftDelete" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="subject_IsVisible" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="subject_Name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="TeacherCalendar" representedClassName="TeacherCalendar" syncable="YES" codeGenerationType="class">
+        <attribute name="databaseid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fromtime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="leafUpdatedDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="myly_studentid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="teacherCalander_ClassID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="teacherCalander_CreatedBy" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="teacherCalander_Day" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="teacherCalander_FromTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="teacherCalander_ID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="teacherCalander_IsActive" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="teacherCalander_PeriodID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="teacherCalander_SubjectID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="teacherCalander_TeacherID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="teacherCalander_ToTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="teacherCalander_UniqueId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="teacherCalenderStudent_IsAppNoti" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="teacherCalenderStudent_IsAppNotiDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+    </entity>
+    <entity name="TeacherCalendarStatus" representedClassName="TeacherCalendarStatus" syncable="YES" codeGenerationType="class">
+        <attribute name="databaseid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="myly_studentid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="teacherCalenderStatus_BranchID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="teacherCalenderStatus_ClassID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="teacherCalenderStatus_ID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="teacherCalenderStatus_IsActive" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="teacherCalenderStatus_UniqueID" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <elements>
-        <element name="Event" positionX="-63" positionY="135" width="128" height="480"/>
-        <element name="StudentDetails" positionX="-63" positionY="-18" width="128" height="405"/>
-        <element name="Assignment" positionX="-63" positionY="135" width="128" height="270"/>
+        <element name="Assignment" positionX="-63" positionY="135" width="128" height="285"/>
+        <element name="Event" positionX="-63" positionY="135" width="128" height="510"/>
+        <element name="StudentDetails" positionX="-63" positionY="-18" width="128" height="435"/>
+        <element name="LastSyncDateTime" positionX="-63" positionY="135" width="128" height="135"/>
+        <element name="SchoolAttachment" positionX="-54" positionY="144" width="128" height="150"/>
+        <element name="Employee" positionX="-36" positionY="153" width="128" height="105"/>
+        <element name="FeeManagement" positionX="-18" positionY="162" width="128" height="420"/>
+        <element name="Message" positionX="0" positionY="171" width="128" height="525"/>
+        <element name="Advertisement" positionX="18" positionY="180" width="128" height="285"/>
+        <element name="AdverstisementAttachment" positionX="36" positionY="189" width="128" height="150"/>
+        <element name="PaymentDetails" positionX="-9" positionY="135" width="128" height="225"/>
+        <element name="EmployeeDetails" positionX="0" positionY="144" width="128" height="165"/>
+        <element name="FeeReconcilation" positionX="9" positionY="153" width="128" height="330"/>
+        <element name="ParentMessageEmpId" positionX="18" positionY="162" width="128" height="135"/>
+        <element name="NewsLetter" positionX="27" positionY="171" width="128" height="240"/>
+        <element name="NewsLetterAttachment" positionX="36" positionY="180" width="128" height="180"/>
+        <element name="ParentMessage" positionX="45" positionY="189" width="128" height="345"/>
+        <element name="AssignmentAttachment" positionX="-9" positionY="135" width="128" height="180"/>
+        <element name="Holiday" positionX="0" positionY="144" width="128" height="225"/>
+        <element name="TeacherCalendar" positionX="9" positionY="153" width="128" height="300"/>
+        <element name="Subject" positionX="18" positionY="162" width="128" height="135"/>
+        <element name="Period" positionX="27" positionY="171" width="128" height="150"/>
+        <element name="CalendarDayOff" positionX="36" positionY="180" width="128" height="120"/>
+        <element name="TeacherCalendarStatus" positionX="45" positionY="189" width="128" height="150"/>
+        <element name="ExamDetail" positionX="-9" positionY="135" width="128" height="240"/>
+        <element name="ExamSubjectDetail" positionX="0" positionY="144" width="128" height="180"/>
+        <element name="ExamResult" positionX="9" positionY="153" width="128" height="165"/>
+        <element name="ExamResultDetail" positionX="18" positionY="162" width="128" height="225"/>
+        <element name="ExamTerm" positionX="27" positionY="171" width="128" height="120"/>
+        <element name="ExamType" positionX="36" positionY="180" width="128" height="120"/>
+        <element name="ExamSubType" positionX="45" positionY="189" width="128" height="105"/>
+        <element name="ExamOtherSkill" positionX="-9" positionY="135" width="128" height="120"/>
+        <element name="ExamOtherResultSkill" positionX="0" positionY="144" width="128" height="165"/>
+        <element name="ExamOtherResult" positionX="9" positionY="153" width="128" height="165"/>
+        <element name="MessageQueue" positionX="18" positionY="162" width="128" height="360"/>
+        <element name="Club" positionX="27" positionY="171" width="128" height="195"/>
+        <element name="Action" positionX="36" positionY="180" width="128" height="135"/>
+        <element name="Group" positionX="45" positionY="189" width="128" height="195"/>
+        <element name="GroupStudent" positionX="-9" positionY="135" width="128" height="165"/>
+        <element name="ClubStudent" positionX="0" positionY="144" width="128" height="270"/>
+        <element name="ExamAttachment" positionX="9" positionY="153" width="128" height="180"/>
+        <element name="ParentMessageAttachment" positionX="18" positionY="162" width="128" height="210"/>
+        <element name="Menu" positionX="27" positionY="171" width="128" height="135"/>
+        <element name="StudentProfile" positionX="36" positionY="180" width="128" height="435"/>
+        <element name="ContactInfo" positionX="45" positionY="189" width="128" height="465"/>
+        <element name="BranchDetail" positionX="-9" positionY="135" width="128" height="120"/>
+        <element name="StudentMigration" positionX="0" positionY="144" width="128" height="300"/>
     </elements>
 </model>
