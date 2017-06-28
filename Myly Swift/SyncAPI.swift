@@ -11,7 +11,9 @@ import CoreData
 
 class SyncAPI {
     
-    class func syncTask(_ controller: UIViewController, completion: @escaping (_ response: Dictionary<String, Any>) -> Void) -> Void {
+    var dict_response: Dictionary<String, Any> = [:]
+    
+    func syncTask(_ controller: UIViewController, completion: @escaping (_ response: Dictionary<String, Any>) -> Void) -> Void {
         
         let dict_parameters: Dictionary<String, Any> = ["StudentID": UserDefaults.standard.value(forKey: kStudentId) ?? "",
                                "LastSyncdate": "",
@@ -25,10 +27,11 @@ class SyncAPI {
                             
                             if response["ResponseCode"] != nil {
                                 
-                                let responseCode = response["ResponseCode"] as! NSNumber
+                                self.dict_response = response
+                                let responseCode = self.dict_response["ResponseCode"] as! NSNumber
                                 
                                 if responseCode == 1 {
-                                    
+                                    self.insertDataInCoreData()
                                 }
                                 else {
                                     Alert.showAlert(message: kError,
@@ -41,7 +44,7 @@ class SyncAPI {
         })
     }
     
-    func insertDataInCoreData(_ dict_response: NSDictionary) -> Void {
+    func insertDataInCoreData() -> Void {
         
         let dict_tableMappingToEntities = ["Table": kEvent,
                                            "Table2": kMessage,
@@ -89,8 +92,9 @@ class SyncAPI {
                                            "Table58": kParentMessageAttachment,
                                            "Table59": kMenu
                                            ]
-        for str_entity in dict_response {
-            
+        for (key, element) in dict_tableMappingToEntities {
+            let dict_particularKeyResult: Dictionary<String, Any> = dict_response["SyncData"] as! Dictionary<String, Any>
+            self.insertDataInParticularEntity(element, arr_data:dict_particularKeyResult[key] as! Array<Dictionary<String, Any>>)
         }
         
         
@@ -111,9 +115,24 @@ class SyncAPI {
                     
                     var str_key = key
                     
-                    if obj_managedObject.entity.propertiesByName.keys.contains(str_key) {
+                    if obj_managedObject.entity.propertiesByName.keys.contains(str_key.lowerFirstCharacter()) {
+                        
+                        let dict_attributes = obj_managedObject.entity.attributesByName
+                        for (key, element) in dict_attributes {
+                            let attributeDesc = element 
+                            print("\(key) type is \(attributeDesc.attributeType.rawValue)")
+                            
+                        }
+                        
                         if ((element as? NSNull) == nil)  {
-                            obj_managedObject.setValue(element, forKey: str_key.lowerFirstCharacter())
+                            
+                            if let value = element as? NSNumber {
+                                let str_value = "\(value)"
+                                obj_managedObject.setValue(str_value, forKey: str_key.lowerFirstCharacter())
+                            }
+                            else {
+                                obj_managedObject.setValue(element, forKey: str_key.lowerFirstCharacter())
+                            }
                         }
                         else {
                             obj_managedObject.setValue(nil, forKey: str_key.lowerFirstCharacter())
@@ -123,11 +142,14 @@ class SyncAPI {
                         arr_attributesNotSaved.append(str_key)
                     }
                 }
-                self.save()
+                DispatchQueue.main.async {
+                    self.save()
+                }
+                
             }
             
             if arr_attributesNotSaved.count > 0 {
-                print("The attributes that are not present in core data are: %@", arr_attributesNotSaved[0])
+                print("The attributes that are not present in entity \(str_entityName) are:\n \(arr_attributesNotSaved)")
             }
         }
     }

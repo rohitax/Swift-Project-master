@@ -10,12 +10,13 @@ import UIKit
 
 class MoreOptionViewController: UIViewController {
 
+    let obj_syncAPI = SyncAPI()
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
-        SyncAPI.syncTask(self, completion: {(response: Dictionary<String, Any>) -> Void in
+        obj_syncAPI.syncTask(self, completion: {(response: Dictionary<String, Any>) -> Void in
             
         })
     }

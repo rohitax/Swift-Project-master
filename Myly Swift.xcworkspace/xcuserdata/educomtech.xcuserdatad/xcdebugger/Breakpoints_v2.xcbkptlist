@@ -49,11 +49,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Myly Swift/MoreOptionViewController.swift"
-            timestampString = "516713442.116495"
+            timestampString = "520342179.461641"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "13"
-            endingLineNumber = "13"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -65,12 +65,44 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Myly Swift/SyncAPI.swift"
-            timestampString = "520251999.874612"
+            timestampString = "520348200.384796"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "syncTask(_:completion:)"
+            startingLineNumber = "142"
+            endingLineNumber = "142"
+            landmarkName = "insertDataInParticularEntity(_:arr_data:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Myly Swift/SyncAPI.swift"
+            timestampString = "520348200.384796"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "127"
+            endingLineNumber = "127"
+            landmarkName = "insertDataInParticularEntity(_:arr_data:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Myly Swift/SyncAPI.swift"
+            timestampString = "520348200.384796"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
+            landmarkName = "insertDataInParticularEntity(_:arr_data:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
