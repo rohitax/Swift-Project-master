@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '4726C1CB0E53285E7FD069E65EA108FC'
+               BlueprintIdentifier = '819365BA4F5E16FDCAFEF2445D647BBF'
                BlueprintName = 'TKKeyboardControl'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'TKKeyboardControl.framework'>

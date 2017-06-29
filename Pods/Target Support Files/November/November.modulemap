@@ -1,0 +1,6 @@
+framework module November {
+  umbrella header "November-umbrella.h"
+
+  export *
+  module * { export * }
+}

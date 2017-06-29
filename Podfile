@@ -14,6 +14,7 @@ pod 'INSPersistentContainer'
 pod "EVReflection"
 pod 'FormToolbar', '~> 1.0'
 pod 'SVProgressHUD'
+pod 'November'
 
   # Pods for Myly Swift
 

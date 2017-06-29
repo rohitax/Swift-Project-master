@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 import INSPersistentContainer
+import November
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -218,10 +219,39 @@ extension String {
     }
 }
 
-extension Double {
-    /// Rounds the double to decimal places value
-    func roundTo(places:Int) -> Double {
-        let divisor = pow(10.0, Double(places))
-        return (self * divisor).rounded() / divisor
+extension String {
+    
+    func getDateFromString() -> Date? {
+        
+        let arr_parts = self.components(separatedBy: ".")
+        if self.uppercased().contains("T") {
+            return Date(string: arr_parts[0], format: "yyyy-MM-dd'T'HH:mm:ss")
+        }
+        else if self.isNumeric {
+            return Date(string: arr_parts[0], format: "yyyyMMddHHmmss")
+        }
+        return Date()
+    }
+    
+    func getLeafUpdateDate() -> Date? {
+        
+        if self.uppercased().contains("T") {
+            let arr_parts = self.components(separatedBy: ".")
+            let date = Date(string: arr_parts[0], format: "yyyy-MM-dd'T'HH:mm:ss")
+            if let str_date = date?.string(withFormat: "yyyyMMddHHmmss") {
+                return Date(string: str_date, format: "yyyyMMddHHmmss")
+            }
+            
+        }
+        return Date()
+    }
+}
+
+extension String {
+    
+    var isNumeric: Bool {
+        guard self.characters.count > 0 else { return false }
+        let nums: Set<Character> = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+        return Set(self.characters).isSubset(of: nums)
     }
 }

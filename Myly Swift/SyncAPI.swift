@@ -117,13 +117,6 @@ class SyncAPI {
                     
                     if obj_managedObject.entity.propertiesByName.keys.contains(str_key.lowerFirstCharacter()) {
                         
-                        let dict_attributes = obj_managedObject.entity.attributesByName
-                        for (key, element) in dict_attributes {
-                            let attributeDesc = element 
-                            print("\(key) type is \(attributeDesc.attributeType.rawValue)")
-                            
-                        }
-                        
                         if ((element as? NSNull) == nil)  {
                             
                             if let value = element as? NSNumber {
@@ -131,7 +124,19 @@ class SyncAPI {
                                 obj_managedObject.setValue(str_value, forKey: str_key.lowerFirstCharacter())
                             }
                             else {
-                                obj_managedObject.setValue(element, forKey: str_key.lowerFirstCharacter())
+                                if let attribute = obj_managedObject.entity.attributesByName[str_key.lowerFirstCharacter()],
+                                    attribute.attributeType == .dateAttributeType {
+                                    
+                                    if let date = (element as! String).getDateFromString() {
+                                        obj_managedObject.setValue(date, forKey: str_key.lowerFirstCharacter())
+                                    }
+                                    else {
+                                        obj_managedObject.setValue(nil, forKey: str_key.lowerFirstCharacter())
+                                    }
+                                }
+                                else {
+                                    obj_managedObject.setValue(element, forKey: str_key.lowerFirstCharacter())
+                                }
                             }
                         }
                         else {
