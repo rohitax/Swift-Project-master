@@ -26,7 +26,9 @@ let kForgotPasswordNoteForMyly = "Enter the primary mobile number for which you 
 let kLoginNoteForMyly = "Welcome to the most trusted Mobile App Solution connecting educators, students and parents. If your Institute is still not on myly platform, ask them to contact us at hello@mylyapp.com"
 let kNoStudentsExist = "No students exist with this mobile number."
 
+
 let kAppNameMyly = "myly"
+
 
 let numberSet = NSCharacterSet(charactersIn:"0123456789").inverted
 let kFontSizeForNoteTextView: CGFloat = 14.0
@@ -85,3 +87,7 @@ let kExamAttachment = "ExamAttachment"
 let kParentMessageAttachment = "ParentMessageAttachment"
 let kMenu = "Menu"
 let kLastSyncDateTime = "LastSyncDateTime"
+
+
+let kDateTimeFormatServer = "yyyy-MM-dd'T'HH:mm:ss"
+let kDateTimeFormatLeafUpdateDate = "yyyyMMddHHmmss"

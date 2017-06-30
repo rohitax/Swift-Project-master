@@ -221,29 +221,40 @@ extension String {
 
 extension String {
     
-    func getDateFromString() -> Date? {
+    func getDateFromString(_ str_currentDateFormat: String,
+                           inFormat str_expectedDateFormat: String) -> Date? {
         
-        let arr_parts = self.components(separatedBy: ".")
-        if self.uppercased().contains("T") {
-            return Date(string: arr_parts[0], format: "yyyy-MM-dd'T'HH:mm:ss")
+        let str_dateTime = self.truncateMilliSecondsInString(self)
+        let date = Date(string: str_dateTime, format: str_currentDateFormat)
+        
+        guard str_currentDateFormat != str_expectedDateFormat else {
+            return date
         }
-        else if self.isNumeric {
-            return Date(string: arr_parts[0], format: "yyyyMMddHHmmss")
+        
+        let str_date = date?.string(withFormat: str_expectedDateFormat)
+        
+        if let date = Date(string: str_date!, format: str_expectedDateFormat) {
+            return date
         }
-        return Date()
+        return nil
     }
     
     func getLeafUpdateDate() -> Date? {
         
-        if self.uppercased().contains("T") {
-            let arr_parts = self.components(separatedBy: ".")
-            let date = Date(string: arr_parts[0], format: "yyyy-MM-dd'T'HH:mm:ss")
-            if let str_date = date?.string(withFormat: "yyyyMMddHHmmss") {
-                return Date(string: str_date, format: "yyyyMMddHHmmss")
-            }
-            
+        let arr_parts = self.components(separatedBy: ".")
+        return Date(string: arr_parts[0], format: "yyyyMMddHHmmss")
+    }
+    
+    func truncateMilliSecondsInString(_ str_time: String) -> String {
+        
+        guard str_time.contains(".") else {
+            return str_time
         }
-        return Date()
+        
+        if str_time.uppercased().contains("T") {
+            return str_time.components(separatedBy: ".")[0]
+        }
+        return str_time
     }
 }
 
