@@ -7,8 +7,36 @@ PODS:
   - EVReflection/Core (4.16.3)
   - FormToolbar (1.0)
   - INSPersistentContainer (1.0.2)
+  - libwebp (0.6.0):
+    - libwebp/core (= 0.6.0)
+    - libwebp/dec (= 0.6.0)
+    - libwebp/demux (= 0.6.0)
+    - libwebp/dsp (= 0.6.0)
+    - libwebp/enc (= 0.6.0)
+    - libwebp/mux (= 0.6.0)
+    - libwebp/utils (= 0.6.0)
+    - libwebp/webp (= 0.6.0)
+  - libwebp/core (0.6.0):
+    - libwebp/webp
+  - libwebp/dec (0.6.0):
+    - libwebp/core
+  - libwebp/demux (0.6.0):
+    - libwebp/core
+  - libwebp/dsp (0.6.0):
+    - libwebp/core
+  - libwebp/enc (0.6.0):
+    - libwebp/core
+  - libwebp/mux (0.6.0):
+    - libwebp/core
+  - libwebp/utils (0.6.0):
+    - libwebp/core
+  - libwebp/webp (0.6.0)
   - November (3.0.0)
-  - SkyFloatingLabelTextField (3.1.0)
+  - SDWebImage/Core (4.0.0)
+  - SDWebImage/WebP (4.0.0):
+    - libwebp
+    - SDWebImage/Core
+  - SkyFloatingLabelTextField (3.2.0)
   - SVProgressHUD (2.1.2)
   - TKKeyboardControl (1.0.8)
 
@@ -20,6 +48,7 @@ DEPENDENCIES:
   - FormToolbar (~> 1.0)
   - INSPersistentContainer
   - November
+  - SDWebImage/WebP
   - SkyFloatingLabelTextField (~> 3.0)
   - SVProgressHUD
   - TKKeyboardControl
@@ -31,11 +60,13 @@ SPEC CHECKSUMS:
   EVReflection: 78a60b3c628a2e765652cdc554a903a3e40b16c8
   FormToolbar: 4def0dd90e2c9165e0f14e36a9ec6d3ba783b9f8
   INSPersistentContainer: 7e04a0d332ba075441ce0ee73d584ce84d76ac23
+  libwebp: 1d5a07c2eb97f9c31bd5f154bb82efc0ea67c6a2
   November: 94e89a5c2fd331adc8e3a474098ba67f3c9aebc0
-  SkyFloatingLabelTextField: 26a92ad407044dd5a7c3e4e348738ff0991514fe
+  SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
+  SkyFloatingLabelTextField: 4e2d2f7160af660ed1da6bb9d0027b5c474b4b79
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
   TKKeyboardControl: 32a07ab35fa0540062b22e323776d7fb0a8fb48a
 
-PODFILE CHECKSUM: 164367725ae679ad57437dc3c69af9bff99c18a8
+PODFILE CHECKSUM: 7695b773e0e63a38f18c7f180f0b9e62bdd80946
 
 COCOAPODS: 1.2.1

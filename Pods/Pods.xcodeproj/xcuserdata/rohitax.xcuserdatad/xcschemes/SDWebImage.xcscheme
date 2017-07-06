@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'A9ACEF2C498EF8F83B78A83DB2C1F172'
-               BlueprintName = 'KRProgressHUD'
+               BlueprintIdentifier = '6827E587B9426440E8DFF0168E44D70D'
+               BlueprintName = 'SDWebImage'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'KRProgressHUD.framework'>
+               BuildableName = 'SDWebImage.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

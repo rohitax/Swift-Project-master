@@ -96,9 +96,11 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/FormToolbar/FormToolbar.framework"
   install_framework "$BUILT_PRODUCTS_DIR/INSPersistentContainer/INSPersistentContainer.framework"
   install_framework "$BUILT_PRODUCTS_DIR/November/November.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SDWebImage/SDWebImage.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SVProgressHUD/SVProgressHUD.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework"
   install_framework "$BUILT_PRODUCTS_DIR/TKKeyboardControl/TKKeyboardControl.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/libwebp/libwebp.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/ASToast/ASToast.framework"
@@ -108,9 +110,11 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/FormToolbar/FormToolbar.framework"
   install_framework "$BUILT_PRODUCTS_DIR/INSPersistentContainer/INSPersistentContainer.framework"
   install_framework "$BUILT_PRODUCTS_DIR/November/November.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SDWebImage/SDWebImage.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SVProgressHUD/SVProgressHUD.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework"
   install_framework "$BUILT_PRODUCTS_DIR/TKKeyboardControl/TKKeyboardControl.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/libwebp/libwebp.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

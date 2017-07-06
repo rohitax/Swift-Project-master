@@ -152,10 +152,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     }
                 }
                 self.saveDetailsInUserDefaults(arr_studentDetails)
-//                DispatchQueue.main.async {
-//                    self.perform(navigateToWall(), with: self, afterDelay: 0.5)
-//                    
-//                }
                 DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.1, execute: {
                     self.navigateToWall()
                 })
@@ -175,7 +171,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     func checkIfStudentDetailsExist(_ dict_studentDetails: Dictionary<String, Any>) -> Bool {
         
         let fetchRequest = NSFetchRequest<StudentDetails>(entityName: StudentDetails.description())
-        fetchRequest.predicate = NSPredicate(format: "student_ID == %f", dict_studentDetails["Student_ID"] as! Double);
+        fetchRequest.predicate = NSPredicate(format: "student_ID == %f", dict_studentDetails["Student_ID"] as! Double)
         fetchRequest.returnsObjectsAsFaults = false
         
         do {

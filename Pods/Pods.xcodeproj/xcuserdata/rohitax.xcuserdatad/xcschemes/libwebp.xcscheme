@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '4DC059E04CBA98AEDDB5C34E02D551E9'
-               BlueprintName = 'IQKeyboardManagerSwift'
+               BlueprintIdentifier = '624C5A9D7E41DE757CEDA330D7C13308'
+               BlueprintName = 'libwebp'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'IQKeyboardManagerSwift.framework'>
+               BuildableName = 'libwebp.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

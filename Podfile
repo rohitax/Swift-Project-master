@@ -15,6 +15,7 @@ pod "EVReflection"
 pod 'FormToolbar', '~> 1.0'
 pod 'SVProgressHUD'
 pod 'November'
+pod 'SDWebImage/WebP'
 
   # Pods for Myly Swift
 

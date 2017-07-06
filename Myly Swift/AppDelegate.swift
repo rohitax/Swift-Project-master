@@ -112,6 +112,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         DispatchQueue.main.asyncAfter(deadline: when, execute: closure)
     }
     
+    func fetchDataFromCoreData(_ str_entityName: String, withPredicate predicate: NSPredicate) -> Array<Any>? {
+        
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: str_entityName)
+        fetchRequest.predicate = predicate
+        fetchRequest.returnsObjectsAsFaults = false
+        
+        do {
+            let arr_studentDetails = try managedObjectContext.fetch(fetchRequest)
+            return arr_studentDetails
+        } catch let error as NSError {
+            print("Could not fetch. \(error), \(error.userInfo)")
+        }
+        return nil
+    }
 }
 
 extension UIApplication {

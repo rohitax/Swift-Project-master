@@ -32,6 +32,7 @@ class SyncAPI {
                                 
                                 if responseCode == 1 {
                                     self.insertDataInCoreData()
+                                    completion(self.dict_response)
                                 }
                                 else {
                                     Alert.showAlert(message: kError,
@@ -220,9 +221,9 @@ class SyncAPI {
             obj.setValue(self.fetchDataInDateType(dict_data["ExamResult_UpdatedOn"] as? String ?? dict_data["ExamResult_CreatedOn"] as? String, havingFormat: kDateTimeFormatServer, inFormat: kDateTimeFormatLeafUpdateDate), forKey: "leafUpdatedDate")
             
         case kExamOtherResult:
-            obj.setValue(self.fetchDataInDateType(dict_data["ExamOtherResultCreatedON"] as? String, havingFormat: kDateTimeFormatServer, inFormat: kDateTimeFormatServer), forKey: "examOtherResultCreatedON")
-            obj.setValue(self.fetchDataInDateType(dict_data["examOtherResultUpdatedOn"] as? String, havingFormat: kDateTimeFormatServer, inFormat: kDateTimeFormatServer), forKey: "examOtherResultUpdatedOn")
-            obj.setValue(self.fetchDataInDateType(dict_data["ExamOtherResultUpdatedOn"] as? String ?? dict_data["ExamOtherResultCreatedON"] as? String, havingFormat: kDateTimeFormatServer, inFormat: kDateTimeFormatLeafUpdateDate), forKey: "leafUpdatedDate")
+        obj.setValue(self.fetchDataInDateType(dict_data["ExamOtherResultCreatedON"] as? String, havingFormat: kDateTimeFormatServer, inFormat: kDateTimeFormatServer), forKey: "examOtherResultCreatedON")
+        obj.setValue(self.fetchDataInDateType(dict_data["examOtherResultUpdatedOn"] as? String, havingFormat: kDateTimeFormatServer, inFormat: kDateTimeFormatServer), forKey: "examOtherResultUpdatedOn")
+        obj.setValue(self.fetchDataInDateType(dict_data["ExamOtherResultUpdatedOn"] as? String ?? dict_data["ExamOtherResultCreatedON"] as? String, havingFormat: kDateTimeFormatServer, inFormat: kDateTimeFormatLeafUpdateDate), forKey: "leafUpdatedDate")
             
         case kStudentMigration:
             obj.setValue(self.fetchDataInDateType(dict_data["Message_CreatedOn"] as? String, havingFormat: "yyyy-MM-dd HH:mm:ss", inFormat: kDateTimeFormatServer), forKey: "message_CreatedOn")
